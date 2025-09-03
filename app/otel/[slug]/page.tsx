@@ -1,8 +1,9 @@
+// app/otel/[slug]/page.tsx
 import { notFound } from "next/navigation"
-import { hotels } from "@/lib/hotel-data"
+import { hotels, Hotel } from "@/lib/hotel-data"
 import { Header } from "@/components/header"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Star, MapPin, Wifi, Car, Utensils, Dumbbell, Users, Heart, Phone, Mail, Home, Building } from "lucide-react"
 import Link from "next/link"
 
@@ -12,26 +13,13 @@ interface HotelPageProps {
   }
 }
 
-
 export async function generateStaticParams() {
-  // Örnek slug listesi (backend’den veya sabit)
-  return [
-    { slug: "wome-deluxe" },
-    { slug: "angels-marmaris" },
-    { slug: "adenya-resort" },
-    { slug: "sah-inn-paradise" },
-    { slug: "the-oba" },
-    { slug: "adin-beach" },
-    { slug: "bera-alanya" },
-    { slug: "rizom-beach" },
-    { slug: "selge-beach" },
-    { slug: "royal-teos" },
-    { slug: "rizom-tatil-koyu" }
-  ]
+  return hotels.map(hotel => ({ slug: hotel.slug }))
 }
 
+
 export default function HotelPage({ params }: HotelPageProps) {
-  const hotel = hotels.find(h => h.slug === params.slug)
+  const hotel: Hotel | undefined = hotels.find(h => h.slug === params.slug)
 
   if (!hotel) {
     notFound()
@@ -202,52 +190,9 @@ export default function HotelPage({ params }: HotelPageProps) {
                 </div>
               </CardContent>
             </Card>
-
-            {/* Pricing */}
-            {/* <Card>
-              <CardHeader>
-                <CardTitle>Fiyat Bilgisi</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">
-                    ₺{hotel.price.toLocaleString()}
-                  </div>
-                  <div className="text-gray-600 mb-4">gece başına</div>
-                  <Link href={`/otel/${hotel.slug}/rezervasyon`}>
-                    <Button className="w-full bg-blue-600 hover:bg-blue-700">
-                      Rezervasyon Yap
-                    </Button>
-                  </Link>
-                </div>
-              </CardContent>
-            </Card> */}
-
-            {/* Contact */}
-            <Card>
-              <CardHeader>
-                <CardTitle>İletişim</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-3">
-                    <Phone className="w-5 h-5 text-blue-600" />
-                    <span className="text-sm">+90 533 818 99 58</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <Mail className="w-5 h-5 text-blue-600" />
-                    <span className="text-sm">info@helaltrip.com</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <MapPin className="w-5 h-5 text-blue-600" />
-                    <span className="text-sm">{hotel.location}</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </div>
     </div>
   )
-} 
+}
