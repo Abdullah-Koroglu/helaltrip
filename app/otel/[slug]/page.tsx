@@ -1,5 +1,5 @@
-// app/otel/[slug]/page.tsx
-import { notFound } from "next/navigation"
+"use client"
+import { notFound, useParams } from "next/navigation"
 import { hotels, Hotel } from "@/lib/hotel-data"
 import { Header } from "@/components/header"
 import { Button } from "@/components/ui/button"
@@ -7,18 +7,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Star, MapPin, Wifi, Car, Utensils, Dumbbell, Users, Heart, Phone, Mail, Home, Building } from "lucide-react"
 import Link from "next/link"
 
-interface HotelPageProps {
-  params: {
-    slug: string
-  }
-}
-
-export async function generateStaticParams() {
-  return hotels.map(hotel => ({ slug: hotel.slug }))
-}
-
-
-export default function HotelPage({ params }: HotelPageProps) {
+export default function HotelPage() {
+  const params = useParams()
   const hotel: Hotel | undefined = hotels.find(h => h.slug === params.slug)
 
   if (!hotel) {

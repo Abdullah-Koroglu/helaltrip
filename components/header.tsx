@@ -30,7 +30,7 @@ export function Header() {
         {/* Main header */}
         <div className="flex items-center justify-between py-4">
           <Link href="/" className="text-2xl font-bold text-red-600">
-            <img src="logo.png" alt="Helaltrip" className="h-20" />
+            <img src="../public/../logo.png" alt="Helaltrip" className="h-20" />
           </Link>
 
           <nav className="hidden md:flex items-center space-x-8 justify-center">
