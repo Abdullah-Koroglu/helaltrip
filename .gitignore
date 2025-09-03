@@ -8,8 +8,6 @@
 # env
 .env.local
 
-# config
-/postcss.config.js
 
 # output
 /reviews.json
