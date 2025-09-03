@@ -9,7 +9,6 @@
 .env.local
 
 # config
-/next.config.js
 /tsconfig.json
 /postcss.config.js
 
