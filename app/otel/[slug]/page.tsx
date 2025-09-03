@@ -12,6 +12,24 @@ interface HotelPageProps {
   }
 }
 
+
+export async function generateStaticParams() {
+  // Örnek slug listesi (backend’den veya sabit)
+  return [
+    { slug: "wome-deluxe" },
+    { slug: "angels-marmaris" },
+    { slug: "adenya-resort" },
+    { slug: "sah-inn-paradise" },
+    { slug: "the-oba" },
+    { slug: "adin-beach" },
+    { slug: "bera-alanya" },
+    { slug: "rizom-beach" },
+    { slug: "selge-beach" },
+    { slug: "royal-teos" },
+    { slug: "rizom-tatil-koyu" }
+  ]
+}
+
 export default function HotelPage({ params }: HotelPageProps) {
   const hotel = hotels.find(h => h.slug === params.slug)
 
@@ -68,7 +86,7 @@ export default function HotelPage({ params }: HotelPageProps) {
           alt={hotel.name}
           className="w-full h-full object-cover"
         />
-        
+
         <div className="absolute inset-0 z-20 flex items-center">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl text-white">
@@ -77,23 +95,22 @@ export default function HotelPage({ params }: HotelPageProps) {
                   {[...Array(5)].map((_, i) => (
                     <Star
                       key={i}
-                      className={`w-6 h-6 ${
-                        i < Math.floor(hotel.rating)
+                      className={`w-6 h-6 ${i < Math.floor(hotel.rating)
                           ? "text-yellow-400 fill-current"
                           : "text-gray-300"
-                      }`}
+                        }`}
                     />
                   ))}
                 </div>
                 <span className="text-xl font-medium">{hotel.rating}</span>
               </div>
-              
+
               <h1 className="text-6xl font-bold mb-4">{hotel.name}</h1>
               <p className="text-2xl mb-6 text-gray-200 flex items-center">
                 <MapPin className="w-6 h-6 mr-2" />
                 {hotel.location}
               </p>
-              
+
               {/* <div className="flex items-center space-x-4">
                 <Link href={`/otel/${hotel.slug}/rezervasyon`}>
                   <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
