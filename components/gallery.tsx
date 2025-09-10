@@ -29,7 +29,7 @@ const Gallery = ({ hotel }: { hotel: Hotel }) => {
               <Button variant="outline" onClick={() => handleSingleImage(singleImage ? singleImage > 1 ? singleImage - 1 : 1 : 1)} className="absolute -left-1 top-1/2 transform -translate-y-1/2 z-30 md:w-12 md:h-12 w-8 h-8 md:p-0 p-2 rounded-full">
                 <ChevronLeft className="w-6 h-6" />
               </Button>
-              <img src={`/hotelImages/${hotel.imageSlug}_${singleImage}.jpg`} alt={hotel.name} className="w-[calc(100%-4rem)] md:w-[calc(100%-8rem)] h-full object-cover  md:m-4 m-4 rounded-lg" />
+              <img src={`hotelImages/${hotel.imageSlug}_${singleImage}.jpg`} alt={hotel.name} className="w-[calc(100%-4rem)] md:w-[calc(100%-8rem)] h-full object-cover  md:m-4 m-4 rounded-lg" />
               <Button variant="outline" onClick={() => handleSingleImage(singleImage ? singleImage < 12 ? singleImage + 1 : 1 : 1)} className="absolute -right-1 top-1/2 transform -translate-y-1/2 z-30 md:w-12 md:h-12 w-8 h-8 md:p-0 p-2 rounded-full">
                 <ChevronRight className="w-6 h-6" />
               </Button>
