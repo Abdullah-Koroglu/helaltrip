@@ -1,12 +1,10 @@
 const review = require("@/public/reviews.json")
-import { Header } from "@/components/header"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
 import { Star } from "lucide-react"
 import Link from "next/link"
 const Reviews = () => {
   return (
     <>
-    <Header />
     <div className="container mx-auto px-4 mt-12">
       <Link target="_blank" href="https://www.google.com/search?sca_esv=21d142fe9e0fef6b&rlz=1C1ONGR_trTR1096TR1096&sxsrf=AE3TifONluydChVe4v0wnuLNa2o-0zgAVA:1756908875128&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E-9P16DJLk8INtZhsUGN1m9MxbQDagele8zYIzSzro3plJ7kO0V7IwaY_9NFKnt0I9ecBo7KpVcf6w6-o61OY-9wNToKftlH2-hAfqs6CnMJURzruQ%3D%3D&q=Helaltrip+Turizm+Yorumlar&sa=X&ved=2ahUKEwijiJ7L47yPAxWnBtsEHR9oNeEQ0bkNegQIKBAE&biw=2048&bih=1044&dpr=1.25">
         <p className="text-xl text-center text-blue-600 mb-8">Google'da yorumları gör</p>

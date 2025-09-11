@@ -1,11 +1,8 @@
 // app/otel/[slug]/page.tsx
 import { notFound } from "next/navigation"
 import { hotels, Hotel } from "@/lib/hotel-data"
-import { Header } from "@/components/header"
-import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Star, MapPin, Wifi, Car, Utensils, Dumbbell, Users, Heart, Phone, Mail, Home, Building } from "lucide-react"
-import Link from "next/link"
+import { Star, MapPin, Wifi, Car, Utensils, Dumbbell, Users, Heart, Home, Building } from "lucide-react"
 import Gallery from "@/components/gallery"
 
 interface HotelPageProps {
@@ -64,8 +61,7 @@ export default function HotelPage({ params }: HotelPageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Header />
+    <div className="min-h-screen bg-background text-primary">
 
       {/* Hero Banner */}
       <div className="relative h-[500px] overflow-hidden">
@@ -86,7 +82,7 @@ export default function HotelPage({ params }: HotelPageProps) {
                       key={i}
                       className={`w-6 h-6 ${i < Math.floor(hotel.rating)
                           ? "text-yellow-400 fill-current"
-                          : "text-gray-300"
+                          : "text-white"
                         }`}
                     />
                   ))}
@@ -95,7 +91,7 @@ export default function HotelPage({ params }: HotelPageProps) {
               </div>
 
               <h1 className="text-6xl font-bold mb-4">{hotel.name}</h1>
-              <p className="text-2xl mb-6 text-gray-200 flex items-center">
+              <p className="text-2xl mb-6 text-white flex items-center">
                 <MapPin className="w-6 h-6 mr-2" />
                 {hotel.location}
               </p>
@@ -117,17 +113,17 @@ export default function HotelPage({ params }: HotelPageProps) {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-12 text-primary">
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-8">
             {/* Description */}
             <Card>
               <CardHeader>
-                <CardTitle>Otel Hakkında</CardTitle>
+                <CardTitle className="text-primary">Otel Hakkında</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-700 leading-relaxed text-lg">
+                <p className="text-primary/70 leading-relaxed text-lg">
                   {hotel.description}
                 </p>
               </CardContent>
@@ -138,7 +134,7 @@ export default function HotelPage({ params }: HotelPageProps) {
             {/* YouTube Video */}
             <Card>
               <CardHeader>
-                <CardTitle>Otel Tanıtım Videosu</CardTitle>
+                <CardTitle className="text-primary">Otel Tanıtım Videosu</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="relative aspect-video rounded-lg overflow-hidden">
@@ -155,14 +151,14 @@ export default function HotelPage({ params }: HotelPageProps) {
             {/* Features */}
             <Card>
               <CardHeader>
-                <CardTitle>Özellikler</CardTitle>
+                <CardTitle className="text-primary">Özellikler</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="grid md:grid-cols-2 gap-4">
                   {hotel.features.map((feature, index) => (
-                    <div key={index} className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                      <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                        <Heart className="w-4 h-4 text-blue-600" />
+                    <div key={index} className="flex items-center space-x-3 p-3 bg-primary/10 rounded-lg">
+                      <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
+                        <Heart className="w-4 h-4 text-primary" />
                       </div>
                       <span className="font-medium">{feature}</span>
                     </div>
@@ -185,7 +181,7 @@ export default function HotelPage({ params }: HotelPageProps) {
                     const Icon = amenityIcons[amenity] || MapPin
                     return (
                       <div key={index} className="flex items-center space-x-3">
-                        <Icon className="w-5 h-5 text-blue-600" />
+                        <Icon className="w-5 h-5 text-primary" />
                         <span className="text-sm">{amenity}</span>
                       </div>
                     )

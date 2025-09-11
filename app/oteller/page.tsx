@@ -1,4 +1,3 @@
-import { Header } from '@/components/header'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { hotels } from '@/lib/hotel-data'
@@ -9,10 +8,9 @@ import React from 'react'
 const page = () => {
   return (
     <>
-      <Header />
       <div className="container mx-auto px-4 mt-12 pb-12">
-        <h1 className="text-4xl font-bold text-center text-gray-900 mb-4">Oteller</h1>
-        <p className="text-xl text-center text-gray-600 mb-4">Türkiye'nin en güzel helal konseptli otelleri</p>
+        <h1 className="text-4xl font-bold text-center text-primary mb-4">Oteller</h1>
+        <p className="text-xl text-center text-primary/70 mb-4">Türkiye'nin en güzel helal konseptli otelleri</p>
         <div className="grid md:grid-cols-3 gap-8">
           {hotels.map((hotel: any) => (
             <Card key={hotel.id} className="overflow-hidden hover:shadow-xl transition-shadow">
@@ -40,7 +38,7 @@ const page = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+                <p className="text-primary/70 text-sm mb-4 line-clamp-2">
                   {hotel.description}
                 </p>
                 <div className="flex items-center justify-between">
@@ -48,7 +46,7 @@ const page = () => {
                     {hotel.features.slice(0, 2).map((feature: any, index: any) => (
                       <span
                         key={index}
-                        className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded"
+                        className="bg-primary/10 text-primary text-xs px-2 py-1 rounded"
                       >
                         {feature}
                       </span>
