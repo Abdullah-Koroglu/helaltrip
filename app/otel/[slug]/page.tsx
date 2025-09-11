@@ -173,7 +173,7 @@ export default function HotelPage({ params }: HotelPageProps) {
             {/* Amenities */}
             <Card>
               <CardHeader>
-                <CardTitle>Otel Olanakları</CardTitle>
+                <CardTitle className="text-primary">Otel Olanakları</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-3">
