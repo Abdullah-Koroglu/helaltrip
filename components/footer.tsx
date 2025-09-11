@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center gap-2 font-bold text-xl">
-              <Image src="logo-w.png" alt="HelaTrip" width={240} height={32} />
+              <Image src="logo-w.png" alt="Helaltrip" width={240} height={32} />
             </div>
             <p className="text-sm text-primary-foreground/80 leading-relaxed">
               Türkiye'nin en güzel otellerinde unutulmaz tatil deneyimleri sunan güvenilir turizm acenteniz.
