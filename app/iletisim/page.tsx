@@ -53,19 +53,19 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Telefon",
-      details: ["+90 533 888 99 99", "+90 242 123 45 67"],
+      details: ["+90 533 818 99 58"],
       description: "7/24 müşteri hizmetleri"
     },
     {
       icon: Mail,
       title: "E-posta",
-      details: ["info@helatrip.com", "rezervasyon@helatrip.com"],
+      details: ["info@helaltrip.com"],
       description: "24 saat içinde yanıt"
     },
     {
       icon: MapPin,
       title: "Adres",
-      details: ["Atatürk Mahallesi, Turizm Caddesi No:123", "07400 Alanya/Antalya"],
+      details: ["Akşemsettin, Vatanperver Sk. Ata Apt No:2/1 34080 Fatih/İstanbul"],
       description: "Merkez ofisimiz"
     },
     {
@@ -141,6 +141,7 @@ const Contact = () => {
                   <div className="space-y-2">
                     <Label htmlFor="name">Ad Soyad *</Label>
                     <Input
+                      className="text-primary bg-white"
                       id="name"
                       value={formData.name}
                       onChange={(e: any) => handleInputChange('name', e.target.value)}
@@ -151,6 +152,7 @@ const Contact = () => {
                   <div className="space-y-2">
                     <Label htmlFor="email">E-posta *</Label>
                     <Input
+                      className="text-primary bg-white"
                       id="email"
                       type="email"
                       value={formData.email}
@@ -165,6 +167,7 @@ const Contact = () => {
                   <div className="space-y-2">
                     <Label htmlFor="phone">Telefon</Label>
                     <Input
+                      className="text-primary bg-white"
                       id="phone"
                       value={formData.phone}
                       onChange={(e: any) => handleInputChange('phone', e.target.value)}
@@ -174,7 +177,7 @@ const Contact = () => {
                   <div className="space-y-2">
                     <Label htmlFor="subject">Konu</Label>
                     <Select value={formData.subject} onValueChange={(value: any) => handleInputChange('subject', value)}>
-                      <SelectTrigger>
+                      <SelectTrigger className="text-primary bg-white">
                         <SelectValue placeholder="Konu seçin" />
                       </SelectTrigger>
                       <SelectContent>
@@ -191,6 +194,7 @@ const Contact = () => {
                 <div className="space-y-2">
                   <Label htmlFor="message">Mesaj *</Label>
                   <Textarea
+                    className="text-primary bg-white"
                     id="message"
                     value={formData.message}
                     onChange={(e: any) => handleInputChange('message', e.target.value)}
