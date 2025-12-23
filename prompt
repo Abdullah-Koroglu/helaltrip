@@ -1,0 +1,23 @@
+bu uygulamayi, Rezervasyon almaya uygun bir hale getir. fiyatlari fiyat api'si ile al. 
+api detaylari bu sekilde:
+http: //45.195.75.246:3030/api/hotel-prices
+[
+  {
+    "hotelId":"135",
+    "checkin":"2026-06-06",
+    "checkout":"2026-06-12",
+    "adults":"2",
+    "children":"1",
+    "childrenAges":[10],
+    "discountPercentage":"0",
+    "currency":"TRY",
+    "customerCountryCode":"TR"
+  }
+]
+hotel id, hotel bilgilerinde priceId olarak tutuluyor.
+
+ana sayfada otel arama ve tarih ve kisi sayisi alma alani ac. otelin detay sayfasinda tarih ve kisi sayisi alma alani ac.
+kisi sayisi ve tarih secildikten sonra fiyat api'si ile fiyat alinir ve otel detay sayfasinda gosterilir.
+daha sonra rezervasyon yapma sayfasina gecilir ve orda musteri bilgilier alinir.
+daha sonra odeme sayfaina gecilir. bu sayfada kredi karti bilgilier ve email bilgilier alinir.
+odeme gerceklesince basari sayfasina gecilir, basarisiz olursa hata sayfasina gecilir.

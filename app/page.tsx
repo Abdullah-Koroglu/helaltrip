@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { hotels } from "@/lib/hotel-data"
 import { Star, Shield, MapPin, Heart, Users, Award } from "lucide-react"
 import Link from "next/link"
+import { BookingSearchForm } from "@/components/booking-search-form"
 const review = require("@/public/reviews.json")
 
 export default function HomePage() {
@@ -12,6 +13,15 @@ export default function HomePage() {
       
       {/* Hero Slider */}
       <HeroSlider />
+
+      {/* Search Form Section */}
+      <section className="py-8 bg-white border-b">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <BookingSearchForm />
+          </div>
+        </div>
+      </section>
 
       {/* Features Section */}
       <section className="py-20 bg-white">

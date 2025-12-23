@@ -34,7 +34,7 @@ export function Header() {
             </Link>
           </div>
           <div className="flex items-center space-x-4">
-            <p className="text-sm text-primary">
+            <p className="text-sm text-primary hidden md:block">
             Türkiye'nin en güzel otellerinde unutulmaz deneyimler yaşayın
             </p>
           </div>
@@ -44,9 +44,9 @@ export function Header() {
         <div className="flex items-center justify-between py-4">
           <Link href="/" className="text-2xl font-bold text-red-600">
             <Image
-              src="logo.png"
+              src="/logo.png"
               alt="Helaltrip"
-              className="h-12 object-contain"
+              className="h-12 object-contain bg-red"
               height={80}
               width={200}
             />

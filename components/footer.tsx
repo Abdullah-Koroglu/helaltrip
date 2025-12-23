@@ -75,11 +75,11 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-primary-foreground/80">
-              © 2024 HelaTrip. Tüm hakları saklıdır.
+              © 2024 Helaltrip. Tüm hakları saklıdır.
             </p>
             <div className="flex gap-6 text-sm">
-              <a href="#" className="hover:text-secondary smooth-transition">Gizlilik Politikası</a>
-              <a href="#" className="hover:text-secondary smooth-transition">Kullanım Şartları</a>
+              
+              {/* tursab belgesi */}
             </div>
           </div>
         </div>

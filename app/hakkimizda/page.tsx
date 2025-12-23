@@ -4,10 +4,10 @@ import { Button } from "@/components/ui/button";
 
 const About = () => {
   const stats = [
-    { number: "50+", label: "Partner Otel" },
+    // { number: "50+", label: "Partner Otel" },
     { number: "10K+", label: "Mutlu Müşteri" },
-    { number: "15+", label: "Yıllık Deneyim" },
-    { number: "24/7", label: "Destek Hizmeti" }
+    { number: "10+", label: "Yıllık Deneyim" },
+    { number: "7/24", label: "Destek Hizmeti" }
   ];
 
   const values = [
@@ -24,7 +24,7 @@ const About = () => {
     {
       icon: CheckCircle,
       title: "Güvenilir Partnerlik",
-      description: "15 yıllık deneyimimizle güvenilir ve şeffaf hizmet anlayışımızı sürdürüyoruz."
+      description: "10 yıllık deneyimimizle güvenilir ve şeffaf hizmet anlayışımızı sürdürüyoruz."
     },
     {
       icon: Clock,
@@ -65,7 +65,8 @@ const About = () => {
         <div className="relative z-10 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Hakkımızda</h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
-            15 yıldır Türkiye'nin en güzel otellerinde unutulmaz tatil deneyimleri yaratıyoruz
+          Turizm alanında 10 yılı aşkın tecrübemizle, %100 müşteri memnuniyetini ilke edinerek hizmet veriyoruz.
+
           </p>
         </div>
       </section>
@@ -73,7 +74,7 @@ const About = () => {
       {/* Stats */}
       <section className="py-20 bg-muted/30 shadow-md">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-primary mb-2">{stat.number}</div>
@@ -90,25 +91,17 @@ const About = () => {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-6">Hikayemiz</h2>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                2009 yılında kurduğumuz HelaTrip, Türkiye'nin en güzel destinasyonlarında kaliteli 
-                tatil deneyimleri sunma vizyonuyla yola çıktı. Bugün 50'den fazla partner otelimiz 
-                ve binlerce mutlu müşterimizle sektörün güvenilir markalarından biri haline geldik.
-              </p>
+              <p className="text-xl text-start leading-relaxed">
+              Helaltrip Turizm, TURSAB üyesi olarak dünya çapındaki müşterilerine seyahat alternatifleri üretmek üzere kurulmuştur. Şirket; Türkiye’de ve yurt dışında yüzlerce tur hazırlayıp müşterilerine sunmaktadır. Helaltrip Turizm’in yurt içinde otel ve tatil köyü, birçok havayolu şirketiyle anlaşmaları bulunmaktadır ve araba kiralama hizmetleri sunmaktadır. Yurtiçi ve yurtdışı turlardan, kültür turlarına, mavi yolculuktan kayak paketlerine, gençlere yönelik programlardan kurumsal hizmetlere, uçak biletinden araba kiralama hizmetlerine kadar uzanan seyahat ürünleri ile çevresinde kısa sürede kendini göstermiştir.</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
                 <h3 className="text-3xl font-bold mb-6">Vizyonumuz</h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  Türkiye'nin turizm potansiyelini en iyi şekilde değerlendirerek, yerli ve yabancı 
-                  turistlere unutulmaz deneyimler yaşatmak ve ülke turizmine katkıda bulunmak.
-                </p>
+                Çalıştığı alanda kendini sürekli yenileyerek ve geliştirerek üstlenmiş olduğu her iş ve organizasyonun tüm detaylarını planlamak ve amacına ulaşmasını sağlamak kadromuzun görevidir. Alacağınız hizmetin kusursuz olmasını istiyorsanız. Hayal ettiğiniz, tasarladığınız, düşlediğiniz, fakat parçalarını bulup birleştiremediğiniz her şeyi bize bırakın</p>
                 <h3 className="text-3xl font-bold mb-6">Misyonumuz</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Müşterilerimizin beklentilerini aşan kaliteli hizmet sunarak, güven dolu bir tatil 
-                  deneyimi yaratmak ve uzun vadeli müşteri ilişkileri kurmak.
-                </p>
+                <p className="text-muted-foreground leading-relaxed">Gelişmekte olan dinamik turizm dünyasını yakından takip ederek, hızlı adaptasyonlarla müşterilerimize her zaman üstün hizmet, servis ve kaliteyi, yüksek eğitimli profesyonel bir takım ruhu içinde sunmaktır. Vizyonumuz ise , müşterilerimiz için değer yaratmak, beklentilerine kalite ve istikrarla karşılık vermek ve çözüm ortakları olmak.</p>
               </div>
               <div className="relative">
                 <img 
@@ -150,7 +143,7 @@ const About = () => {
       </section>
 
       {/* Team */}
-      <section className="py-20 shadow-md">
+      {/* <section className="py-20 shadow-md">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6">Ekibimiz</h2>
@@ -176,7 +169,7 @@ const About = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA */}
       <section className="py-20 hero-gradient text-white shadow-md">

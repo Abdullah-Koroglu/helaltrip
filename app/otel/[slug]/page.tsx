@@ -4,6 +4,12 @@ import { hotels, Hotel } from "@/lib/hotel-data"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Star, MapPin, Wifi, Car, Utensils, Dumbbell, Users, Heart, Home, Building } from "lucide-react"
 import Gallery from "@/components/gallery"
+import { HotelBookingSidebar } from "@/components/hotel-booking-sidebar"
+import { fetchHotelDetails } from "@/lib/price-api"
+import HotelStar from "@/components/star"
+import HotelInfoCard from "@/components/hotelDetail"
+import hotelDetails from "@/lib/hotel-details"
+
 
 interface HotelPageProps {
   params: {
@@ -16,120 +22,54 @@ export async function generateStaticParams() {
 }
 
 
-export default function HotelPage({ params }: HotelPageProps) {
+export default async function HotelPage({ params }: HotelPageProps) {
   const hotel: Hotel | undefined = hotels.find(h => h.slug === params.slug)
+
+  const data = hotelDetails[hotel?.id as keyof typeof hotelDetails] || hotelDetails["wome-deluxe"]
 
   if (!hotel) {
     notFound()
   }
 
-  const amenityIcons: { [key: string]: any } = {
-    "Ücretsiz WiFi": Wifi,
-    "Havuz": Car,
-    "Spa": Car,
-    "Restoran": Utensils,
-    "Bar": Utensils,
-    "Gym": Dumbbell,
-    "Su Sporları": Car,
-    "Rüzgar Sörfü": Car,
-    "Plaj Bar": Utensils,
-    "Çocuk Havuzu": Car,
-    "Animasyon": Users,
-    "Deniz Manzarası": MapPin,
-    "Özel Plaj": Car,
-    "Çocuk Kulübü": Users,
-    "Mini Golf": Dumbbell,
-    "Tenis Kortu": Dumbbell,
-    "Aile Havuzu": Car,
-    "Dağ Manzarası": MapPin,
-    "Doğa Yürüyüşü": MapPin,
-    "Tarihi Manzara": MapPin,
-    "Antik Kent Turu": MapPin,
-    "Özel Villa": Home,
-    "Infinity Havuz": Car,
-    "Spa Merkezi": Car,
-    "Golf Sahası": Dumbbell,
-    "Helikopter Transfer": Car,
-    "Yat Limanı": Car,
-    "Lüks Restoran": Utensils,
-    "Merkezi Konum": MapPin,
-    "İş Merkezi": Building,
-    "Toplantı Salonu": Building,
-    "Tatil Köyü": Home,
-    "Çoklu Havuz": Car,
-    "Spor Alanları": Dumbbell,
-  }
+  // const { data: hotelDetails, error: hotelDetailsError } = await fetchHotelDetails(hotel.priceId) as { data: any | null, error: string | null }
+  // if (hotelDetailsError) {
+  //   console.error(hotelDetailsError)
+  // }
+
+  // console.log({ hotelDetails: hotelDetails?.data[0]?.facilities })
 
   return (
     <div className="min-h-screen bg-background text-primary">
 
       {/* Hero Banner */}
-      <div className="relative h-[500px] overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent z-10" />
-        <img
-          src={hotel.image}
-          alt={hotel.name}
-          className="w-full h-full object-cover"
-        />
-
-        <div className="absolute inset-0 z-20 flex items-center">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl text-white">
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="flex items-center">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className={`w-6 h-6 ${i < Math.floor(hotel.rating)
-                          ? "text-yellow-400 fill-current"
-                          : "text-white"
-                        }`}
-                    />
-                  ))}
-                </div>
-                <span className="text-xl font-medium">{hotel.rating}</span>
-              </div>
-
-              <h1 className="text-6xl font-bold mb-4">{hotel.name}</h1>
-              <p className="text-2xl mb-6 text-white flex items-center">
-                <MapPin className="w-6 h-6 mr-2" />
-                {hotel.location}
-              </p>
-
-              {/* <div className="flex items-center space-x-4">
-                <Link href={`/otel/${hotel.slug}/rezervasyon`}>
-                  <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-                    Rezervasyon Yap
-                  </Button>
-                </Link>
-                <div className="text-2xl font-bold">
-                  ₺{hotel.price.toLocaleString()}
-                  <span className="text-lg font-normal"> / gece</span>
-                </div>
-              </div> */}
-            </div>
-          </div>
+      <div className="relative md:p-10">
+        <div className="flex" >
+          <Gallery hotel={hotel} />
         </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent z-10" />
+        <HotelStar hotel={hotel} />
       </div>
 
       {/* Content */}
       <div className="container mx-auto px-4 py-12 text-primary">
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className=" gap-8">
           {/* Main Content */}
-          <div className="lg:col-span-2 space-y-8">
-            {/* Description */}
-            <Card>
+          {/* <div className="lg:col-span-2 space-y-8">
+            {/* Booking Sidebar */}
+          {/* <HotelBookingSidebar hotel={hotel} /> */}
+
+
+          <div className="space-y-6 p-0">
+          {hotelDetails[hotel?.id as keyof typeof hotelDetails] &&
+            <Card className="p-0">
               <CardHeader>
                 <CardTitle className="text-primary">Otel Hakkında</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-primary/70 leading-relaxed text-lg">
-                  {hotel.description}
-                </p>
+              <CardContent className="p-0">
+                 <HotelInfoCard data={data as any}/>
               </CardContent>
             </Card>
-
-            <Gallery hotel={hotel} />
+            }
 
             {/* YouTube Video */}
             <Card>
@@ -149,7 +89,7 @@ export default function HotelPage({ params }: HotelPageProps) {
             </Card>
 
             {/* Features */}
-            <Card>
+            {/* <Card>
               <CardHeader>
                 <CardTitle className="text-primary">Özellikler</CardTitle>
               </CardHeader>
@@ -165,31 +105,9 @@ export default function HotelPage({ params }: HotelPageProps) {
                   ))}
                 </div>
               </CardContent>
-            </Card>
+            </Card> */}
           </div>
 
-          {/* Sidebar */}
-          <div className="space-y-6">
-            {/* Amenities */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-primary">Otel Olanakları</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-3">
-                  {hotel.amenities.map((amenity, index) => {
-                    const Icon = amenityIcons[amenity] || MapPin
-                    return (
-                      <div key={index} className="flex items-center space-x-3">
-                        <Icon className="w-5 h-5 text-primary" />
-                        <span className="text-sm">{amenity}</span>
-                      </div>
-                    )
-                  })}
-                </div>
-              </CardContent>
-            </Card>
-          </div>
         </div>
       </div>
     </div>
