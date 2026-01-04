@@ -12,6 +12,8 @@ export interface Hotel {
   features: string[];
   imageSlug: string;
   priceId: string;
+  agencyLink?: string;
+  mapLink?: string;
 }
 
 export const hotels: Hotel[] = [
@@ -28,7 +30,10 @@ export const hotels: Hotel[] = [
     price: 2500,
     rating: 4.8,
     amenities: ["Ücretsiz WiFi", "Havuz", "Spa", "Restoran", "Bar", "Gym"],
-    features: ["Deniz Manzarası", "Merkezi Konum", "24/7 Hizmet", "Özel Plaj"]
+    features: ["Deniz Manzarası", "Merkezi Konum", "24/7 Hizmet", "Özel Plaj"],
+    agencyLink: "https://www.wome.com.tr/tr/acenteler",
+    mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4352.496438740863!2d31.754110076796746!3d36.63032297229603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14dc98853d3ee249%3A0xbbfd95bcfad09755!2sWome%20Deluxe!5e1!3m2!1str!2str!4v1767528434808!5m2!1str!2str",
+    
   },
   {
     id: "angels-marmaris",
@@ -43,7 +48,7 @@ export const hotels: Hotel[] = [
     price: 2200,
     rating: 5,
     amenities: ["Deniz Manzarası", "Özel Plaj", "Su Sporları", "Çocuk Kulübü", "Animasyon"],
-    features: ["All Inclusive", "Aile Dostu", "Doğa İçinde", "Sakin Atmosfer"]
+    features: ["All Inclusive", "Aile Dostu", "Doğa İçinde", "Sakin Atmosfer"],
   },
   {
     id: "adenya-resort",

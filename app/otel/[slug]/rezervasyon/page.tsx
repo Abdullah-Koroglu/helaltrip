@@ -108,18 +108,18 @@ export default function BookingPage() {
 
       const response = await fetchHotelPrice(priceRequest)
 
-      if (response.error) {
-        console.error("Price fetch error:", response.error)
-      } else {
-        const extractedPrice = response.price || response.totalPrice || response.amount || response.totalAmount || null
-        if (extractedPrice !== null && extractedPrice !== undefined) {
-          // Convert to number if it's a string
-          const priceValue = typeof extractedPrice === 'string' ? parseFloat(extractedPrice) : extractedPrice
-          if (!isNaN(priceValue) && priceValue > 0) {
-            setPrice(priceValue)
-          }
-        }
-      }
+      // if (response.error) {
+      //   console.error("Price fetch error:", response.error)
+      // } else {
+      //   const extractedPrice = response?.price || response.totalPrice || response.amount || response.totalAmount || null
+      //   if (extractedPrice !== null && extractedPrice !== undefined) {
+      //     // Convert to number if it's a string
+      //     const priceValue = typeof extractedPrice === 'string' ? parseFloat(extractedPrice) : extractedPrice
+      //     if (!isNaN(priceValue) && priceValue > 0) {
+      //       setPrice(priceValue)
+      //     }
+      //   }
+      // }
     } catch (error) {
       console.error("Error fetching price:", error)
     } finally {

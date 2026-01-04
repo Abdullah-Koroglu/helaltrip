@@ -276,3 +276,35 @@ All colors MUST be HSL.
     background: #6b7280;
   }
 }
+
+/* globals.css */
+@keyframes attention-pulse {
+  0%, 90%, 100% {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  }
+  92% {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  }
+  94% {
+    transform: translateY(-6px) rotate(0.5deg);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+  }
+  96% {
+    transform: translateY(-3px) rotate(-0.5deg);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  }
+  98% {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  }
+}
+
+.animate-attention {
+  animation: attention-pulse 3s infinite;
+}
+
+.animate-attention:hover {
+  animation-play-state: paused;
+}

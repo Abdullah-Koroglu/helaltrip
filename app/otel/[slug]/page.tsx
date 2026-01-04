@@ -60,13 +60,40 @@ export default async function HotelPage({ params }: HotelPageProps) {
 
 
           <div className="space-y-6 p-0">
-          {hotelDetails[hotel?.id as keyof typeof hotelDetails] &&
-            <Card className="p-0">
+            {hotelDetails[hotel?.id as keyof typeof hotelDetails] &&
+              <Card className="p-0">
+                <CardHeader>
+                  <CardTitle className="text-primary">Otel Hakkında</CardTitle>
+                </CardHeader>
+                <CardContent className="p-0">
+                  <HotelInfoCard data={data as any} />
+                </CardContent>
+              </Card>
+            }
+            {
+
+              hotel.mapLink &&
+              <Card className="p-0">
               <CardHeader>
-                <CardTitle className="text-primary">Otel Hakkında</CardTitle>
+                <CardTitle className="text-primary">Harita</CardTitle>
               </CardHeader>
               <CardContent className="p-0">
-                 <HotelInfoCard data={data as any}/>
+                <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
+                  <iframe
+                    src={hotel.mapLink}
+                    style={{
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      width: '100%',
+                      height: '100%',
+                      border: 0,
+                    }}
+                    loading="lazy"
+                    allowFullScreen
+                  />
+                </div>
+
               </CardContent>
             </Card>
             }

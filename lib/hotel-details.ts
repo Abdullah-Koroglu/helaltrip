@@ -2492,6 +2492,2346 @@ const hotelDetails = {
         ]
       }
     ]
+  },
+  "sah-inn-paradise": {
+    "title": "Sezon Bilgisi",
+    "startDate": "8-Mayıs-2026",
+    "endDate": "31-Ekim-2026",
+    "active": true,
+    "generalInfo": {
+      "themes": [
+        {
+          "icon": "fa-regular fa-circle-check",
+          "label": "Aile Oteli",
+          "description": null,
+          "subDescriptions": []
+        },
+        {
+          "icon": "fa-regular fa-circle-check",
+          "label": "Denize Sıfır",
+          "description": null,
+          "subDescriptions": []
+        },
+        {
+          "icon": "fa-regular fa-circle-check",
+          "label": "Çocuk Dostu",
+          "description": null,
+          "subDescriptions": []
+        }
+      ],
+      "generalInfoText": "<p>2007 yılında yapılan Şah Inn Paradise Antalya, Kumluca bölgesinde bulunmaktadır. Şah Inn Paradise denize sıfır konumuyla dikkat çekmektedir. Tesis çocukların da konforunu düşünmekte olup, bebek bakımı hizmeti sunmaktadır.</p><p>400 m uzunluğundaki sahile sahip tesisin kendine ait iskelesi vardır. 9 adet açık yüzme havuzu ile keyifli bir tatil yaşayabilirsiniz. Arzu ederseniz tesis içerisinde bilardo, tenis oynayabilirsiniz.</p><p>167000 m2 alanda kurulmuş olan Şah Inn Paradise otel alkolsüz herşey dahil konseptiyle misafirlerimize hizmet vermektedir. Tesiste bulunan ala carte restaurant, açık restaurant, kapalı restaurantta yemeklerinizi yiyebilirsiniz.</p><p>Odanızda bulunan merkezi klima/split klima ile oda sıcaklığınız ayarlanabilir. Konaklamanız boyunca faydalanabileceğiniz TV, kablosuz internet, telefon ve oda kasası standart odalarda mevcuttur. Oda servisi hizmeti bulunmaktadır.</p><p>Tesis içerisinde yer alan spa, jakuzi ve masaj hizmetlerinden faydalanarak rahatlayabilir ve kendinizi yenilenmiş hissedebilirsiniz. Otel Antalya Havaalanı'na 105 km, Antalya'ya 90 km, Kumluca'ya 12 km uzaklıktadır.</p>",
+      "facilities": [
+        {
+          "label": "Kablosuz İnternet",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Oda Kasası",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Oda Servisi",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Telefon",
+          "paid": false,
+          "description": null
+        }
+      ]
+    },
+    "importantInfo": {
+      "checkInTime": "16:00",
+      "checkOutTime": "11:00",
+      "desc": "<p>Tesis alkolsüz herşey dahil konseptiyle hizmet vermektedir.</p><p>Otel Antalya Havaalanı'na 105 km, Antalya şehir merkezine 90 km, Kumluca'ya 12 km uzaklıktadır.</p>"
+    },
+    "facilityCategories": [
+      {
+        "title": {
+          "icon": "fa-regular fa-bell-concierge",
+          "label": "Yeme & İçme",
+          "description": null,
+          "subDescriptions": null
+        },
+        "freeText": "<p>Alkolsüz herşey dahil konseptiyle hizmet verilmektedir. Tesiste ala carte restaurant, açık restaurant ve kapalı restaurant bulunmaktadır.</p>",
+        "facilities": [
+          {
+            "label": "Ala Carte Restaurant",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Açık Restaurant",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Kapalı Restaurant",
+            "paid": false,
+            "description": null
+          }
+        ]
+      },
+      {
+        "title": {
+          "icon": "fa-regular fa-futbol",
+          "label": "Spor & Eğlence",
+          "description": null,
+          "subDescriptions": null
+        },
+        "freeText": "<p>Tesis içerisinde bilardo ve tenis oynayabilirsiniz.</p>",
+        "facilities": [
+          {
+            "label": "Bilardo",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Tenis",
+            "paid": false,
+            "description": null
+          }
+        ]
+      },
+      {
+        "title": {
+          "icon": "fa-regular fa-umbrella-beach",
+          "label": "Plaj",
+          "description": null,
+          "subDescriptions": null
+        },
+        "freeText": "<p>400 m uzunluğunda sahile sahiptir. Denize sıfır konumdadır ve kendine ait iskelesi bulunmaktadır.</p>",
+        "facilities": [
+          {
+            "label": "İskele",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Denize Sıfır",
+            "paid": false,
+            "description": null
+          }
+        ]
+      },
+      {
+        "title": {
+          "icon": "fa-solid fa-baby",
+          "label": "Çocuk & Bebek",
+          "description": null,
+          "subDescriptions": null
+        },
+        "freeText": "<p>Tesis çocukların konforunu düşünmekte olup, bebek bakımı hizmeti sunmaktadır.</p>",
+        "facilities": [
+          {
+            "label": "Bebek Bakımı",
+            "paid": false,
+            "description": null
+          }
+        ]
+      },
+      {
+        "title": {
+          "icon": "fa-regular fa-spa",
+          "label": "Spa & Wellness",
+          "description": null,
+          "subDescriptions": null
+        },
+        "freeText": "<p>Tesis içerisinde yer alan spa, jakuzi ve masaj hizmetlerinden faydalanabilirsiniz.</p>",
+        "facilities": [
+          {
+            "label": "SPA",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Jakuzi",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Masaj",
+            "paid": false,
+            "description": null
+          }
+        ]
+      },
+      {
+        "title": {
+          "icon": "fa-solid fa-water",
+          "label": "Havuz",
+          "description": null,
+          "subDescriptions": null
+        },
+        "freeText": "<p>9 adet açık yüzme havuzu bulunmaktadır.</p>",
+        "facilities": [
+          {
+            "label": "Açık Havuz",
+            "paid": false,
+            "description": "9 adet"
+          }
+        ]
+      }
+    ]
+  }, 
+  "adin-beach": {
+    "title": "Sezon Bilgisi",
+    "startDate": "06-Nisan-2026",
+    "endDate": "31-Ekim-2026",
+    "active": true,
+    "generalInfo": {
+      "themes": [
+        {
+          "icon": "fa-regular fa-circle-check",
+          "label": "Denize Sıfır",
+          "description": null,
+          "subDescriptions": []
+        },
+        {
+          "icon": "fa-regular fa-circle-check",
+          "label": "Çocuk Dostu",
+          "description": null,
+          "subDescriptions": []
+        },
+        {
+          "icon": "fa-regular fa-circle-check",
+          "label": "Aile Oteli",
+          "description": null,
+          "subDescriptions": []
+        },
+        {
+          "icon": "fa-regular fa-circle-check",
+          "label": "Su Sporları",
+          "description": null,
+          "subDescriptions": []
+        }
+      ],
+      "generalInfoText": "<p>Antalya, Alanya bölgesinde bulunan Adin Beach Hotel en son 2015 yılında yenilenmiştir. Adin Beach Hotel denize sıfır konumuyla dikkat çekmektedir. Tatiliniz boyunca çocuklarınızın güvenli bir şekilde ağırlanabilmesi için bebek bakımı bulunmaktadır.</p><p>Tesisin kendine özel kum plajı bulunmaktadır. 300 m uzunluğundaki sahile sahip tesisin kendine ait iskelesi vardır. 6 adet açık, 2 adet kapalı yüzme havuzu ile keyifli bir tatil yaşayabilirsiniz. Tesiste bulunan banana, jetski, kano, sörf, yelkenli ile su sporları yaparak keyifli dakikalar geçirebilirsiniz.</p><p>Tesiste bilardo oynanabilecek özel alanlar kurulmuştur. 27000 m2 alanda kurulmuş olan Adin Beach Hotel alkolsüz ultra herşey dahil konseptiyle misafirlerimize hizmet vermektedir. Tesis 3 adet ala carte restaurant, 2 adet kapalı restaurant ile misafirlere özel hizmet sunmaktadır.</p><p>Tesis içerisinde yer alan jakuzi, masaj hizmetlerinden faydalanarak rahatlayabilir ve kendinizi yenilenmiş hissedebilirsiniz. Aksiyon sever tatilciler için paraşüt, sörf imkanı bulunmaktadır. Otel Antalya Havaalanı'na 105 km, Gazipaşa'ya 58 km, Konaklı'ya 6 km, Alanya'ya 22 km, Antalya Merkez'e 115 km uzaklıktadır.</p><p>Tesis içerisinde bulunan doktor, fotoğrafçı, güzellik salonu, kuaför, market, araç kiralama hizmetlerinden yararlanabilirsiniz.</p>",
+      "facilities": [
+        {
+          "label": "Doktor",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Fotoğrafçı",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Güzellik Salonu",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Kuaför",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Market",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Araç Kiralama",
+          "paid": false,
+          "description": null
+        }
+      ]
+    },
+    "importantInfo": {
+      "checkInTime": "15:00",
+      "checkOutTime": "11:00",
+      "desc": "<p>Adin Beach Hotel alkolsüz ultra herşey dahil konseptiyle hizmet vermektedir.</p><p>Otel Antalya Havaalanı'na 105 km, Gazipaşa'ya 58 km, Konaklı'ya 6 km, Alanya'ya 22 km, Antalya Merkez'e 115 km uzaklıktadır.</p><p>Tesis en son 2015 yılında yenilenmiştir.</p>"
+    },
+    "facilityCategories": [
+      {
+        "title": {
+          "icon": "fa-regular fa-bell-concierge",
+          "label": "Yeme & İçme",
+          "description": null,
+          "subDescriptions": null
+        },
+        "freeText": "<p>Alkolsüz ultra herşey dahil konseptiyle hizmet verilmektedir. Tesis 3 adet ala carte restaurant ve 2 adet kapalı restaurant ile misafirlere özel hizmet sunmaktadır.</p>",
+        "facilities": [
+          {
+            "label": "Ala Carte Restaurant",
+            "paid": false,
+            "description": "3 adet"
+          },
+          {
+            "label": "Kapalı Restaurant",
+            "paid": false,
+            "description": "2 adet"
+          }
+        ]
+      },
+      {
+        "title": {
+          "icon": "fa-regular fa-futbol",
+          "label": "Spor & Eğlence",
+          "description": null,
+          "subDescriptions": null
+        },
+        "freeText": "<p>Tesiste bilardo oynanabilecek özel alanlar kurulmuştur. Aksiyon sever tatilciler için paraşüt ve sörf imkanı bulunmaktadır.</p>",
+        "facilities": [
+          {
+            "label": "Bilardo",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Paraşüt",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Sörf",
+            "paid": false,
+            "description": null
+          }
+        ]
+      },
+      {
+        "title": {
+          "icon": "fa-regular fa-umbrella-beach",
+          "label": "Plaj",
+          "description": null,
+          "subDescriptions": null
+        },
+        "freeText": "<p>Tesisin kendine özel kum plajı bulunmaktadır. 300 m uzunluğundaki sahile sahip tesisin kendine ait iskelesi vardır. Denize sıfır konumdadır.</p>",
+        "facilities": [
+          {
+            "label": "Kum Plaj",
+            "paid": false,
+            "description": "Özel plaj"
+          },
+          {
+            "label": "İskele",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Denize Sıfır",
+            "paid": false,
+            "description": null
+          }
+        ]
+      },
+      {
+        "title": {
+          "icon": "fa-solid fa-baby",
+          "label": "Çocuk & Bebek",
+          "description": null,
+          "subDescriptions": null
+        },
+        "freeText": "<p>Tatiliniz boyunca çocuklarınızın güvenli bir şekilde ağırlanabilmesi için bebek bakımı bulunmaktadır.</p>",
+        "facilities": [
+          {
+            "label": "Bebek Bakımı",
+            "paid": false,
+            "description": null
+          }
+        ]
+      },
+      {
+        "title": {
+          "icon": "fa-regular fa-spa",
+          "label": "Spa & Wellness",
+          "description": null,
+          "subDescriptions": null
+        },
+        "freeText": "<p>Tesis içerisinde yer alan jakuzi ve masaj hizmetlerinden faydalanabilirsiniz.</p>",
+        "facilities": [
+          {
+            "label": "Jakuzi",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Masaj",
+            "paid": false,
+            "description": null
+          }
+        ]
+      },
+      {
+        "title": {
+          "icon": "fa-solid fa-water",
+          "label": "Havuz",
+          "description": null,
+          "subDescriptions": null
+        },
+        "freeText": "<p>6 adet açık ve 2 adet kapalı yüzme havuzu bulunmaktadır.</p>",
+        "facilities": [
+          {
+            "label": "Açık Havuz",
+            "paid": false,
+            "description": "6 adet"
+          },
+          {
+            "label": "Kapalı Havuz",
+            "paid": false,
+            "description": "2 adet"
+          }
+        ]
+      },
+      {
+        "title": {
+          "icon": "fa-solid fa-water",
+          "label": "Su Sporları",
+          "description": null,
+          "subDescriptions": null
+        },
+        "freeText": "<p>Tesiste banana, jetski, kano, sörf, yelkenli ile su sporları yaparak keyifli dakikalar geçirebilirsiniz.</p>",
+        "facilities": [
+          {
+            "label": "Banana",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Jetski",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Kano",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Sörf",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Yelkenli",
+            "paid": false,
+            "description": null
+          }
+        ]
+      }
+    ]
+  },
+  "angels-marmaris":     {
+    "title": "Yaz Sezonu",
+    "startDate": "15-Mayıs-2026",
+    "endDate": "15-Ekim-2026",
+    "active": true,
+    "generalInfo": {
+      "themes": [
+        {
+          "icon": "fa-regular fa-circle-check",
+          "label": "Denize Sıfır",
+          "description": null,
+          "subDescriptions": []
+        },
+        {
+          "icon": "fa-regular fa-circle-check",
+          "label": "Helal Yemek",
+          "description": null,
+          "subDescriptions": []
+        },
+        {
+          "icon": "fa-regular fa-circle-check",
+          "label": "Aile Oteli",
+          "description": null,
+          "subDescriptions": []
+        },
+        {
+          "icon": "fa-regular fa-circle-check",
+          "label": "Muhafazakar",
+          "description": null,
+          "subDescriptions": []
+        },
+        {
+          "icon": "fa-regular fa-circle-check",
+          "label": "Mavi Bayraklı",
+          "description": null,
+          "subDescriptions": []
+        },
+        {
+          "icon": "fa-regular fa-circle-check",
+          "label": "Su Sporları",
+          "description": null,
+          "subDescriptions": []
+        }
+      ],
+      "generalInfoText": "<p>2011 yılında yapılan Angels Marmaris Hotel Marmaris, Bozburun bölgesinde bulunmaktadır. 85000 m2 alanda kurulmuş olan Angels Marmaris Hotel alkolsüz herşey dahil konseptiyle misafirlerimize hizmet vermektedir.</p><p>Angels Marmaris Hotel denize sıfır konumuyla dikkat çekmektedir. Sahile sahip tesisin kendine ait iskelesi vardır. Tesisin kendine özel kum plajı bulunmaktadır. Tesis 2 adet ala carte restaurant ile misafirlere özel hizmet sunmaktadır.</p><p>Açık ve kapalı yüzme havuzları ile eğlenme ve dinlenme imkanı bulabilirsiniz. Denizde sadece yüzmeyecek, banana, jetski, sörf gibi su sporlarından da faydanalabiliyor olacaksınız. Tatiliniz süresince bisiklet, sörf gibi aktiviteler ile zamanınızı değerlendirebilirsiniz.</p><p>Arzu ederseniz tesis içerisinde tenis, bowling oynayabilirsiniz. Tesis içerisinde yer alan spa, masaj hizmetlerinden faydalanarak rahatlayabilir ve kendinizi yenilenmiş hissedebilirsiniz. İhtiyacınıza göre tesisteki doktor, fotoğrafçı, güzellik salonu, kuaför, market, araç kiralama hizmetlerini kullanabilirsiniz.</p><p>Keyifli vakit geçirmeniz için tesiste bar bulunmaktadır. Otel Dalaman Havaalanı'na 120 km, Milas Havaalanı'na 150 km, Marmaris'e 30 km uzaklıktadır.</p>",
+      "facilities": [
+        {
+          "label": "Kablosuz İnternet",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "24 Saat Resepsiyon Hizmeti",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Otopark",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Klima",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "TV",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Asansör",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Mini Bar",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Saç Kurutma Makinesi",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Ücretsiz Banyo Malzemesi",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Makyaj Aynası",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Bebek Yatağı",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Emanet Kasası",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Uyandırma Servisi",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Bagaj Muhafazası",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Can Kurtaran",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Hemşire",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Doktor",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Oda Servisi",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Market",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Kuaför",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Fotoğrafçı",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Jet Ski",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Restoran (alakart)",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Çamaşırhane",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Bebek Bakımı/Çocuk Hizmetleri",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Ütü Servisi",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Kuru Temizleme",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Havaalanı Servisi",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Transfer Hizmetleri",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Masaj",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Dalış",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Bovling",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Otelde Su Sporu Olanakları",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Tekne Turu",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Oyun Salonu",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Bisiklet",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Türk Hamamı",
+          "paid": true,
+          "description": null
+        }
+      ]
+    },
+    "importantInfo": {
+      "checkInTime": "14:00",
+      "checkOutTime": "12:00",
+      "desc": "<p>Angels Marmaris Hotel alkolsüz herşey dahil konseptiyle hizmet vermektedir.</p><p>Otel Dalaman Havaalanı'na 120 km, Milas Havaalanı'na 150 km, Marmaris'e 30 km uzaklıktadır.</p><p>Sezon: 15 Mayıs 2026 - 15 Ekim 2026 arası hizmet vermektedir.</p><p>Giriş: 14:00'dan sonra, Çıkış: 12:00'dan önce</p><p>* İşaretli servisler ücrete tabidir.</p><p>Tesiste helal yemek servisi bulunmaktadır.</p><p>Bayanlar ve baylar için ayrı mescitler mevcuttur.</p><p>Tesiste bayanlar plajı ve bayanlar havuzu bulunmaktadır.</p>"
+    },
+    "facilityCategories": [
+      {
+        "title": {
+          "icon": "fa-regular fa-bell-concierge",
+          "label": "Yeme & İçme",
+          "description": null,
+          "subDescriptions": null
+        },
+        "freeText": "<p>Alkolsüz herşey dahil konseptiyle hizmet verilmektedir. Tesiste helal yemek servisi bulunmaktadır.</p><p>Kahvaltı büfesi, akşam yemeği, beş çayı ve gece çorbası servis edilmektedir.</p><p>Restoran (büfe) ve 2 adet ala carte restaurant bulunmaktadır.</p>",
+        "facilities": [
+          {
+            "label": "Kahvaltı Büfesi",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Akşam Yemeği",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Beş Çayı",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Gece Çorbası",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Helal Yemek",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Bar",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Restoran (Büfe)",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Ala Carte Restaurant",
+            "paid": true,
+            "description": "2 adet"
+          }
+        ]
+      },
+      {
+        "title": {
+          "icon": "fa-regular fa-futbol",
+          "label": "Spor & Eğlence",
+          "description": null,
+          "subDescriptions": null
+        },
+        "freeText": "<p>Animasyon ekibi tarafından çeşitli aktiviteler düzenlenmektedir. Tesiste sinema, karaoke ve amfi tiyatro bulunmaktadır.</p>",
+        "facilities": [
+          {
+            "label": "Animasyon Ekibi",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Sinema",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Karaoke",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Amfi Tiyatro",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Basketbol",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Basketbol Sahası",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Plaj Voleybolu",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Masa Tenisi",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Dart",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Satranç",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Langırt",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Tenis Kortu",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Bisiklet",
+            "paid": true,
+            "description": null
+          },
+          {
+            "label": "Bovling",
+            "paid": true,
+            "description": null
+          },
+          {
+            "label": "Oyun Salonu",
+            "paid": true,
+            "description": null
+          }
+        ]
+      },
+      {
+        "title": {
+          "icon": "fa-regular fa-umbrella-beach",
+          "label": "Plaj",
+          "description": null,
+          "subDescriptions": null
+        },
+        "freeText": "<p>Denize sıfır konumdadır. Kendine özel kum plajı bulunmaktadır. Mavi bayraklı plajdır.</p><p>Bayanlar için ayrı plaj alanı mevcuttur.</p>",
+        "facilities": [
+          {
+            "label": "Denize Sıfır",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Kum Plaj",
+            "paid": false,
+            "description": "Özel plaj"
+          },
+          {
+            "label": "Mavi Bayraklı",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "İskele",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Bayanlar Plajı",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Özel Plaj Alanı",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Sahil Şeridi",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Plaj ve Havuz Şemsiyeleri",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Plaj Şezlongu",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Plaj Havlusu",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Soyunma Kabini",
+            "paid": false,
+            "description": null
+          }
+        ]
+      },
+      {
+        "title": {
+          "icon": "fa-solid fa-baby",
+          "label": "Çocuk & Bebek",
+          "description": null,
+          "subDescriptions": null
+        },
+        "freeText": "<p>Çocuklar için mini kulüp ve çocuk bahçesi bulunmaktadır.</p>",
+        "facilities": [
+          {
+            "label": "Mini Club",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Çocuk Bahçesi",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Çocuk Yüzme Havuzu",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Bebek Yatağı",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Bebek Bakımı/Çocuk Hizmetleri",
+            "paid": true,
+            "description": null
+          }
+        ]
+      },
+      {
+        "title": {
+          "icon": "fa-regular fa-spa",
+          "label": "Spa & Wellness",
+          "description": null,
+          "subDescriptions": null
+        },
+        "freeText": "<p>Tesis içerisinde spa, sağlık merkezi, tuz odası ve kaplıca bulunmaktadır.</p>",
+        "facilities": [
+          {
+            "label": "SPA Merkezi",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Sauna",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Buhar Odası",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Tuz Odası",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Kaplıca",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Yürüyüş Alanı",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Masaj",
+            "paid": true,
+            "description": null
+          },
+          {
+            "label": "Türk Hamamı",
+            "paid": true,
+            "description": null
+          }
+        ]
+      },
+      {
+        "title": {
+          "icon": "fa-solid fa-water",
+          "label": "Havuz",
+          "description": null,
+          "subDescriptions": null
+        },
+        "freeText": "<p>Karma açık havuz, açık bayanlar havuzu, kapalı yüzme havuzu ve su kaydırağı bulunmaktadır.</p>",
+        "facilities": [
+          {
+            "label": "Karma Açık Havuz",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Açık Bayanlar Havuzu",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Kapalı Yüzme Havuzu",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Açık Yüzme Havuzu",
+            "paid": false,
+            "description": "Sezonluk"
+          },
+          {
+            "label": "Su Kaydırağı",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Çocuk Yüzme Havuzu",
+            "paid": false,
+            "description": null
+          }
+        ]
+      },
+      {
+        "title": {
+          "icon": "fa-solid fa-water",
+          "label": "Su Sporları",
+          "description": null,
+          "subDescriptions": null
+        },
+        "freeText": "<p>Denizde banana, jetski, sörf, kano gibi su sporları yapılabilmektedir.</p>",
+        "facilities": [
+          {
+            "label": "Banana",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Sörf",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Kano",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Jet Ski",
+            "paid": true,
+            "description": null
+          },
+          {
+            "label": "Dalış",
+            "paid": true,
+            "description": null
+          },
+          {
+            "label": "Tekne Turu",
+            "paid": true,
+            "description": null
+          }
+        ]
+      },
+      {
+        "title": {
+          "icon": "fa-solid fa-mosque",
+          "label": "Dini Hizmetler",
+          "description": null,
+          "subDescriptions": null
+        },
+        "freeText": "<p>Bayanlar ve baylar için ayrı mescitler bulunmaktadır.</p>",
+        "facilities": [
+          {
+            "label": "Bayanlar Mescidi",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Baylar Mescidi",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Kuran-ı Kerim",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Seccade",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Tespih",
+            "paid": false,
+            "description": null
+          }
+        ]
+      },
+      {
+        "title": {
+          "icon": "fa-solid fa-wheelchair",
+          "label": "Engelli Dostu",
+          "description": null,
+          "subDescriptions": null
+        },
+        "freeText": "<p>Engelli konuklar için uygun odalar ve imkanlar bulunmaktadır.</p>",
+        "facilities": [
+          {
+            "label": "Engelli Konuklar için Odalar/İmkanlar",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Asansör",
+            "paid": false,
+            "description": null
+          }
+        ]
+      }
+    ]
+  },
+  "adenya-resort": {
+    "title": "Yaz Sezonu",
+    "startDate": "20-Nisan-2026",
+    "endDate": "04-Kasım-2026",
+    "active": true,
+    "generalInfo": {
+      "themes": [
+        {
+          "icon": "fa-regular fa-circle-check",
+          "label": "Aile Oteli",
+          "description": null,
+          "subDescriptions": []
+        },
+        {
+          "icon": "fa-regular fa-circle-check",
+          "label": "Denize Sıfır",
+          "description": null,
+          "subDescriptions": []
+        },
+        {
+          "icon": "fa-regular fa-circle-check",
+          "label": "Helal Yemek",
+          "description": null,
+          "subDescriptions": []
+        },
+        {
+          "icon": "fa-regular fa-circle-check",
+          "label": "Mavi Bayraklı",
+          "description": null,
+          "subDescriptions": []
+        },
+        {
+          "icon": "fa-regular fa-circle-check",
+          "label": "Çocuk Dostu",
+          "description": null,
+          "subDescriptions": []
+        },
+        {
+          "icon": "fa-regular fa-circle-check",
+          "label": "Su Sporları",
+          "description": null,
+          "subDescriptions": []
+        }
+      ],
+      "generalInfoText": "<p>Antalya Alanya bölgesinde bulunan Adenya Hotel & Resort, aile konseptine uygun hizmet anlayışıyla misafirlerini ağırlamaktadır. Tesis toplam 45.000 m² alana kuruludur ve denize sıfır konumdadır. Ailelerin konforu için bebek bakım hizmeti sunulmaktadır. Tesise ait kum plaj ve iskele bulunmaktadır.</p><p>Misafirler 7 adet açık ve 2 adet kapalı yüzme havuzundan yararlanabilir. 2026 sezonu itibarıyla aquapark alanları yenilenmiştir. Yetişkin aquaparkı 431 m² büyüklüğünde olup 5 kaydıraktan oluşmaktadır. Çocuk aquaparkı ise 683 m² büyüklüğünde ve 7 kaydıraklıdır.</p><p>Erkekler plajı 2026 sezonunda kaldırılmış, yerine +18 yaş misafirler için karma deniz alanı oluşturulmuştur.</p><p>Tesis alkolsüz her şey dahil konseptiyle hizmet vermektedir. Misafirlere iki adet à la carte restoran seçeneği sunulmaktadır. Sahilde banana, jetski, parasailing ve sörf gibi çeşitli su sporları bulunmaktadır. Tesis içerisindeki spa ve masaj hizmetleri misafirlere rahatlama imkânı sağlar.</p><p>2026 sezonundan itibaren 12 yaş ve üzeri çocuklar için yetişkin ücreti uygulanmaktadır.</p><p>Tesis Gazipaşa Havalimanı'na 65 km, Antalya Havalimanı'na 104 km, Alanya'ya 22 km ve Antalya şehir merkezine 115 km uzaklıktadır. Tesis içerisinde doktor, fotoğrafçı, güzellik salonu, kuaför, market ve araç kiralama gibi hizmetler bulunmaktadır.</p>",
+      "facilities": [
+        {
+          "label": "Kablosuz İnternet",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Otopark",
+          "paid": false,
+          "description": "Ücretsiz"
+        },
+        {
+          "label": "Klima",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "TV",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Asansör",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Mini Bar",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Saç Kurutma Makinesi",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Ücretsiz Banyo Malzemesi",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Makyaj Aynası",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Bebek Yatağı",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Bebek Sandalyesi",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Emanet Kasası",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Can Kurtaran",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Teras",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Bahçe",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Sigara İçilmeyen Odalar",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Günlük Kat Görevlisi Hizmeti",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Araba Şarj İstasyonu",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Fotoğrafçı",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Hemşire",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Doktor",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Market",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Kuaför",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Oda Servisi",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Transfer Servisi",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Havaalanı Servisi",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Kiralık Otomobil",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Play Station",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Çamaşırhane",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Odaya Kahvaltı Servisi",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Toplantı/Ziyafet İmkanları",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Tur Danışma",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Ütü Servisi",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Masaj",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Otelde Mağazalar Mevcut",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Faks / Fotokopi",
+          "paid": true,
+          "description": null
+        }
+      ]
+    },
+    "importantInfo": {
+      "checkInTime": "15:00",
+      "checkOutTime": "11:00",
+      "desc": "<p>Tesis alkolsüz her şey dahil konseptiyle hizmet vermektedir.</p><p>Sezon: 20 Nisan 2026 - 04 Kasım 2026 arası hizmet vermektedir.</p><p>2026 sezonundan itibaren 12 yaş ve üzeri çocuklar için yetişkin ücreti uygulanmaktadır.</p><p>Erkekler plajı 2026 sezonunda kaldırılmış, yerine +18 yaş misafirler için karma deniz alanı oluşturulmuştur.</p><p>Aquapark alanları 2026 sezonu itibarıyla yenilenmiştir.</p><p>Tesis Gazipaşa Havalimanı'na 65 km, Antalya Havalimanı'na 104 km, Alanya'ya 22 km ve Antalya şehir merkezine 115 km uzaklıktadır.</p><p>* İşaretli servisler ücrete tabidir.</p>"
+    },
+    "facilityCategories": [
+      {
+        "title": {
+          "icon": "fa-regular fa-bell-concierge",
+          "label": "Yeme & İçme",
+          "description": null,
+          "subDescriptions": null
+        },
+        "freeText": "<p>Alkolsüz her şey dahil konseptiyle hizmet verilmektedir. Tesiste helal yemek servisi bulunmaktadır.</p><p>Beş çayı ve gece çorbası servis edilmektedir. Teras kafe bulunmaktadır.</p>",
+        "facilities": [
+          {
+            "label": "Helal Yemek",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Beş Çayı",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Gece Çorbası",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Teras Kafe",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Restoran",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Ala Carte Restaurant",
+            "paid": false,
+            "description": "2 adet"
+          },
+          {
+            "label": "Odaya Kahvaltı Servisi",
+            "paid": true,
+            "description": null
+          }
+        ]
+      },
+      {
+        "title": {
+          "icon": "fa-regular fa-futbol",
+          "label": "Spor & Eğlence",
+          "description": null,
+          "subDescriptions": null
+        },
+        "freeText": "<p>Animasyon ekibi ve eğlence ekibi tarafından çeşitli aktiviteler düzenlenmektedir. Tv salonu bulunmaktadır.</p>",
+        "facilities": [
+          {
+            "label": "Animasyon Ekibi",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Eğlence Ekibi",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Tv Salonu",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Masa Tenisi",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Dart",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Satranç",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Plaj Voleybolu",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Fitnes Merkezi",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Play Station",
+            "paid": true,
+            "description": null
+          },
+          {
+            "label": "Oyun Salonu",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Oyun Odası",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Bilardo",
+            "paid": false,
+            "description": null
+          }
+        ]
+      },
+      {
+        "title": {
+          "icon": "fa-regular fa-umbrella-beach",
+          "label": "Plaj",
+          "description": null,
+          "subDescriptions": null
+        },
+        "freeText": "<p>Denize sıfır konumdadır. Tesise ait kum plajı bulunmaktadır. Mavi bayraklı plajdır. Bayanlar için ayrı plaj alanı mevcuttur.</p>",
+        "facilities": [
+          {
+            "label": "Denize Sıfır",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Kum Plaj",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Mavi Bayraklı",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "İskele",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Bayanlar Plajı",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Özel Plaj Alanı",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Soyunma Kabini",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Plaj ve Havuz Şemsiyeleri",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Plaj Şezlongu",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Sahil ve Havuz Şezlongları",
+            "paid": false,
+            "description": null
+          }
+        ]
+      },
+      {
+        "title": {
+          "icon": "fa-solid fa-baby",
+          "label": "Çocuk & Bebek",
+          "description": null,
+          "subDescriptions": null
+        },
+        "freeText": "<p>Çocuklar için mini kulüp, çocuk aquaparkı ve çocuk havuzları bulunmaktadır. Çocuklar için uygun aktiviteler mevcuttur.</p>",
+        "facilities": [
+          {
+            "label": "Mini Club",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Çocuklar için uygun",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Bebek Sandalyesi",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Bebek Yatağı",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Çocuk Yüzme Havuzu",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Bayanlar Çocuk Havuzu",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Baylar Çocuk Havuzu",
+            "paid": false,
+            "description": null
+          }
+        ]
+      },
+      {
+        "title": {
+          "icon": "fa-regular fa-spa",
+          "label": "Spa & Wellness",
+          "description": null,
+          "subDescriptions": null
+        },
+        "freeText": "<p>Bayanlar ve baylar için ayrı spa merkezleri bulunmaktadır. Sauna ve Türk hamamı hizmetleri mevcuttur.</p>",
+        "facilities": [
+          {
+            "label": "Bayanlar Spa Merkezi",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Baylar Spa Merkezi",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Sauna",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Türk Hamamı",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Masaj",
+            "paid": true,
+            "description": null
+          }
+        ]
+      },
+      {
+        "title": {
+          "icon": "fa-solid fa-water",
+          "label": "Havuz",
+          "description": null,
+          "subDescriptions": null
+        },
+        "freeText": "<p>7 adet açık ve 2 adet kapalı yüzme havuzu bulunmaktadır. Bayanlar ve baylar için ayrı kapalı havuzlar mevcuttur.</p>",
+        "facilities": [
+          {
+            "label": "Karma Açık Havuz",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Açık Bayanlar Havuzu",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Kapalı Bayanlar Havuzu",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Kapalı Bay Havuzu",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Havuz Şezlongu",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Açık Havuz",
+            "paid": false,
+            "description": "7 adet"
+          },
+          {
+            "label": "Kapalı Havuz",
+            "paid": false,
+            "description": "2 adet"
+          }
+        ]
+      },
+      {
+        "title": {
+          "icon": "fa-solid fa-water",
+          "label": "Aquapark",
+          "description": null,
+          "subDescriptions": null
+        },
+        "freeText": "<p>2026 sezonu itibarıyla yenilenen aquapark alanları mevcuttur. Yetişkin aquaparkı 431 m² büyüklüğünde ve 5 kaydıraklı, çocuk aquaparkı 683 m² büyüklüğünde ve 7 kaydıraklıdır.</p>",
+        "facilities": [
+          {
+            "label": "Su Kaydırağı",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Yetişkin Aquapark",
+            "paid": false,
+            "description": "431 m², 5 kaydırak"
+          },
+          {
+            "label": "Çocuk Aquapark",
+            "paid": false,
+            "description": "683 m², 7 kaydırak"
+          }
+        ]
+      },
+      {
+        "title": {
+          "icon": "fa-solid fa-water",
+          "label": "Su Sporları",
+          "description": null,
+          "subDescriptions": null
+        },
+        "freeText": "<p>Sahilde banana, jetski, parasailing ve sörf gibi çeşitli su sporları yapılabilmektedir.</p>",
+        "facilities": [
+          {
+            "label": "Banana",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Sörf",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Parasailing",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Jetski",
+            "paid": false,
+            "description": null
+          }
+        ]
+      },
+      {
+        "title": {
+          "icon": "fa-solid fa-mosque",
+          "label": "Dini Hizmetler",
+          "description": null,
+          "subDescriptions": null
+        },
+        "freeText": "<p>Bayanlar ve baylar için ayrı mescitler bulunmaktadır.</p>",
+        "facilities": [
+          {
+            "label": "Bayanlar Mescidi",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Baylar Mescidi",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Kuran-ı Kerim",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Seccade",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Tespih",
+            "paid": false,
+            "description": null
+          }
+        ]
+      }
+    ]
+  },
+  "the-oba":     {
+    "title": "Yaz Sezonu",
+    "startDate": "22-Mayıs-2026",
+    "endDate": "11-Ekim-2026",
+    "active": true,
+    "generalInfo": {
+      "themes": [
+        {
+          "icon": "fa-regular fa-circle-check",
+          "label": "Denize Sıfır",
+          "description": null,
+          "subDescriptions": []
+        },
+        {
+          "icon": "fa-regular fa-circle-check",
+          "label": "Helal Yemek",
+          "description": null,
+          "subDescriptions": []
+        },
+        {
+          "icon": "fa-regular fa-circle-check",
+          "label": "Aile Oteli",
+          "description": null,
+          "subDescriptions": []
+        },
+        {
+          "icon": "fa-regular fa-circle-check",
+          "label": "Mavi Bayraklı",
+          "description": null,
+          "subDescriptions": []
+        },
+        {
+          "icon": "fa-regular fa-circle-check",
+          "label": "Çocuk Dostu",
+          "description": null,
+          "subDescriptions": []
+        },
+        {
+          "icon": "fa-regular fa-circle-check",
+          "label": "Su Sporları",
+          "description": null,
+          "subDescriptions": []
+        }
+      ],
+      "generalInfoText": "<p>The Oba Hotel Bodrum Torba bölgesinde bulunmaktadır. Tesis alkolsüz herşey dahil konseptinde hizmet vermektedir. The Oba Hotel Bodrum denize sıfır konumuyla dikkat çekmektedir. 100 m uzunluğundaki sahile sahip tesisin kendine ait iskelesi vardır.</p><p>Tesisin kendine özel plajı, kum ve çakıldan oluşmaktadır. Tesiste bulunan ala carte restaurant, açık restaurant, kapalı restaurantta yemeklerinizi yiyebilirsiniz. 2 adet açık, 2 adet kapalı yüzme havuzu ile keyifli bir tatil yaşayabilirsiniz.</p><p>Tesiste bulunan banana, jetski ile su sporları yaparak keyifli dakikalar geçirebilirsiniz. Aksiyon sever tatilciler için dalgıçlık okulu imkanı bulunmaktadır. Tesis içerisinde yer alan spa, masaj hizmetlerinden faydalanarak rahatlayabilir ve kendinizi yenilenmiş hissedebilirsiniz.</p><p>Tesis içerisinde bulunan doktor, fotoğrafçı, kuaför, market, araç kiralama hizmetlerinden yararlanabilirsiniz. Keyifli vakit geçirmeniz için tesiste bar bulunmaktadır. Otel Milas Havaalanı'na 26 km, Bodrum'a 26 km, Milas'a 40 km uzaklıktadır.</p>",
+      "facilities": [
+        {
+          "label": "Kablosuz İnternet",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "24 Saat Resepsiyon Hizmeti",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Otopark",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Klima",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Plazma TV",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Mini Bar",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Saç Kurutma Makinesi",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Ücretsiz Banyo Malzemesi",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Makyaj Aynası",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Bebek Yatağı",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Bebek Sandalyesi",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Emanet Kasası",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Bagaj Muhafazası",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Can Kurtaran",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Teras",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Bahçe",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Sigara İçilmeyen Odalar",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Günlük Kat Görevlisi Hizmeti",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Vale Park Hizmeti",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Ortak Lobi",
+          "paid": false,
+          "description": null
+        },
+        {
+          "label": "Fotoğrafçı",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Kuaför",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Market",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Hemşire",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Bebek Bakımı/Çocuk Hizmetleri",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Çamaşırhane",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Kuru Temizleme",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Ütü Servisi",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Otelde Mağazalar Mevcut",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Cilt ve Vücut Bakımı",
+          "paid": true,
+          "description": null
+        },
+        {
+          "label": "Masaj",
+          "paid": true,
+          "description": null
+        }
+      ]
+    },
+    "importantInfo": {
+      "checkInTime": "14:00",
+      "checkOutTime": "12:00",
+      "desc": "<p>The Oba Hotel Bodrum alkolsüz herşey dahil konseptinde hizmet vermektedir.</p><p>Sezon: 22 Mayıs 2026 - 11 Ekim 2026 arası hizmet vermektedir.</p><p>Otele giriş 14:00 itibariyle, otelden çıkış ise 12:00'dadır.</p><p>Otel Milas Havaalanı'na 26 km, Bodrum'a 26 km, Milas'a 40 km uzaklıktadır.</p><p>* İşaretli servisler ücrete tabidir.</p><p>Tesiste helal yemek servisi bulunmaktadır.</p><p>Bayanlar ve baylar için ayrı mescitler mevcuttur.</p><p>Tesiste bayanlar plajı bulunmaktadır.</p>"
+    },
+    "facilityCategories": [
+      {
+        "title": {
+          "icon": "fa-regular fa-bell-concierge",
+          "label": "Yeme & İçme",
+          "description": null,
+          "subDescriptions": null
+        },
+        "freeText": "<p>Alkolsüz herşey dahil konseptinde hizmet verilmektedir. Tesiste helal yemek servisi bulunmaktadır.</p><p>Özel diyet menüleri (isteğe bağlı) sunulmaktadır. Gece çorbası servis edilmektedir.</p>",
+        "facilities": [
+          {
+            "label": "Helal Yemek",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Gece Çorbası",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Ala Carte Restaurant",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Açık Restaurant",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Kapalı Restaurant",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Teras Kafe",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Bar",
+            "paid": false,
+            "description": "Lobby Bar"
+          },
+          {
+            "label": "Özel Diyet Menüleri",
+            "paid": false,
+            "description": "İsteğe bağlı"
+          }
+        ]
+      },
+      {
+        "title": {
+          "icon": "fa-regular fa-futbol",
+          "label": "Spor & Eğlence",
+          "description": null,
+          "subDescriptions": null
+        },
+        "freeText": "<p>Animasyon ekibi ve eğlence ekibi tarafından çeşitli aktiviteler düzenlenmektedir. Karaoke etkinlikleri yapılmaktadır.</p>",
+        "facilities": [
+          {
+            "label": "Animasyon Ekibi",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Eğlence Ekibi",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Karaoke",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Masa Tenisi",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Su Topu",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Plaj Voleybolu",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Basketbol Sahası",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Fitnes Merkezi",
+            "paid": false,
+            "description": null
+          }
+        ]
+      },
+      {
+        "title": {
+          "icon": "fa-regular fa-umbrella-beach",
+          "label": "Plaj",
+          "description": null,
+          "subDescriptions": null
+        },
+        "freeText": "<p>Denize sıfır konumdadır. 100 m uzunluğunda sahile sahiptir. Tesisin kendine özel plajı, kum ve çakıldan oluşmaktadır. Mavi bayraklı plajdır.</p>",
+        "facilities": [
+          {
+            "label": "Denize Sıfır",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Mavi Bayraklı",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "İskele",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Bayanlar Plajı",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Soyunma Kabini",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Plaj ve Havuz Şemsiyeleri",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Plaj Şezlongu",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Sahil ve Havuz Şezlongları",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Plaj Havlusu",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Şezlong",
+            "paid": false,
+            "description": null
+          }
+        ]
+      },
+      {
+        "title": {
+          "icon": "fa-solid fa-baby",
+          "label": "Çocuk & Bebek",
+          "description": null,
+          "subDescriptions": null
+        },
+        "freeText": "<p>Çocuklar için mini kulüp ve çocuk havuzları bulunmaktadır. Çocuklar için uygun aktiviteler mevcuttur.</p>",
+        "facilities": [
+          {
+            "label": "Mini Club",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Çocuklar için uygun",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Çocuk Yüzme Havuzu",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Bayanlar Çocuk Havuzu",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Bebek Sandalyesi",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Bebek Yatağı",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Su Parkı",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Bebek Bakımı/Çocuk Hizmetleri",
+            "paid": true,
+            "description": null
+          }
+        ]
+      },
+      {
+        "title": {
+          "icon": "fa-regular fa-spa",
+          "label": "Spa & Wellness",
+          "description": null,
+          "subDescriptions": null
+        },
+        "freeText": "<p>Bayanlar ve baylar için ayrı spa merkezleri bulunmaktadır. Sauna, Türk hamamı ve buhar odası hizmetleri mevcuttur.</p>",
+        "facilities": [
+          {
+            "label": "SPA Merkezi",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Bayanlar Spa Merkezi",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Baylar Spa Merkezi",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Sauna",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Türk Hamamı",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Buhar Odası",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Yürüyüş Alanı",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Masaj",
+            "paid": true,
+            "description": null
+          },
+          {
+            "label": "Cilt ve Vücut Bakımı",
+            "paid": true,
+            "description": null
+          }
+        ]
+      },
+      {
+        "title": {
+          "icon": "fa-solid fa-water",
+          "label": "Havuz",
+          "description": null,
+          "subDescriptions": null
+        },
+        "freeText": "<p>2 adet açık ve 2 adet kapalı yüzme havuzu bulunmaktadır. Bayanlar için ısıtmalı havuz mevcuttur.</p>",
+        "facilities": [
+          {
+            "label": "Karma Açık Havuz",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Açık Bayanlar Havuzu",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Kapalı Bayanlar Havuzu",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Isıtmalı Bayanlar Havuzu",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Havuz Şezlongu",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Açık Yüzme Havuzu",
+            "paid": false,
+            "description": "2 adet, sezonluk"
+          },
+          {
+            "label": "Kapalı Yüzme Havuzu",
+            "paid": false,
+            "description": "2 adet"
+          }
+        ]
+      },
+      {
+        "title": {
+          "icon": "fa-solid fa-water",
+          "label": "Su Sporları",
+          "description": null,
+          "subDescriptions": null
+        },
+        "freeText": "<p>Tesiste banana ve jetski ile su sporları yapılabilmektedir. Dalgıçlık okulu imkanı bulunmaktadır.</p>",
+        "facilities": [
+          {
+            "label": "Banana",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Jetski",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Dalgıçlık Okulu",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Su Kaydırağı",
+            "paid": false,
+            "description": null
+          }
+        ]
+      },
+      {
+        "title": {
+          "icon": "fa-solid fa-mosque",
+          "label": "Dini Hizmetler",
+          "description": null,
+          "subDescriptions": null
+        },
+        "freeText": "<p>Bayanlar ve baylar için ayrı mescitler bulunmaktadır.</p>",
+        "facilities": [
+          {
+            "label": "Bayanlar Mescidi",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Baylar Mescidi",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Kuran-ı Kerim",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Seccade",
+            "paid": false,
+            "description": null
+          },
+          {
+            "label": "Tespih",
+            "paid": false,
+            "description": null
+          }
+        ]
+      },
+      {
+        "title": {
+          "icon": "fa-solid fa-users",
+          "label": "Aile ve Konfor",
+          "description": null,
+          "subDescriptions": null
+        },
+        "freeText": "<p>Aile odaları mevcuttur. Tesis ailelerin konforu için düşünülmüştür.</p>",
+        "facilities": [
+          {
+            "label": "Aile Odaları",
+            "paid": false,
+            "description": null
+          }
+        ]
+      }
+    ]
   }
 }
 
