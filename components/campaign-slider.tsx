@@ -12,7 +12,7 @@ export function CampaignSlider() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % campaigns.length)
-    }, 5000)
+    }, 12000)
     return () => clearInterval(timer)
   }, [])
 
