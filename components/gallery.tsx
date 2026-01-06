@@ -27,9 +27,9 @@ const Gallery = ({ hotel }: { hotel: Hotel }) => {
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
       // if (open) {
-        if (e.key === "ArrowLeft") prevImage()
-        if (e.key === "ArrowRight") nextImage()
-        if (e.key === "Escape") setOpen(false)
+      if (e.key === "ArrowLeft") prevImage()
+      if (e.key === "ArrowRight") nextImage()
+      if (e.key === "Escape") setOpen(false)
       // }
     }
 
@@ -69,18 +69,23 @@ const Gallery = ({ hotel }: { hotel: Hotel }) => {
     <div className={`w-full`}>
       {/* Desktop'ta maksimum genişlik */}
       <div className={`mx-auto w-full`}>
-        
+
         {/* ANA GALERİ */}
         <div className={`${isMobile ? 'grid-cols-1 gap-3' : 'grid-cols-3 md:grid-cols-4 gap-4'} grid w-full`}>
-          
+
           {/* Büyük görsel - Mobilde full width, Desktop'ta responsive */}
           <div className={`w-full relative ${isMobile ? 'col-span-1' : 'col-span-3'} rounded-xl md:rounded-2xl overflow-hidden shadow-lg max-h-[50vh] flex`}>
-            <img
-              src={`hotelImages/${hotel.imageSlug}_${activeIndex}.jpg`}
-              alt={hotel.name}
-              className="object-cover bg-center hover:scale-105 transition-transform duration-700 w-full"
-              loading={activeIndex <= 2 ? "eager" : "lazy"}
-            />
+            <div className="relative w-full overflow-hidden">
+              <img
+                src={`hotelImages/${hotel.imageSlug}_${activeIndex}.jpg`}
+                alt={hotel.name}
+                className="object-cover bg-center hover:scale-105 transition-transform duration-700 w-full"
+                loading={activeIndex <= 2 ? "eager" : "lazy"}
+              />
+
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-black/30 pointer-events-none"></div>
+            </div>
 
             {/* Navigation Buttons */}
             <Button
@@ -109,7 +114,7 @@ const Gallery = ({ hotel }: { hotel: Hotel }) => {
                 onClick={() => setOpen(true)}
                 className="bg-white/90 hover:bg-white shadow-md flex items-center gap-1"
               >
-                <Grid className="h-4 w-4 text-black/90"/>
+                <Grid className="h-4 w-4 text-black/90" />
                 <span className="text-xs hidden sm:inline text-black/90">Galeri</span>
                 <span className="text-xs font-semibold text-black/90">({IMAGE_COUNT})</span>
               </Button>
@@ -121,11 +126,10 @@ const Gallery = ({ hotel }: { hotel: Hotel }) => {
                 <button
                   key={i}
                   onClick={() => setActiveIndex(i + 1)}
-                  className={`h-1 md:h-1.5 rounded-full transition-all duration-300 ${
-                    activeIndex === i + 1 
-                      ? 'bg-white w-6 md:w-8' 
+                  className={`h-1 md:h-1.5 rounded-full transition-all duration-300 ${activeIndex === i + 1
+                      ? 'bg-white w-6 md:w-8'
                       : 'bg-white/50 w-2 md:w-3 hover:bg-white/80'
-                  }`}
+                    }`}
                   aria-label={`Görsel ${i + 1}`}
                 />
               ))}
@@ -161,8 +165,8 @@ const Gallery = ({ hotel }: { hotel: Hotel }) => {
                     alt={`${hotel.name} - ${i + 1}`}
                     onClick={() => setActiveIndex(i + 1)}
                     className={`h-16 md:h-20 w-24 md:w-32 cursor-pointer rounded-lg md:rounded-xl object-cover transition-all duration-300
-                      ${activeIndex === i + 1 
-                        ? "ring-3 ring-primary shadow-lg scale-105" 
+                      ${activeIndex === i + 1
+                        ? "ring-3 ring-primary shadow-lg scale-105"
                         : "opacity-80 hover:opacity-100 hover:scale-[1.02]"
                       }`}
                     loading={i < 4 ? "eager" : "lazy"}
@@ -196,7 +200,7 @@ const Gallery = ({ hotel }: { hotel: Hotel }) => {
 
         {/* POPUP GALERİ DIALOG */}
         <Dialog open={open} onOpenChange={setOpen}>
-          <DialogContent 
+          <DialogContent
             className={`${isMobile ? 'w-full h-full m-0 max-w-none rounded-none' : 'max-w-6xl'} p-0 md:p-4 bg-black/95`}
           >
             {!isMobile && (
@@ -217,7 +221,7 @@ const Gallery = ({ hotel }: { hotel: Hotel }) => {
               </Button>
 
               {/* Main Image */}
-              <div 
+              <div
                 className="flex justify-center items-center w-full"
                 onTouchStart={onTouchStart}
                 onTouchEnd={onTouchEnd}
@@ -265,8 +269,8 @@ const Gallery = ({ hotel }: { hotel: Hotel }) => {
                       src={`hotelImages/${hotel.imageSlug}_${i + 1}.jpg`}
                       onClick={() => setActiveIndex(i + 1)}
                       className={`h-16 md:h-20 w-24 md:w-32 cursor-pointer rounded-lg object-cover transition-all
-                        ${activeIndex === i + 1 
-                          ? "ring-3 ring-white scale-105" 
+                        ${activeIndex === i + 1
+                          ? "ring-3 ring-white scale-105"
                           : "opacity-60 hover:opacity-100"
                         }`}
                     />

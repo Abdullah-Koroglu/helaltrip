@@ -9,6 +9,7 @@ import { fetchHotelDetails } from "@/lib/price-api"
 import HotelStar from "@/components/star"
 import HotelInfoCard from "@/components/hotelDetail"
 import hotelDetails from "@/lib/hotel-details"
+import HotelReviewPage from "./SYReview"
 
 
 interface HotelPageProps {
@@ -42,11 +43,11 @@ export default async function HotelPage({ params }: HotelPageProps) {
     <div className="min-h-screen bg-background text-primary">
 
       {/* Hero Banner */}
-      <div className="relative md:p-10">
+      <div className="relative md:p-10 shadow-lg">
         <div className="flex" >
           <Gallery hotel={hotel} />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent z-10" />
+        {/* <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent z-10" /> */}
         <HotelStar hotel={hotel} />
       </div>
 
@@ -70,32 +71,38 @@ export default async function HotelPage({ params }: HotelPageProps) {
                 </CardContent>
               </Card>
             }
+
+            {hotel.SYReview && <HotelReviewPage hotel={{
+              SYReview: hotel.SYReview,
+              rating: hotel.rating
+            }}/>}
+
             {
 
               hotel.mapLink &&
               <Card className="p-0">
-              <CardHeader>
-                <CardTitle className="text-primary">Harita</CardTitle>
-              </CardHeader>
-              <CardContent className="p-0">
-                <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
-                  <iframe
-                    src={hotel.mapLink}
-                    style={{
-                      position: 'absolute',
-                      top: 0,
-                      left: 0,
-                      width: '100%',
-                      height: '100%',
-                      border: 0,
-                    }}
-                    loading="lazy"
-                    allowFullScreen
-                  />
-                </div>
+                <CardHeader>
+                  <CardTitle className="text-primary">Harita</CardTitle>
+                </CardHeader>
+                <CardContent className="p-0">
+                  <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
+                    <iframe
+                      src={hotel.mapLink}
+                      style={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        width: '100%',
+                        height: '100%',
+                        border: 0,
+                      }}
+                      loading="lazy"
+                      allowFullScreen
+                    />
+                  </div>
 
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
             }
 
             {/* YouTube Video */}
