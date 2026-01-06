@@ -245,7 +245,7 @@ export default function HotelInfoCard({ data }: HotelInfoCardProps) {
       />}
 
       {/* Mobile Navigation */}
-      <MobileNavBar />
+      {/* <MobileNavBar /> */}
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-3 md:px-6 pb-24 md:pb-6">

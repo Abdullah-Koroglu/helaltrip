@@ -74,7 +74,7 @@ const Gallery = ({ hotel }: { hotel: Hotel }) => {
         <div className={`${isMobile ? 'grid-cols-1 gap-3' : 'grid-cols-3 md:grid-cols-4 gap-4'} grid w-full`}>
 
           {/* Büyük görsel - Mobilde full width, Desktop'ta responsive */}
-          <div className={`w-full relative ${isMobile ? 'col-span-1' : 'col-span-3'} rounded-xl md:rounded-2xl overflow-hidden shadow-lg max-h-[50vh] flex`}>
+          <div className={`w-full relative ${isMobile ? 'col-span-1' : 'col-span-3'} sm:rounded-xl md:rounded-2xl overflow-hidden shadow-lg max-h-[50vh] flex`}>
             <div className="relative w-full overflow-hidden">
               <img
                 src={`hotelImages/${hotel.imageSlug}_${activeIndex}.jpg`}

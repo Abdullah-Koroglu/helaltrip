@@ -1,11 +1,17 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
 import Footer from '@/components/footer'
 import { Header } from '@/components/header'
 import ContactButton from '@/components/contact-button'
+import TimedPopup from '@/components/TimedPopup'
+import { Poppins } from "next/font/google";
 
-const inter = Inter({ subsets: ['latin'] })
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-poppins",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: 'Helaltrip - Türkiye\'nin En Güzel Otelleri',
@@ -19,12 +25,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="tr">
-      <body className={inter.className}>
+      <body className={poppins.className}>
         <Header />
 
         {children}
         <ContactButton />
         <Footer />
+        <TimedPopup />
       </body>
     </html>
   )

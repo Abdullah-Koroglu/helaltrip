@@ -1,5 +1,6 @@
 import { Award, Users, MapPin, Heart, CheckCircle, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 // import Navbar from "@/components/Navbar";
 
 const About = () => {
@@ -23,8 +24,8 @@ const About = () => {
     },
     {
       icon: CheckCircle,
-      title: "Güvenilir Partnerlik",
-      description: "10 yıllık deneyimimizle güvenilir ve şeffaf hizmet anlayışımızı sürdürüyoruz."
+      title: "Oteller ile Birebir İlişki",
+      description: "Olası her türlü problemi, otellerle kurduğumuz güçlü ve yakın iletişim sayesinde hızlı ve etkili şekilde çözüme kavuşturuyoruz."
     },
     {
       icon: Clock,
@@ -42,7 +43,7 @@ const About = () => {
     },
     {
       name: "Elif Kaya",
-      position: "Operasyon Müdürü", 
+      position: "Operasyon Müdürü",
       description: "Müşteri deneyimi uzmanı",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
     },
@@ -57,15 +58,15 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section 
+      <section
         className="relative h-96 flex items-center justify-center text-white overflow-hidden"
-        style={{background: '#0f172a'}}
+        style={{ background: '#0f172a' }}
       >
         <div className="absolute inset-0 hero-gradient opacity-80"></div>
         <div className="relative z-10 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Hakkımızda</h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
-          Turizm alanında 10 yılı aşkın tecrübemizle, %100 müşteri memnuniyetini ilke edinerek hizmet veriyoruz.
+            Turizm alanında 10 yılı aşkın tecrübemizle, %100 müşteri memnuniyetini ilke edinerek hizmet veriyoruz.
 
           </p>
         </div>
@@ -92,20 +93,20 @@ const About = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-6">Hikayemiz</h2>
               <p className="text-xl text-start leading-relaxed">
-              Helaltrip Turizm, TURSAB üyesi olarak dünya çapındaki müşterilerine seyahat alternatifleri üretmek üzere kurulmuştur. Şirket; Türkiye’de ve yurt dışında yüzlerce tur hazırlayıp müşterilerine sunmaktadır. Helaltrip Turizm’in yurt içinde otel ve tatil köyü, birçok havayolu şirketiyle anlaşmaları bulunmaktadır ve araba kiralama hizmetleri sunmaktadır. Yurtiçi ve yurtdışı turlardan, kültür turlarına, mavi yolculuktan kayak paketlerine, gençlere yönelik programlardan kurumsal hizmetlere, uçak biletinden araba kiralama hizmetlerine kadar uzanan seyahat ürünleri ile çevresinde kısa sürede kendini göstermiştir.</p>
+                Helaltrip Turizm, TURSAB üyesi olarak dünya çapındaki müşterilerine seyahat alternatifleri üretmek üzere kurulmuştur. Şirket; Türkiye’de ve yurt dışında yüzlerce tur hazırlayıp müşterilerine sunmaktadır. Helaltrip Turizm’in yurt içinde otel ve tatil köyü, birçok havayolu şirketiyle anlaşmaları bulunmaktadır ve araba kiralama hizmetleri sunmaktadır. Yurtiçi ve yurtdışı turlardan, kültür turlarına, mavi yolculuktan kayak paketlerine, gençlere yönelik programlardan kurumsal hizmetlere, uçak biletinden araba kiralama hizmetlerine kadar uzanan seyahat ürünleri ile çevresinde kısa sürede kendini göstermiştir.</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
                 <h3 className="text-3xl font-bold mb-6">Vizyonumuz</h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                Çalıştığı alanda kendini sürekli yenileyerek ve geliştirerek üstlenmiş olduğu her iş ve organizasyonun tüm detaylarını planlamak ve amacına ulaşmasını sağlamak kadromuzun görevidir. Alacağınız hizmetin kusursuz olmasını istiyorsanız. Hayal ettiğiniz, tasarladığınız, düşlediğiniz, fakat parçalarını bulup birleştiremediğiniz her şeyi bize bırakın</p>
+                  Çalıştığı alanda kendini sürekli yenileyerek ve geliştirerek üstlenmiş olduğu her iş ve organizasyonun tüm detaylarını planlamak ve amacına ulaşmasını sağlamak kadromuzun görevidir. Alacağınız hizmetin kusursuz olmasını istiyorsanız. Hayal ettiğiniz, tasarladığınız, düşlediğiniz, fakat parçalarını bulup birleştiremediğiniz her şeyi bize bırakın</p>
                 <h3 className="text-3xl font-bold mb-6">Misyonumuz</h3>
                 <p className="text-muted-foreground leading-relaxed">Gelişmekte olan dinamik turizm dünyasını yakından takip ederek, hızlı adaptasyonlarla müşterilerimize her zaman üstün hizmet, servis ve kaliteyi, yüksek eğitimli profesyonel bir takım ruhu içinde sunmaktır. Vizyonumuz ise , müşterilerimiz için değer yaratmak, beklentilerine kalite ve istikrarla karşılık vermek ve çözüm ortakları olmak.</p>
               </div>
               <div className="relative">
-                <img 
-                  src={"./hotelImages/wome_1.jpg"} 
+                <img
+                  src={"./hotelImages/wome_1.jpg"}
                   alt="Hikayemiz"
                   className="w-full h-80 object-cover rounded-2xl card-shadow"
                 />
@@ -180,10 +181,14 @@ const About = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="link" size="lg">
-              İletişim
+              <Link target="_blank" rel="noopener noreferrer" href={'https://wa.me/905338189958?text=Merhaba.'} className="text-white">
+                İletişim
+              </Link>
             </Button>
             <Button variant="link" size="lg">
-              Otelleri İncele
+              <Link href={'/oteller'} className="text-white">
+                Otelleri İncele
+              </Link>
             </Button>
           </div>
         </div>

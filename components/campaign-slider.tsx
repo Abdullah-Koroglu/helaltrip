@@ -46,7 +46,7 @@ export function CampaignSlider() {
             <div className="container mx-auto px-4">
               <div className="max-w-4xl text-white">
                 
-                <h1 className="text-5xl font-bold mb-4 max-w-xl">{campaign.header}</h1>
+                <h1 className="text-5xl md:text-[4rem] font-bold mb-4 max-w-3xl leading-tight">{campaign.header}</h1>
                 <p className="text-xl mb-8 text-white line-clamp-2">
                   {campaign.description}
                 </p>
