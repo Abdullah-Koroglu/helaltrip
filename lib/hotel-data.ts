@@ -49,6 +49,7 @@ export const hotels: Hotel[] = [
     rating: 5,
     amenities: ["Deniz Manzarası", "Özel Plaj", "Su Sporları", "Çocuk Kulübü", "Animasyon"],
     features: ["All Inclusive", "Aile Dostu", "Doğa İçinde", "Sakin Atmosfer"],
+    mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4344.6036490031065!2d28.110097476801545!3d36.76984127225589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bfc7d5ed548783%3A0xdc2bbdb4836d8a7d!2sAngel&#39;s%20Marmaris%20Hotel!5e1!3m2!1str!2str!4v1767784920432!5m2!1str!2str",
   },
   {
     id: "adenya-resort",
@@ -63,7 +64,9 @@ export const hotels: Hotel[] = [
     price: 3500,
     rating: 4.8,
     amenities: ["Özel Villa", "Infinity Havuz", "Spa Merkezi", "Golf Sahası", "Helikopter Transfer"],
-    features: ["Ultra Lüks", "Özel Hizmet", "Doğa İçinde", "Gizlilik"]
+    features: ["Ultra Lüks", "Özel Hizmet", "Doğa İçinde", "Gizlilik"],
+    mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4353.884455379811!2d31.772332091170274!3d36.60574020088923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14dcafba09212657%3A0x79a67792c7df74d4!2sAdenya%20Resort%20Hotels%20%26%20Spa!5e1!3m2!1str!2str!4v1767784883987!5m2!1str!2str",
+
   },
   {
     id: "sah-inn-paradise",
@@ -78,7 +81,9 @@ export const hotels: Hotel[] = [
     price: 2800,
     rating: 4.7,
     amenities: ["Deniz Manzarası", "Özel Plaj", "Yat Limanı", "Lüks Restoran", "Spa"],
-    features: ["Bodrum Manzarası", "Yat Turu", "Gece Hayatı", "Lüks Alışveriş"]
+    features: ["Bodrum Manzarası", "Yat Turu", "Gece Hayatı", "Lüks Alışveriş"],
+    mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4371.0375646807715!2d30.320454676786063!3d36.30076447239366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c224bccd87cd6f%3A0x8bf102de835154e2!2zxZ5haCBpbm4gUGFyYWRpc2UgVGF0aWwgS8O2ecO8!5e1!3m2!1str!2str!4v1767784851146!5m2!1str!2str",
+
   },
   {
     id: "the-oba",
@@ -134,7 +139,9 @@ Ancak konfor için parasını kolay harcayabilen müşterilerime burayı mutlaka
     price: 1600,
     rating: 4.6,
     amenities: ["Su Sporları", "Rüzgar Sörfü", "Plaj Bar", "Çocuk Havuzu", "Animasyon"],
-    features: ["Su Sporları Merkezi", "Genç Atmosfer", "Plaj Aktivitesi", "Eğlenceli Ortam"]
+    features: ["Su Sporları Merkezi", "Genç Atmosfer", "Plaj Aktivitesi", "Eğlenceli Ortam"],
+    mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4353.752514890285!2d31.78238767679615!3d36.60807757230262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14dcafa31983fbc1%3A0xb5ae2e1e87be4d51!2sAdin%20Beach%20Hotel!5e1!3m2!1str!2str!4v1767784971002!5m2!1str!2str",
+
   },
   {
     id: "bera-alanya",
@@ -149,7 +156,9 @@ Ancak konfor için parasını kolay harcayabilen müşterilerime burayı mutlaka
     price: 2000,
     rating: 4.5,
     amenities: ["Aile Havuzu", "Çocuk Kulübü", "Mini Golf", "Tenis Kortu", "Spa"],
-    features: ["Aile Dostu", "Geniş Plaj", "Çocuk Aktiviteleri", "Güvenli Ortam"]
+    features: ["Aile Dostu", "Geniş Plaj", "Çocuk Aktiviteleri", "Güvenli Ortam"],
+    mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4355.349602901397!2d31.882808676795126!3d36.57977597231075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14dca48e964b8b59%3A0x7a3e9ddb89ed97bd!2sBera%20Alanya%20Otel!5e1!3m2!1str!2str!4v1767785002245!5m2!1str!2str",
+
   },
   {
     id: "rizom-beach",
@@ -164,7 +173,8 @@ Ancak konfor için parasını kolay harcayabilen müşterilerime burayı mutlaka
     price: 1900,
     rating: 4.5,
     amenities: ["Dağ Manzarası", "Doğa Yürüyüşü", "Havuz", "Restoran", "Bar"],
-    features: ["Doğa İçinde", "Dağ Manzarası", "Huzurlu Ortam", "Temiz Hava"]
+    features: ["Doğa İçinde", "Dağ Manzarası", "Huzurlu Ortam", "Temiz Hava"],
+    mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4370.015596470016!2d30.26145127678657!3d36.31899647238835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c2252ce1848b7f%3A0x6ec87e5c8afb0675!2sRizom%20Beach%20Hotel%20Kumluca!5e1!3m2!1str!2str!4v1767785037563!5m2!1str!2str"
   },
   {
     id: "selge-beach",
@@ -179,7 +189,8 @@ Ancak konfor için parasını kolay harcayabilen müşterilerime burayı mutlaka
     price: 2100,
     rating: 4.5,
     amenities: ["Tarihi Manzara", "Antik Kent Turu", "Havuz", "Restoran", "Spa"],
-    features: ["Tarihi Atmosfer", "Kültür Turu", "Deniz Manzarası", "Eğitimli Rehber"]
+    features: ["Tarihi Atmosfer", "Kültür Turu", "Deniz Manzarası", "Eğitimli Rehber"],
+    mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4346.85267995899!2d31.523210076800112!3d36.73013227226738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab6532e31f387%3A0x6bb9283611cae208!2sSelge%20Beach%20Resort!5e1!3m2!1str!2str!4v1767785073207!5m2!1str!2str"
   },
   {
     id: "royal-teos",
@@ -194,7 +205,8 @@ Ancak konfor için parasını kolay harcayabilen müşterilerime burayı mutlaka
     price: 3200,
     rating: 4.2,
     amenities: ["Özel Plaj", "Yat Limanı", "Lüks Villa", "Spa Merkezi", "Golf"],
-    features: ["Ultra Lüks", "Yat Turu", "Özel Hizmet", "Gizlilik"]
+    features: ["Ultra Lüks", "Yat Turu", "Özel Hizmet", "Gizlilik"],
+    mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4262.414275198542!2d26.772522476849698!3d38.1966816718821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bb8cc2c5861add%3A0x4db9ea7992cbb03d!2sRoyal%20Teos%20Resort%20Clinic%20%26%20Spa!5e1!3m2!1str!2str!4v1767785136564!5m2!1str!2str"
   },
   {
     id: "mola-istanbul",
@@ -209,7 +221,8 @@ Ancak konfor için parasını kolay harcayabilen müşterilerime burayı mutlaka
     price: 1700,
     rating: 4.7,
     amenities: ["Tatil Köyü", "Çoklu Havuz", "Spor Alanları", "Çocuk Kulübü", "Animasyon"],
-    features: ["Geniş Alan", "Çeşitli Aktivite", "Aile Dostu", "Doğa İçinde"]
+    features: ["Geniş Alan", "Çeşitli Aktivite", "Aile Dostu", "Doğa İçinde"],
+    mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4086.167174274347!2d28.365645076952998!3d41.11452377133594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b541a5a3f9465d%3A0x1d945c4ea50e7354!2sMola%20%C4%B0stanbul!5e1!3m2!1str!2str!4v1767785104039!5m2!1str!2str"
     },
   // {
   //   id: "rizom-tatil-koyu",
