@@ -57,7 +57,7 @@ export const hotels: Hotel[] = [
     rating: 5,
     amenities: ["Deniz Manzarası", "Özel Plaj", "Su Sporları", "Çocuk Kulübü", "Animasyon"],
     features: ["All Inclusive", "Aile Dostu", "Doğa İçinde", "Sakin Atmosfer"],
-    mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4344.6036490031065!2d28.110097476801545!3d36.76984127225589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bfc7d5ed548783%3A0xdc2bbdb4836d8a7d!2sAngel&#39;s%20Marmaris%20Hotel!5e1!3m2!1str!2str!4v1767784920432!5m2!1str!2str",
+    mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4344.6036490031065!2d28.110097476801545!3d36.76984127225589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bfc7d5ed548783%3A0xdc2bbdb4836d8a7d!2sAngel's%20Marmaris%20Hotel!5e1!3m2!1str!2str!4v1767881685920!5m2!1str!2str",
   },
   {
     id: "adenya-resort",
