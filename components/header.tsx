@@ -35,7 +35,7 @@ export function Header() {
           </div>
           <div className="flex items-center space-x-4">
             <p className="text-sm text-primary hidden md:block">
-            Türkiye'nin en güzel otellerinde unutulmaz deneyimler yaşayın
+              Dünyanın en iyi helal konsept alkolsuz aile otelleri sadece Türkiye'de
             </p>
           </div>
         </div>

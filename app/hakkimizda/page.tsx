@@ -65,9 +65,8 @@ const About = () => {
         <div className="absolute inset-0 hero-gradient opacity-80"></div>
         <div className="relative z-10 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Hakkımızda</h1>
-          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
-            Turizm alanında 10 yılı aşkın tecrübemizle, %100 müşteri memnuniyetini ilke edinerek hizmet veriyoruz.
-
+          <p className="text-lg md:text-lg text-white/90 max-w-3xl mx-auto">
+          Helal Konsept otellerde yetkili acente olarak  10 yılı aşkın bir süredir misafirlerimize rezervasyon yapma konusunda özenle hizmet etmeye gayret ettik. Geldiğimiz noktada binlerce ailenin güvenini sağladık. Otellerle de ilişkimizi en üst düzeyde tutarak misafirlerimizin anlık gelişebilen sorunlarını hızlıca çözebilme konusunda gayret sarfediyoruz. Her misafir bizim için kıymetli ve çalıştığımız her otel de bizim için değerli.
           </p>
         </div>
       </section>

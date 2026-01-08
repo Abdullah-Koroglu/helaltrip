@@ -14,8 +14,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'Helaltrip - Türkiye\'nin En Güzel Otelleri',
-  description: 'Türkiye\'nin en güzel otellerinde unutulmaz deneyimler yaşayın. Premium kalite, müşteri memnuniyeti ve eşsiz lokasyonlar.',
+  title: 'Helaltrip - Türkiye\'nin en iyi helal konsept alkolsuz aile otelleri',
+  description: 'Dünyanın en iyi helal konsept alkolsuz aile otelleri sadece Türkiye\'de',
 }
 
 export default function RootLayout({

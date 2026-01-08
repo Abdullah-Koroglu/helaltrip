@@ -34,6 +34,14 @@ export const hotels: Hotel[] = [
     features: ["Deniz Manzarası", "Merkezi Konum", "24/7 Hizmet", "Özel Plaj"],
     agencyLink: "https://www.wome.com.tr/tr/acenteler",
     mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4352.496438740863!2d31.754110076796746!3d36.63032297229603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14dc98853d3ee249%3A0xbbfd95bcfad09755!2sWome%20Deluxe!5e1!3m2!1str!2str!4v1767528434808!5m2!1str!2str",
+    SYReview: `
+    <p>Wome Deluxe otel için seneler önce İslami otellerin Mercedesi demiştim. Zaman geçtikçe bu kanaatimin doğru olduğu ortaya çıktı.Bu otele geldiğinizde kendinizi evinizde gibi hissedebilir ve sizlere hizmet eden personelleri aileden biri gibi görebilirsiniz.</p>
+
+<p>Alanya bölgesinin en nezih kumsalı İncekum plajına bitişik olması ve deniz suyunun kalitesi herkes tarafından kabul edilmiştir. Mutfakta meşhur maestro Ahmet ustanın showları ve maharetleri herkesin dilindedir.</p>
+
+<p>Bu otelin ormanlık alan içinde bulunması balayı çiftlerinin çok tercih etmesine sebep olmuştur. Aquaparkı etkinlik ve animasyonları her zaman beğenilmektedir. Bu otele bir defa gelenlerin çoğu uzun yıllar bu oteli tercih etmeye devam etmektedir.</p>
+
+`
   },
   {
     id: "angels-marmaris",
@@ -65,8 +73,14 @@ export const hotels: Hotel[] = [
     rating: 4.8,
     amenities: ["Özel Villa", "Infinity Havuz", "Spa Merkezi", "Golf Sahası", "Helikopter Transfer"],
     features: ["Ultra Lüks", "Özel Hizmet", "Doğa İçinde", "Gizlilik"],
+    agencyLink: 'https://adenyahotels.com.tr/yetkili-acentelerimiz',
     mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4353.884455379811!2d31.772332091170274!3d36.60574020088923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14dcafba09212657%3A0x79a67792c7df74d4!2sAdenya%20Resort%20Hotels%20%26%20Spa!5e1!3m2!1str!2str!4v1767784883987!5m2!1str!2str",
+    SYReview: `<p>Adenya Otel, bayanların en çok sevdiği otel olarak öne çıkmaktadır. Mısır’dan özel getirilen kumları ve otel odalarından kolayca ulaşılan harika kumsalı ile sektörün inci oteli olarak anılır.</p>
 
+<p>Bu otele adım attığınız anda içerisindeki huzur ve dinginlik hemen ruhunuzu sarar. Güleryüzlü ve çalışkan personeli sayesinde kendinizi her an değerli hissedersiniz.</p>
+
+<p>Adenya Otel’de geçirdiğiniz güzel zamanların etkisiyle, bir sonraki yıl tekrar gelme isteğiniz doğal olarak oluşur. Henüz denememiş olanlara tavsiye olarak, ilk fırsatta rezervasyon yapıp bu mükemmel tatili deneyimlemeleri yeterli olacaktır.</p>
+`
   },
   {
     id: "sah-inn-paradise",
@@ -192,22 +206,22 @@ Ancak konfor için parasını kolay harcayabilen müşterilerime burayı mutlaka
     features: ["Tarihi Atmosfer", "Kültür Turu", "Deniz Manzarası", "Eğitimli Rehber"],
     mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4346.85267995899!2d31.523210076800112!3d36.73013227226738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab6532e31f387%3A0x6bb9283611cae208!2sSelge%20Beach%20Resort!5e1!3m2!1str!2str!4v1767785073207!5m2!1str!2str"
   },
-  {
-    id: "royal-teos",
-    priceId: "465835",
-    name: "Royal Teos",
-    slug: "royal-teos",
-    location: "İzmir / Seferihisar",
-    description: "Royal Teos Thermal Resort Clinic Spa (Ex. Euphoria Aegean) İzmir, Seferihisar bölgesinde bulunmaktadır. 90000 m2 alanda kurulmuş olan Royal Teos Thermal Resort Clinic Spa (Ex. Euphoria Aegean) otel alkolsüz herşey dahil konseptiyle misafirlerimize hizmet vermektedir.",
-    image: "/hotelImages/royalteos_1.jpg",
-    imageSlug: "royalteos",
-    youtubeVideoId: "uMrq05x_d70",
-    price: 3200,
-    rating: 4.2,
-    amenities: ["Özel Plaj", "Yat Limanı", "Lüks Villa", "Spa Merkezi", "Golf"],
-    features: ["Ultra Lüks", "Yat Turu", "Özel Hizmet", "Gizlilik"],
-    mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4262.414275198542!2d26.772522476849698!3d38.1966816718821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bb8cc2c5861add%3A0x4db9ea7992cbb03d!2sRoyal%20Teos%20Resort%20Clinic%20%26%20Spa!5e1!3m2!1str!2str!4v1767785136564!5m2!1str!2str"
-  },
+  // {
+  //   id: "royal-teos",
+  //   priceId: "465835",
+  //   name: "Royal Teos",
+  //   slug: "royal-teos",
+  //   location: "İzmir / Seferihisar",
+  //   description: "Royal Teos Thermal Resort Clinic Spa (Ex. Euphoria Aegean) İzmir, Seferihisar bölgesinde bulunmaktadır. 90000 m2 alanda kurulmuş olan Royal Teos Thermal Resort Clinic Spa (Ex. Euphoria Aegean) otel alkolsüz herşey dahil konseptiyle misafirlerimize hizmet vermektedir.",
+  //   image: "/hotelImages/royalteos_1.jpg",
+  //   imageSlug: "royalteos",
+  //   youtubeVideoId: "uMrq05x_d70",
+  //   price: 3200,
+  //   rating: 4.2,
+  //   amenities: ["Özel Plaj", "Yat Limanı", "Lüks Villa", "Spa Merkezi", "Golf"],
+  //   features: ["Ultra Lüks", "Yat Turu", "Özel Hizmet", "Gizlilik"],
+  //   mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4262.414275198542!2d26.772522476849698!3d38.1966816718821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bb8cc2c5861add%3A0x4db9ea7992cbb03d!2sRoyal%20Teos%20Resort%20Clinic%20%26%20Spa!5e1!3m2!1str!2str!4v1767785136564!5m2!1str!2str"
+  // },
   {
     id: "mola-istanbul",
     priceId: "716488",
@@ -223,7 +237,7 @@ Ancak konfor için parasını kolay harcayabilen müşterilerime burayı mutlaka
     amenities: ["Tatil Köyü", "Çoklu Havuz", "Spor Alanları", "Çocuk Kulübü", "Animasyon"],
     features: ["Geniş Alan", "Çeşitli Aktivite", "Aile Dostu", "Doğa İçinde"],
     mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4086.167174274347!2d28.365645076952998!3d41.11452377133594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b541a5a3f9465d%3A0x1d945c4ea50e7354!2sMola%20%C4%B0stanbul!5e1!3m2!1str!2str!4v1767785104039!5m2!1str!2str"
-    },
+  },
   // {
   //   id: "rizom-tatil-koyu",
   //   priceId: "716488",

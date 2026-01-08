@@ -1,11 +1,12 @@
 "use client"
 import { useState } from "react";
-import { Phone, Mail, MapPin, Clock, Send, MessageCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Send, MessageCircle, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import Link from "next/link";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -18,7 +19,7 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Form validation
     if (!formData.name || !formData.email || !formData.message) {
       // toast({
@@ -54,25 +55,29 @@ const Contact = () => {
       icon: Phone,
       title: "Telefon",
       details: ["+90 533 818 99 58"],
+      href: "tel:+905338189958",
       description: "7/24 müşteri hizmetleri"
     },
     {
       icon: Mail,
       title: "E-posta",
       details: ["info@helaltrip.com"],
+      href: 'mailto:info@helaltrip.com',
       description: "24 saat içinde yanıt"
     },
     {
       icon: MapPin,
       title: "Adres",
       details: ["Akşemsettin, Vatanperver Sk. Ata Apt No:2/1 34080 Fatih/İstanbul"],
+      href: 'https://www.google.com/maps/place/Helaltrip+Turizm/@41.0165089,28.9474909,940m/data=!3m2!1e3!4b1!4m6!3m5!1s0x14cabb1c9d0f1d73:0x456c3da49b531acc!8m2!3d41.0165089!4d28.9474909!16s%2Fg%2F11ryh0nyyj?entry=ttu&g_ep=EgoyMDI2MDEwNC4wIKXMDSoASAFQAw%3D%3D',
       description: "Merkez ofisimiz"
     },
     {
-      icon: Clock,
-      title: "Çalışma Saatleri",
-      details: ["Pazartesi - Cumartesi: 09:00 - 18:00", "Pazar: 10:00 - 16:00"],
-      description: "Acil durumlar için 7/24"
+      icon: Instagram,
+      title: "Instagram",
+      details: ["/helaltrip"],
+      href: 'https://www.instagram.com/helaltrip/',
+      description: "7/24 müşteri hizmetleri"
     }
   ];
 
@@ -84,9 +89,9 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      
+
       {/* Hero Section */}
-      <section className="hero-gradient text-white py-20" style={{background: '#0f172a'}}>
+      <section className="hero-gradient text-white py-20" style={{ background: '#0f172a' }}>
         <div className="container mx-auto px-4">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">İletişim</h1>
@@ -104,7 +109,7 @@ const Contact = () => {
             {contactInfo.map((info, index) => {
               const IconComponent = info.icon;
               return (
-                <div key={index} className="text-center group">
+                <Link target="_blank" href={info.href} key={index} className="text-center group">
                   <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 smooth-transition">
                     <IconComponent className="h-10 w-10 text-primary" />
                   </div>
@@ -115,7 +120,7 @@ const Contact = () => {
                     ))}
                   </div>
                   <p className="text-sm text-primary font-medium">{info.description}</p>
-                </div>
+                </Link>
               );
             })}
           </div>
@@ -126,17 +131,17 @@ const Contact = () => {
       <section className="py-20 bg-muted/30 shadow-md rounded-lg">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            
+
             {/* Contact Form */}
             <div>
               <div className="mb-8">
-                <h2 className="text-3xl font-bold mb-4">Bize Mesaj Gönderin</h2>
+                <h2 className="text-3xl font-bold mb-4">Bize WhatsApp Üzerinden Ulaşın</h2>
                 <p className="text-muted-foreground">
-                  Size en iyi hizmeti verebilmek için sorularınızı ve taleplerinizi bize iletin.
+                  Sorularınızı ve taleplerinizi WhatsApp üzerinden hızlıca iletebilirsiniz.
                 </p>
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <Label htmlFor="name">Ad Soyad *</Label>
@@ -176,7 +181,10 @@ const Contact = () => {
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="subject">Konu</Label>
-                    <Select value={formData.subject} onValueChange={(value: any) => handleInputChange('subject', value)}>
+                    <Select
+                      value={formData.subject}
+                      onValueChange={(value: any) => handleInputChange('subject', value)}
+                    >
                       <SelectTrigger className="text-primary bg-white">
                         <SelectValue placeholder="Konu seçin" />
                       </SelectTrigger>
@@ -204,18 +212,32 @@ const Contact = () => {
                   />
                 </div>
 
-                <Button type="submit" variant="default" size="lg" className="w-full">
-                  <Send className="h-5 w-5 mr-2" />
-                  Mesaj Gönder
-                </Button>
-              </form>
+                {/* WhatsApp button */}
+                <a
+                  href={`https://wa.me/905338189958?text=${encodeURIComponent(
+                    `Ad Soyad: ${formData.name}
+E-posta: ${formData.email}
+Telefon: ${formData.phone}
+Konu: ${formData.subject}
+Mesaj: ${formData.message}`
+                  )}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="default" size="lg" className="w-full mt-10">
+                    <Send className="h-5 w-5 mr-2" />
+                    WhatsApp ile Gönder
+                  </Button>
+                </a>
+              </div>
             </div>
+
 
             {/* Additional Info */}
             <div className="space-y-8">
-              
+
               {/* FAQ */}
-              <div className="bg-card p-8 rounded-2xl card-shadow ">
+              {/* <div className="bg-card p-8 rounded-2xl card-shadow ">
                 <div className="flex items-center gap-3 mb-6">
                   <MessageCircle className="h-6 w-6 text-primary" />
                   <h3 className="text-2xl font-semibold">Sık Sorulan Sorular</h3>
@@ -243,7 +265,7 @@ const Contact = () => {
                     </p>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               {/* Office Hours */}
               <div className="bg-card p-8 rounded-2xl card-shadow">
@@ -251,7 +273,7 @@ const Contact = () => {
                   <Clock className="h-6 w-6 text-primary" />
                   <h3 className="text-2xl font-semibold">Çalışma Saatlerimiz</h3>
                 </div>
-                
+
                 <div className="space-y-3">
                   {officeHours.map((schedule, index) => (
                     <div key={index} className="flex justify-between items-center">
@@ -260,7 +282,7 @@ const Contact = () => {
                     </div>
                   ))}
                 </div>
-                
+
                 <div className="mt-6 p-4 bg-accent/10 rounded-lg">
                   <p className="text-sm text-accent-foreground">
                     <strong>Acil Durumlar:</strong> 7/24 destek hattımız +90 533 888 99 99 numarasından ulaşılabilir.
@@ -272,14 +294,13 @@ const Contact = () => {
               <div className="bg-card p-8 rounded-2xl card-shadow">
                 <h3 className="text-2xl font-semibold mb-6">Ofisimizi Ziyaret Edin</h3>
                 <div className="w-full h-48 bg-muted rounded-lg flex items-center justify-center">
-                  <div className="text-center text-muted-foreground">
-                    <MapPin className="h-12 w-12 mx-auto mb-2" />
-                    <p>Harita Yakında Yüklenecek</p>
-                  </div>
+                  <iframe
+                    className="w-full h-full rounded-xl"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4092.2621955271507!2d28.9474909!3d41.016508900000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cabb1c9d0f1d73%3A0x456c3da49b531acc!2sHelaltrip%20Turizm!5e1!3m2!1str!2str!4v1767880098329!5m2!1str!2str"></iframe>
                 </div>
                 <div className="mt-4 text-sm text-muted-foreground">
-                  <p><strong>Adres:</strong> Atatürk Mahallesi, Turizm Caddesi No:123</p>
-                  <p><strong>Şehir:</strong> 07400 Alanya/Antalya</p>
+                  <p><strong>Adres:</strong> Akşemsettin, Vatanperver Sk. Ata Apt No:2/1</p>
+                  <p><strong>Şehir:</strong> 34080 Fatih/İstanbul</p>
                 </div>
               </div>
             </div>

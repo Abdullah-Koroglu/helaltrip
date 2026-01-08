@@ -10,6 +10,7 @@ import HotelStar from "@/components/star"
 import HotelInfoCard from "@/components/hotelDetail"
 import hotelDetails from "@/lib/hotel-details"
 import HotelReviewPage from "./SYReview"
+import Link from "next/link"
 
 
 interface HotelPageProps {
@@ -123,23 +124,20 @@ export default async function HotelPage({ params }: HotelPageProps) {
             </Card>
 
             {/* Features */}
-            {/* <Card>
+            {
+              hotel.agencyLink && <Card>
               <CardHeader>
-                <CardTitle className="text-primary">Özellikler</CardTitle>
+                <CardTitle className="text-primary">Otelin Yetkili Acenteler Sayfası </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="grid md:grid-cols-2 gap-4">
-                  {hotel.features.map((feature, index) => (
-                    <div key={index} className="flex items-center space-x-3 p-3 bg-primary/10 rounded-lg">
-                      <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
-                        <Heart className="w-4 h-4 text-primary" />
-                      </div>
-                      <span className="font-medium">{feature}</span>
-                    </div>
-                  ))}
+                  <Link href={hotel.agencyLink} target="_blank">{
+                    hotel.agencyLink
+                  }</Link>
                 </div>
               </CardContent>
-            </Card> */}
+            </Card>
+            }
           </div>
 
         </div>
