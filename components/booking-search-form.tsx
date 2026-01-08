@@ -25,6 +25,12 @@ export interface BookingSearchParams {
   childrenAges: number[]
 }
 
+const addDays = (date: Date, days: number) => {
+  const d = new Date(date);
+  d.setDate(d.getDate() + days);
+  return d;
+};
+
 export function BookingSearchForm({ hotel, onSearch }: BookingSearchFormProps) {
   const router = useRouter()
   const [checkin, setCheckin] = useState("")
@@ -129,19 +135,21 @@ export function BookingSearchForm({ hotel, onSearch }: BookingSearchFormProps) {
 
 
           <div className="grid md:grid-cols-3 gap-4">
-          <div className="space-y-2">
-            <Label className="flex items-center pl-2">
-              {/* <Calendar className="w-4 h-4 mr-2" /> */}
-              Tarih Aralığı
-            </Label>
+            <div className="space-y-2">
+              <Label className="flex items-center pl-2">
+                {/* <Calendar className="w-4 h-4 mr-2" /> */}
+                Tarih Aralığı
+              </Label>
 
-            <DateRangePicker
-              onChange={({ from, to }) => {
-                setCheckin(from.toISOString().split("T")[0])
-                setCheckout(to.toISOString().split("T")[0])
-              }}
+              <DateRangePicker
+                onChange={({ from, to }) => {
+                  if (!from || !to) return;
+
+                  setCheckin(addDays(from, 1).toISOString().split("T")[0]);
+                  setCheckout(addDays(to, 1).toISOString().split("T")[0]);
+                }}
             />
-          </div>
+            </div>
             <div className="space-y-2">
               <Label htmlFor="adults" className="flex items-center pl-2">
                 {/* <Users className="w-4 h-4 mr-2" /> */}
