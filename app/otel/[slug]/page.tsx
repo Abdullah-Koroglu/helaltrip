@@ -13,10 +13,9 @@ import HotelReviewPage from "./SYReview"
 
 
 interface HotelPageProps {
-  params: {
-    slug: string
-  }
+  params: Promise<{ slug: string }>
 }
+
 
 export async function generateStaticParams() {
   return hotels.map(hotel => ({ slug: hotel.slug }))
@@ -24,8 +23,9 @@ export async function generateStaticParams() {
 
 
 export default async function HotelPage({ params }: HotelPageProps) {
-  const hotel: Hotel | undefined = hotels.find(h => h.slug === params.slug)
-
+  const { slug } = await params
+  const hotel = hotels.find(h => h.slug === slug)
+  
   const data = hotelDetails[hotel?.id as keyof typeof hotelDetails] || hotelDetails["wome-deluxe"]
 
   if (!hotel) {
