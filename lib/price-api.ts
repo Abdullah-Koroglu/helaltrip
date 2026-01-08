@@ -45,7 +45,7 @@ export interface PriceResponse {
 }
 
 // const BASE_API_URL = "http://localhost:3001/api";
-const BASE_API_URL = "http://45.195.75.246:3030/api";
+const BASE_API_URL = "https://test1.helaltrip.com/api";
 
 const HOTEL_DETAILS_API_URL = `${BASE_API_URL}/hotel-info`;
 const PRICE_API_URL = `${BASE_API_URL}/hotel-prices`;
