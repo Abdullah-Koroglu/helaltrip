@@ -49,7 +49,7 @@ export function HotelBookingSidebar({ hotel }: HotelBookingSidebarProps) {
         adults: params.adults.toString(),
         children: params.children.toString(),
         childrenAges: params.childrenAges,
-        discountPercentage: "0",
+        discountPercentage: "7",
         currency: "TRY",
         customerCountryCode: "TR",
       }
