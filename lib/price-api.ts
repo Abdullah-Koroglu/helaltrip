@@ -23,6 +23,7 @@ export interface RoomOffer {
   currency: string;
   cancellationPolicy: string;
   image: string;
+  photos?: string[]
 }
 
 export interface PriceResponseData {
@@ -43,8 +44,8 @@ export interface PriceResponse {
   error?: string;
 }
 
-const BASE_API_URL = "http://localhost:3001/api";
-// const BASE_API_URL = "http://45.195.75.246:3030/api";
+// const BASE_API_URL = "http://localhost:3001/api";
+const BASE_API_URL = "http://45.195.75.246:3030/api";
 
 const HOTEL_DETAILS_API_URL = `${BASE_API_URL}/hotel-info`;
 const PRICE_API_URL = `${BASE_API_URL}/hotel-prices`;
@@ -87,7 +88,6 @@ export async function fetchHotelPrice(request: PriceRequest): Promise<PriceRespo
 
 export async function fetchHotelDetails(hotelId: string): Promise<{ data: any | null, error: string | null }> {
   try {
-    console.log({ hotelId })
     const response = await fetch(`${HOTEL_DETAILS_API_URL}`, {
       method: "POST",
       headers: {

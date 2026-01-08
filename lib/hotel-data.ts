@@ -99,7 +99,7 @@ export const hotels: Hotel[] = [
     rating: 4.9,
     amenities: ["Merkezi Konum", "İş Merkezi", "Toplantı Salonu", "Restoran", "Bar"],
     features: ["Tarihi Kale Manzarası", "İş Dostu", "Merkezi Konum", "Ulaşım Kolaylığı"],
-    mapLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4092.9759692626717!2d28.971564!3d41.005018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab999e64b6fa1%3A0x785705c6f2fbddac!2sOba%20Hotel!5e1!3m2!1str!2str!4v1767782726922!5m2!1str!2str',
+    mapLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4325.680946457982!2d27.499391176812615!3d37.10249607216236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14be69712a10bd87%3A0x53202d97fed60bc0!2sThe%20Oba%20Hotel!5e1!3m2!1str!2str!4v1767866440912!5m2!1str!2str',
     SYReview: `
     
     

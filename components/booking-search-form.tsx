@@ -10,6 +10,7 @@ import { useRouter } from "next/navigation"
 import { Hotel } from "@/lib/hotel-data"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select"
 import { hotels } from "@/lib/hotel-data"
+import { DateRangePicker } from "./date-range-picker"
 
 interface BookingSearchFormProps {
   hotel?: Hotel
@@ -103,65 +104,47 @@ export function BookingSearchForm({ hotel, onSearch }: BookingSearchFormProps) {
       <CardHeader>
         <CardTitle className="flex items-center">
           <Search className="w-5 h-5 mr-2" />
-          {hotel ? "Rezervasyon Yap" : "Otel Ara"}
+          {hotel ? "Rezervasyon Telebi Oluştur" : "Otel Ara"}
         </CardTitle>
       </CardHeader>
       <CardContent>
         <form onSubmit={handleSubmit} className="space-y-4">
-          {
+          {/* {
             !hotel && (
               <div className="space-y-2">
-            <Label htmlFor="hotel" className="flex items-center ">Otel Seçin</Label>
-            <Select value={selectedHotel || ""} onValueChange={handleHotelChange}>
-              <SelectTrigger className="text-primary bg-white">
-                <SelectValue placeholder="Otel Seçin" />
-              </SelectTrigger>
-              <SelectContent>
-                {hotels.map((hotel : any) => (
-                  <SelectItem key={hotel.id} value={hotel.id}>{hotel.name}</SelectItem>
-                ))}
-                </SelectContent>
-              </Select>
-          </div>
+                <Label htmlFor="hotel" className="flex items-center ">Otel Seçin</Label>
+                <Select value={selectedHotel || ""} onValueChange={handleHotelChange}>
+                  <SelectTrigger className="text-primary bg-white">
+                    <SelectValue placeholder="Otel Seçin" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {hotels.map((hotel: any) => (
+                      <SelectItem key={hotel.id} value={hotel.id}>{hotel.name}</SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
             )
-          }
+          } */}
 
-          <div className="grid md:grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <Label htmlFor="checkin" className="flex items-center">
-                <Calendar className="w-4 h-4 mr-2" />
-                Giriş Tarihi
-              </Label>
-              <Input
-                id="checkin"
-                type="date"
-                value={checkin}
-                onChange={(e) => setCheckin(e.target.value)}
-                min={today}
-                required
-              />
-            </div>
 
-            <div className="space-y-2">
-              <Label htmlFor="checkout" className="flex items-center">
-                <Calendar className="w-4 h-4 mr-2" />
-                Çıkış Tarihi
-              </Label>
-              <Input
-                id="checkout"
-                type="date"
-                value={checkout}
-                onChange={(e) => setCheckout(e.target.value)}
-                min={checkin || today}
-                required
-              />
-            </div>
+          <div className="grid md:grid-cols-3 gap-4">
+          <div className="space-y-2">
+            <Label className="flex items-center pl-2">
+              {/* <Calendar className="w-4 h-4 mr-2" /> */}
+              Tarih Aralığı
+            </Label>
+
+            <DateRangePicker
+              onChange={({ from, to }) => {
+                setCheckin(from.toISOString().split("T")[0])
+                setCheckout(to.toISOString().split("T")[0])
+              }}
+            />
           </div>
-
-          <div className="grid md:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label htmlFor="adults" className="flex items-center">
-                <Users className="w-4 h-4 mr-2" />
+              <Label htmlFor="adults" className="flex items-center pl-2">
+                {/* <Users className="w-4 h-4 mr-2" /> */}
                 Yetişkin Sayısı
               </Label>
               <Input
@@ -176,8 +159,8 @@ export function BookingSearchForm({ hotel, onSearch }: BookingSearchFormProps) {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="children" className="flex items-center">
-                <Users className="w-4 h-4 mr-2" />
+              <Label htmlFor="children" className="flex items-center pl-2">
+                {/* <Users className="w-4 h-4 mr-2" /> */}
                 Çocuk Sayısı
               </Label>
               <Input

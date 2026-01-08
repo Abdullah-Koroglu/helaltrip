@@ -57,7 +57,7 @@ export default async function HotelPage({ params }: HotelPageProps) {
           {/* Main Content */}
           {/* <div className="lg:col-span-2 space-y-8">
             {/* Booking Sidebar */}
-          {/* <HotelBookingSidebar hotel={hotel} /> */}
+          <HotelBookingSidebar hotel={hotel} />
 
 
           <div className="space-y-6 p-0">

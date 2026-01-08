@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { BookingSearchForm, BookingSearchParams } from "@/components/booking-search-form"
 import { fetchHotelPrice, RoomOffer } from "@/lib/price-api"
 import { Hotel } from "@/lib/hotel-data"
-import { Loader2, CheckCircle, XCircle, DollarSign, Bed, Utensils, Calendar } from "lucide-react"
+import { Loader2, XCircle, Bed, Utensils, X } from "lucide-react"
 import Image from "next/image"
 
 interface HotelBookingSidebarProps {
@@ -19,11 +19,27 @@ export function HotelBookingSidebar({ hotel }: HotelBookingSidebarProps) {
   const [error, setError] = useState<string | null>(null)
   const [searchParams, setSearchParams] = useState<BookingSearchParams | null>(null)
 
+  const [showAll, setShowAll] = useState(false)
+
+  const [showImageModal, setShowImageModal] = useState(false)
+  const [activeImage, setActiveImage] = useState<string | null>(null)
+
+  const openImage = (url: string) => {
+    setActiveImage(url)
+    setShowImageModal(true)
+  }
+
+  const closeImage = () => {
+    setShowImageModal(false)
+    setActiveImage(null)
+  }
+
   const handleSearch = async (params: BookingSearchParams) => {
     setLoading(true)
     setError(null)
     setOffers([])
     setSearchParams(params)
+    setShowAll(false)
 
     try {
       const priceRequest = {
@@ -83,8 +99,10 @@ export function HotelBookingSidebar({ hotel }: HotelBookingSidebarProps) {
     return Math.ceil(diffTime / (1000 * 60 * 60 * 24))
   }
 
+  const visibleOffers = showAll ? offers : offers.slice(0, 6)
+
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 mb-8">
       <BookingSearchForm hotel={hotel} onSearch={handleSearch} />
 
       {loading && (
@@ -109,7 +127,7 @@ export function HotelBookingSidebar({ hotel }: HotelBookingSidebarProps) {
         </Card>
       )}
 
-      {offers.length > 0 && !loading && !error && (
+      {visibleOffers.length > 0 && !loading && !error && (
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center">
@@ -123,71 +141,147 @@ export function HotelBookingSidebar({ hotel }: HotelBookingSidebarProps) {
               </div>
             )}
           </CardHeader>
+
           <CardContent>
-            <div className="space-y-4">
-              {offers.map((offer, index) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {visibleOffers.map((offer, index) => (
                 <Card
                   key={offer.roomId || index}
-                  className="border hover:border-blue-500 transition-colors cursor-pointer"
-                  onClick={() => handleRoomSelect(offer)}
+                  className="border hover:shadow-lg transition-all duration-200 rounded-xl cursor-pointer overflow-hidden"
+                // onClick={() => handleRoomSelect(offer)}
                 >
-                  <CardContent className="p-4">
-                    <div className="flex gap-4">
-                      {offer.image && (
-                        <div className="relative w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden">
-                          <Image
-                            src={offer.image}
-                            alt={offer.roomName}
-                            fill
-                            className="object-cover"
-                          />
+                  <CardContent className="p-0">
+
+                    {/* Ana Görsel */}
+                    <div className="relative w-full h-40 md:h-48 overflow-hidden">
+                      <Image
+                        src={offer.image}
+                        alt={offer.roomName}
+                        fill
+                        className="object-cover transition-transform duration-300 hover:scale-105"
+                      />
+                    </div>
+
+                    <div className="p-4 space-y-4">
+
+                      {/* Oda Başlık */}
+                      <h3 className="font-semibold text-xl text-gray-900">
+                        {offer.roomName}
+                      </h3>
+
+                      {/* Yemek Planı */}
+                      <div className="flex items-center text-sm text-gray-600">
+                        <Utensils className="w-4 h-4 mr-1" />
+                        <span>{offer.mealPlan}</span>
+                      </div>
+
+                      {/* İptal Politikası */}
+                      {offer.cancellationPolicy && (
+                        <p className="text-xs text-gray-500">
+                          {offer.cancellationPolicy}
+                        </p>
+                      )}
+
+                      {/* FOTO GALERİ (SCROLLABLE THUMBNAILS) */}
+                      {offer.photos && offer.photos.length > 1 && (
+                        <div className="flex space-x-2 overflow-x-auto scrollbar-hide py-1">
+                          {offer.photos.map((photo, idx) => (
+                            <div
+                              key={idx}
+                              className="relative w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 cursor-pointer"
+                              onClick={(e) => {
+                                e.stopPropagation()
+                                openImage(photo)
+                              }}
+                            >
+                              <Image
+                                src={photo}
+                                alt={`${offer.roomName} photo ${idx}`}
+                                fill
+                                className="object-cover border hover:scale-110 transition-transform"
+                              />
+                            </div>
+                          ))}
                         </div>
                       )}
-                      <div className="flex-1 min-w-0">
-                        <h3 className="font-semibold text-lg mb-1">{offer.roomName}</h3>
-                        <div className="flex items-center text-sm text-gray-600 mb-2">
-                          <Utensils className="w-4 h-4 mr-1" />
-                          <span>{offer.mealPlan}</span>
-                        </div>
-                        {offer.cancellationPolicy && (
-                          <p className="text-xs text-gray-500 mb-2">
-                            {offer.cancellationPolicy}
-                          </p>
-                        )}
-                        <div className="flex items-center justify-between mt-3">
-                          <div>
-                            {offer.discountPercentage !== "0" && (
-                              <div className="text-sm text-gray-400 line-through">
-                                ₺{offer.originalPrice.toLocaleString("tr-TR")}
-                              </div>
-                            )}
-                            <div className="text-xl font-bold text-blue-600">
-                              ₺{offer.discountedPrice.toLocaleString("tr-TR")}
+
+
+                      {/* Fiyat ve Buton */}
+                      <div className="flex items-end justify-between mt-4">
+
+                        {/* Fiyat Bilgisi */}
+                        <div>
+                          {offer.discountPercentage !== "0" && (
+                            <div className="text-sm text-gray-400 line-through">
+                              ₺{offer.originalPrice.toLocaleString("tr-TR")}
                             </div>
-                            <div className="text-xs text-gray-500">
-                              {calculateNights()} gece
-                            </div>
+                          )}
+                          <div className="text-2xl font-bold text-blue-600">
+                            ₺{offer.discountedPrice.toLocaleString("tr-TR")}
                           </div>
-                          <Button
-                            className="bg-blue-600 hover:bg-blue-700"
-                            onClick={(e) => {
-                              e.stopPropagation()
-                              handleRoomSelect(offer)
-                            }}
-                          >
-                            Seç
-                          </Button>
+                          <div className="text-xs text-gray-500">{calculateNights()} gece</div>
                         </div>
+
+                        {/* Seç Butonu */}
+                        <Button
+                          className="bg-blue-600 hover:bg-blue-700"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleRoomSelect(offer);
+                          }}
+                        >
+                          Seç
+                        </Button>
                       </div>
                     </div>
+
                   </CardContent>
                 </Card>
               ))}
+
             </div>
+
+            {offers.length > 6 && (
+              <div className="flex justify-center mt-4">
+                <Button
+                  variant="outline"
+                  onClick={() => setShowAll(!showAll)}
+                >
+                  {showAll ? "Daha Az Göster" : "Daha Fazla Göster"}
+                </Button>
+              </div>
+            )}
           </CardContent>
         </Card>
       )}
+
+      {showImageModal && activeImage && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
+          onClick={closeImage}
+        >
+          <div className="relative max-w-4xl max-h-[90vh]">
+            <Image
+              src={activeImage}
+              alt="room"
+              width={1200}
+              height={900}
+              className="rounded-lg object-contain max-h-[90vh] mx-auto"
+            />
+
+            <button
+              className="absolute top-2 right-2 bg-white text-black px-2 py-1 rounded-lg text-sm"
+              onClick={(e) => {
+                e.stopPropagation()
+                closeImage()
+              }}
+            >
+              <X  size={18}/>
+            </button>
+          </div>
+        </div>
+      )}
+
     </div>
   )
 }
-
