@@ -27,11 +27,12 @@ export default function RootLayout({
     <html lang="tr">
       <body className={poppins.className}>
         <Header />
-
-        {children}
+        <div className="min-h-[calc(100vh-20rem)]">
+          {children}
+        </div>
+        <TimedPopup />
         <ContactButton />
         <Footer />
-        <TimedPopup />
       </body>
     </html>
   )

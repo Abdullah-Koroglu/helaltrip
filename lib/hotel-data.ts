@@ -238,21 +238,21 @@ Ancak konfor için parasını kolay harcayabilen müşterilerime burayı mutlaka
     features: ["Geniş Alan", "Çeşitli Aktivite", "Aile Dostu", "Doğa İçinde"],
     mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4086.167174274347!2d28.365645076952998!3d41.11452377133594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b541a5a3f9465d%3A0x1d945c4ea50e7354!2sMola%20%C4%B0stanbul!5e1!3m2!1str!2str!4v1767785104039!5m2!1str!2str"
   },
-  // {
-  //   id: "rizom-tatil-koyu",
-  //   priceId: "716488",
-  //   name: "Rizom Tatil Köyü",
-  //   slug: "rizom-tatil-koyu",
-  //   location: "Çanakkale / Akçakeçili",
-  //   description: "Rizom Tatil Köyü Yalova Merkez'de bulunmaktadır. Rizom Tatil Köyü denize sıfır konumuyla dikkat çekmektedir. Tesisin kendine özel kum plajı bulunmaktadır. 4 adet açık yüzme havuzu ile keyifli bir tatil yaşayabilirsiniz.",
-  //   image: "/hotelImages/rizomtatil_1.jpg",
-  //   imageSlug: "rizomtatil",
-  //   youtubeVideoId: "dQw4w9WgXcQ",
-  //   price: 1700,
-  //   rating: 4.4,
-  //   amenities: ["Tatil Köyü", "Çoklu Havuz", "Spor Alanları", "Çocuk Kulübü", "Animasyon"],
-  //   features: ["Geniş Alan", "Çeşitli Aktivite", "Aile Dostu", "Doğa İçinde"]
-  //   },
+  {
+    id: "rizom-assos-koyu",
+    priceId: "716488",
+    name: "Rizom Assos Tatil Köyü",
+    slug: "rizom-assos-koyu",
+    location: "Çanakkale / Akçakeçili",
+    description: "Rizom Tatil Köyü Yalova Merkez'de bulunmaktadır. Rizom Tatil Köyü denize sıfır konumuyla dikkat çekmektedir. Tesisin kendine özel kum plajı bulunmaktadır. 4 adet açık yüzme havuzu ile keyifli bir tatil yaşayabilirsiniz.",
+    image: "/hotelImages/rizomtatil_1.jpg",
+    imageSlug: "rizomtatil",
+    youtubeVideoId: "eiTWAOzd-o0",
+    price: 1700,
+    rating: 4.4,
+    amenities: ["Tatil Köyü", "Çoklu Havuz", "Spor Alanları", "Çocuk Kulübü", "Animasyon"],
+    features: ["Geniş Alan", "Çeşitli Aktivite", "Aile Dostu", "Doğa İçinde"]
+    },
   // {
   //   id: "zeyda-kemer",
   //   priceId: "716355",

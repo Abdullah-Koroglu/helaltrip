@@ -4,8 +4,9 @@ import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { CheckCircle, Home, Calendar, Users, MapPin, Star, Mail } from "lucide-react"
+import { CheckCircle, Home, Calendar, Users, MapPin, Star, Mail, Camera } from "lucide-react"
 import Link from "next/link"
+import html2canvas from "html2canvas"
 
 interface PaymentData {
   hotel: {
@@ -44,7 +45,8 @@ export default function PaymentSuccessPage() {
 
   useEffect(() => {
     // Get payment data from sessionStorage
-    const storedData = sessionStorage.getItem("paymentData")
+    // const storedData = sessionStorage.getItem("paymentData")
+    const storedData = sessionStorage.getItem("bookingData")
     if (!storedData) {
       // Redirect to home if no payment data
       router.push("/")
@@ -61,6 +63,19 @@ export default function PaymentSuccessPage() {
       setLoading(false)
     }
   }, [router])
+
+  const handleScreenshot = async () => {
+    const element = document.getElementById("payment-success-wrapper")
+    if (!element) return
+
+    const canvas = await html2canvas(element, { scale: 2 })
+    const dataURL = canvas.toDataURL("image/png")
+
+    const link = document.createElement("a")
+    link.href = dataURL
+    link.download = "rezervasyon-detayi.png"
+    link.click()
+  }
 
   const calculateNights = () => {
     if (!paymentData?.checkin || !paymentData?.checkout) return 0
@@ -86,9 +101,16 @@ export default function PaymentSuccessPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12">
-      <div className="container mx-auto px-4">
-        <div className="max-w-2xl mx-auto">
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center py-4">
+      <div className="mx-auto px-4">
+        <div className="flex justify-center mb-10">
+          <Button onClick={handleScreenshot} variant="outline">
+            <Camera className="w-4 h-4 mr-2" />
+            Ekran Görüntüsü Al
+          </Button>
+        </div>
+
+        <div id="payment-success-wrapper" className="max-w-2xl mx-auto">
           <Card className="border-green-200 bg-green-50">
             <CardContent className="pt-12 pb-12">
               <div className="text-center space-y-6">
@@ -100,7 +122,7 @@ export default function PaymentSuccessPage() {
 
                 <div>
                   <h1 className="text-3xl font-bold text-gray-900 mb-2">
-                    Ödeme Başarılı!
+                    Talep Başarılı!
                   </h1>
                   <p className="text-lg text-gray-600">
                     Rezervasyonunuz başarıyla oluşturuldu

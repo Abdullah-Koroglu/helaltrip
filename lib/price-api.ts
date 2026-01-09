@@ -3,7 +3,7 @@ export interface PriceRequest {
   checkin: string;
   checkout: string;
   adults: string;
-  children: string;
+  children: number;
   childrenAges: number[];
   discountPercentage?: string;
   currency?: string;

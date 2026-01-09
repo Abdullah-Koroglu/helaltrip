@@ -47,7 +47,7 @@ export function HotelBookingSidebar({ hotel }: HotelBookingSidebarProps) {
         checkin: params.checkin,
         checkout: params.checkout,
         adults: params.adults.toString(),
-        children: params.children.toString(),
+        children: params.children,
         childrenAges: params.childrenAges,
         discountPercentage: "7",
         currency: "TRY",

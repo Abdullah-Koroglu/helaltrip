@@ -37,7 +37,7 @@ export default function BookingPage() {
   const checkin = searchParams.get("checkin")
   const checkout = searchParams.get("checkout")
   const adults = searchParams.get("adults")
-  const children = searchParams.get("children")
+  const children = parseInt(searchParams.get("children") || "")
   const childrenAges = searchParams.get("childrenAges")?.split(",").map(Number) || []
   const roomId = searchParams.get("roomId")
   const roomName = searchParams.get("roomName")
@@ -99,7 +99,7 @@ export default function BookingPage() {
         checkin,
         checkout,
         adults,
-        children: children || "0",
+        children: children || 0,
         childrenAges,
         discountPercentage: "0",
         currency: "TRY",
@@ -306,7 +306,7 @@ export default function BookingPage() {
                   </div>
 
                   <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700" size="lg">
-                    Ödeme Sayfasına Geç
+                    Onay Sayfasına Geç
                   </Button>
                 </form>
               </CardContent>
@@ -372,7 +372,7 @@ export default function BookingPage() {
                       </span>
                       <span>
                         {adults} yetişkin
-                        {children && parseInt(children) > 0 && `, ${children} çocuk`}
+                        {children && children > 0 && `, ${children} çocuk`}
                       </span>
                     </div>
                     <div className="flex items-center justify-between text-sm font-semibold">

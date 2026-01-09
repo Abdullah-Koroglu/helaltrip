@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Phone, Mail, MapPin, Instagram, Facebook, Twitter } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram, Facebook, Twitter, MessageCircle } from "lucide-react";
 import Image from "next/image";
 
 const Footer = () => {
@@ -10,15 +10,15 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center gap-2 font-bold text-xl">
-              <Image src="logo-w.png" alt="Helaltrip" width={240} height={32} />
+              <Image src="/logo-w.png" alt="Helaltrip" width={240} height={32} />
             </div>
             <p className="text-sm text-primary-foreground/80 leading-relaxed">
               Türkiye'nin en güzel otellerinde unutulmaz tatil deneyimleri sunan güvenilir turizm acenteniz.
             </p>
             <div className="flex space-x-4">
-              <Facebook className="h-5 w-5 hover:text-secondary cursor-pointer smooth-transition" />
-              <Instagram className="h-5 w-5 hover:text-secondary cursor-pointer smooth-transition" />
-              <Twitter className="h-5 w-5 hover:text-secondary cursor-pointer smooth-transition" />
+              {/* <Whatsapp className="h-5 w-5 hover:text-secondary cursor-pointer smooth-transition" /> */}
+              <Link href={'https://www.instagram.com/helaltrip/'}><Instagram className="h-5 w-5 hover:text-secondary cursor-pointer smooth-transition" /></Link>
+              <Link href={"https://wa.me/905338189958"}><MessageCircle className="h-5 w-5 hover:text-secondary cursor-pointer smooth-transition" /></Link>
             </div>
           </div>
 
@@ -56,18 +56,18 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-semibold text-lg">İletişim</h3>
             <div className="space-y-3">
-              <div className="flex items-center gap-3">
+              <Link href={"tel:+905338189958"} className="flex items-center gap-3">
                 <Phone className="h-4 w-4 text-secondary" />
                 <span className="text-sm">+90 533 818 99 58</span>
-              </div>
-              <div className="flex items-center gap-3">
+              </Link>
+              <Link href={"mailto:info@helaltrip.com"} className="flex items-center gap-3">
                 <Mail className="h-4 w-4 text-secondary" />
                 <span className="text-sm">info@helaltrip.com</span>
-              </div>
-              <div className="flex items-start gap-3">
+              </Link>
+              <Link href={'https://www.google.com/maps/place/Helaltrip+Turizm/@41.0165089,28.9474909,940m/data=!3m2!1e3!4b1!4m6!3m5!1s0x14cabb1c9d0f1d73:0x456c3da49b531acc!8m2!3d41.0165089!4d28.9474909!16s%2Fg%2F11ryh0nyyj?entry=ttu&g_ep=EgoyMDI2MDEwNC4wIKXMDSoASAFQAw%3D%3D'} className="flex items-start gap-3">
                 <MapPin className="h-4 w-4 text-secondary mt-1 flex-shrink-0" />
                 <span className="text-sm">Akşemsettin, Vatanperver Sk. Ata Apt No:2/1 34080 Fatih/İstanbul</span>
-              </div>
+              </Link>
             </div>
           </div>
         </div>
