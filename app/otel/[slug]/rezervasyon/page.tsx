@@ -95,7 +95,7 @@ export default function BookingPage() {
     setPriceLoading(true)
     try {
       const priceRequest = {
-        hotelId: hotelData.priceId,
+        hotelId: hotelData.priceId || "31",
         checkin,
         checkout,
         adults,
