@@ -43,13 +43,13 @@ export function HotelBookingSidebar({ hotel }: HotelBookingSidebarProps) {
 
     try {
       const priceRequest = {
-        hotelId: hotel.priceId,
+        hotelId: hotel.priceId || '31',
         checkin: params.checkin,
         checkout: params.checkout,
         adults: params.adults.toString(),
         children: params.children,
         childrenAges: params.childrenAges,
-        discountPercentage: "7",
+        discountPercentage: "0",
         currency: "TRY",
         customerCountryCode: "TR",
       }
@@ -103,7 +103,7 @@ export function HotelBookingSidebar({ hotel }: HotelBookingSidebarProps) {
 
   return (
     <div className="space-y-6 mb-8">
-      <BookingSearchForm hotel={hotel} onSearch={handleSearch} />
+      {hotel.priceId && <BookingSearchForm hotel={hotel} onSearch={handleSearch} />}
 
       {loading && (
         <Card>

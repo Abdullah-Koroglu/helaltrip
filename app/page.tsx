@@ -4,7 +4,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { hotels } from "@/lib/hotel-data"
 import { Star, Shield, MapPin, Heart, Users, Award } from "lucide-react"
 import Link from "next/link"
-import { BookingSearchForm } from "@/components/booking-search-form"
 import { CampaignSlider } from "@/components/campaign-slider"
 const review = require("@/public/reviews.json")
 

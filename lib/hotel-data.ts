@@ -11,7 +11,7 @@ export interface Hotel {
   amenities: string[];
   features: string[];
   imageSlug: string;
-  priceId: string;
+  priceId: string | null;
   agencyLink?: string;
   mapLink?: string;
   SYReview?: string;
@@ -45,7 +45,7 @@ export const hotels: Hotel[] = [
   },
   {
     id: "angels-marmaris",
-    priceId: "31",
+    priceId: null,
     name: "Angel's Marmaris",
     slug: "angels-marmaris",
     location: "Muğla / Marmaris",
@@ -84,7 +84,7 @@ export const hotels: Hotel[] = [
   },
   {
     id: "sah-inn-paradise",
-    priceId: "31",
+    priceId: null,
     name: "Şah Inn Paradise",
     slug: "sah-inn-paradise",
     location: "Antalya / Kumluca",
@@ -253,6 +253,22 @@ Ancak konfor için parasını kolay harcayabilen müşterilerime burayı mutlaka
     amenities: ["Tatil Köyü", "Çoklu Havuz", "Spor Alanları", "Çocuk Kulübü", "Animasyon"],
     features: ["Geniş Alan", "Çeşitli Aktivite", "Aile Dostu", "Doğa İçinde"]
     },
+  // {
+  //   id: "loca-marin",
+  //   priceId: "999999999",
+  //   name: "Locamarin Yat Tatili",
+  //   slug: "loca-marin",
+  //   location: "Muğla / Göcek",
+  //   description: "",
+  //   image: "/hotelImages/locamarin_1.jpg",
+  //   imageSlug: "locamarin",
+  //   youtubeVideoId: "",
+  //   price: 1700,
+  //   rating: 4.6,
+  //   amenities: ["Yat Turu"],
+  //   features: ["Yat Turu"],
+  //   mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4992.535361260812!2d28.94116072807842!3d36.75340050866275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c065fa398fef15%3A0x8de56199ebeef49d!2zR8O2Y2VrLCBGZXRoaXllL011xJ9sYSwgVMO8cmtpeWU!5e1!3m2!1str!2sus!4v1768389421095!5m2!1str!2sus"
+  //   },
   // {
   //   id: "zeyda-kemer",
   //   priceId: "716355",
