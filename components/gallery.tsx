@@ -75,11 +75,11 @@ const Gallery = ({ hotel }: { hotel: Hotel }) => {
 
           {/* Büyük görsel - Mobilde full width, Desktop'ta responsive */}
           <div className={`w-full relative ${isMobile ? 'col-span-1' : 'col-span-3'} sm:rounded-xl md:rounded-2xl overflow-hidden shadow-lg max-h-[50vh] flex`}>
-            <div className="relative w-full overflow-hidden">
+            <div className="relative w-full overflow-hidden flex">
               <img
                 src={`/hotelImages/${hotel.imageSlug}_${activeIndex}.jpg`}
                 alt={hotel.name}
-                className="object-cover bg-center hover:scale-105 transition-transform duration-700 w-full"
+                className="object-cover object-center hover:scale-105 transition-transform duration-700 w-full"
                 loading={activeIndex <= 2 ? "eager" : "lazy"}
               />
 

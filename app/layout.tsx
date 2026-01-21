@@ -16,6 +16,10 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: 'Helaltrip - Türkiye\'nin en iyi helal konsept alkolsuz aile otelleri',
   description: 'Dünyanın en iyi helal konsept alkolsuz aile otelleri sadece Türkiye\'de',
+  icons: {
+    icon: "./icon.png",
+    shortcut: "./icon.png",
+  },
 }
 
 export default function RootLayout({

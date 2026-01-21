@@ -106,6 +106,29 @@ export function Header() {
                       </div>
                     </Link>
                   ))}
+                  <Link
+                    key={'locamarin'}
+                    href={`locamarin`}
+                    className="flex items-center space-x-3 p-2 rounded hover:bg-primary/10 transition-colors duration-300"
+                  >
+                    <div className="w-12 h-12 rounded-lg overflow-hidden flex-shrink-0">
+                      <Image
+                        src={'/hotelImages/loca_1.jpg'}
+                        alt={"Locamarin"}
+                        className="w-full h-full object-cover"
+                        width={48}
+                        height={48}
+                      />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h4 className="text-sm font-medium text-primary truncate">
+                        Locamarin
+                      </h4>
+                      <p className="text-xs text-primary/70 truncate">
+                        Muğla / Göcek
+                      </p>
+                    </div>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -176,6 +199,17 @@ export function Header() {
                         <span className="text-sm text-primary font-semibold">{hotel.name}</span>
                       </Link>
                     ))}
+                    <Link
+                      key={'locamarin'}
+                      href={`/locamarin`}
+                      className="flex items-center space-x-3 p-2 rounded hover:bg-primary/10 transition-colors duration-300"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      <div className="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0">
+                        <Image src={'/hotelImages/loca_1.jpg'} alt={"Locamarin"} className="w-full h-full object-cover" width={40} height={40} />
+                      </div>
+                      <span className="text-sm text-primary font-semibold">Locamarin</span>
+                    </Link>
                   </div>
                 </CollapsibleContent>
               </Collapsible>
