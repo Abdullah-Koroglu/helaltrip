@@ -77,7 +77,7 @@ const Gallery = ({ hotel }: { hotel: Hotel }) => {
           <div className={`w-full relative ${isMobile ? 'col-span-1' : 'col-span-3'} sm:rounded-xl md:rounded-2xl overflow-hidden shadow-lg max-h-[50vh] flex`}>
             <div className="relative w-full overflow-hidden">
               <img
-                src={`hotelImages/${hotel.imageSlug}_${activeIndex}.jpg`}
+                src={`/hotelImages/${hotel.imageSlug}_${activeIndex}.jpg`}
                 alt={hotel.name}
                 className="object-cover bg-center hover:scale-105 transition-transform duration-700 w-full"
                 loading={activeIndex <= 2 ? "eager" : "lazy"}
@@ -142,7 +142,7 @@ const Gallery = ({ hotel }: { hotel: Hotel }) => {
               {[2, 3].map((i) => (
                 <div key={i} className="relative group overflow-hidden rounded-xl shadow-md">
                   <img
-                    src={`hotelImages/${hotel.imageSlug}_${i}.jpg`}
+                    src={`/hotelImages/${hotel.imageSlug}_${i}.jpg`}
                     alt={hotel.name}
                     onClick={() => setActiveIndex(i)}
                     className="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-500"
@@ -161,7 +161,7 @@ const Gallery = ({ hotel }: { hotel: Hotel }) => {
               {Array.from({ length: IMAGE_COUNT }).map((_, i) => (
                 <div key={i} className="relative group flex-shrink-0">
                   <img
-                    src={`hotelImages/${hotel.imageSlug}_${i + 1}.jpg`}
+                    src={`/hotelImages/${hotel.imageSlug}_${i + 1}.jpg`}
                     alt={`${hotel.name} - ${i + 1}`}
                     onClick={() => setActiveIndex(i + 1)}
                     className={`h-16 md:h-20 w-24 md:w-32 cursor-pointer rounded-lg md:rounded-xl object-cover transition-all duration-300
@@ -187,7 +187,7 @@ const Gallery = ({ hotel }: { hotel: Hotel }) => {
               {Array.from({ length: Math.min(IMAGE_COUNT, 6) }).map((_, i) => (
                 <img
                   key={i}
-                  src={`hotelImages/${hotel.imageSlug}_${i + 1}.jpg`}
+                  src={`/hotelImages/${hotel.imageSlug}_${i + 1}.jpg`}
                   alt={`${hotel.name} - ${i + 1}`}
                   onClick={() => setActiveIndex(i + 1)}
                   className={`h-12 w-16 cursor-pointer rounded-md object-cover flex-shrink-0
@@ -227,7 +227,7 @@ const Gallery = ({ hotel }: { hotel: Hotel }) => {
                 onTouchEnd={onTouchEnd}
               >
                 <img
-                  src={`hotelImages/${hotel.imageSlug}_${activeIndex}.jpg`}
+                  src={`/hotelImages/${hotel.imageSlug}_${activeIndex}.jpg`}
                   alt={hotel.name}
                   className={`${isMobile ? 'max-h-[60vh]' : 'max-h-[70vh]'} w-auto object-contain rounded-lg`}
                 />
@@ -266,7 +266,7 @@ const Gallery = ({ hotel }: { hotel: Hotel }) => {
                 {Array.from({ length: IMAGE_COUNT }).map((_, i) => (
                   <div key={i} className="relative flex-shrink-0">
                     <img
-                      src={`hotelImages/${hotel.imageSlug}_${i + 1}.jpg`}
+                      src={`/hotelImages/${hotel.imageSlug}_${i + 1}.jpg`}
                       onClick={() => setActiveIndex(i + 1)}
                       className={`h-16 md:h-20 w-24 md:w-32 cursor-pointer rounded-lg object-cover transition-all
                         ${activeIndex === i + 1

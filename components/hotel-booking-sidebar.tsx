@@ -220,6 +220,9 @@ export function HotelBookingSidebar({ hotel }: HotelBookingSidebarProps) {
                             ₺{offer.discountedPrice.toLocaleString("tr-TR")}
                           </div>
                           <div className="text-xs text-gray-500">{calculateNights()} gece</div>
+                        <div className="text-xs text-green-600 font-medium mt-1 pt-1 pl-1">
+                          Yeni Üyelere Özel Hoş Geldin İndirimi Sunulacaktır
+                        </div>
                         </div>
 
                         {/* Seç Butonu */}
@@ -276,7 +279,7 @@ export function HotelBookingSidebar({ hotel }: HotelBookingSidebarProps) {
                 closeImage()
               }}
             >
-              <X  size={18}/>
+              <X size={18} />
             </button>
           </div>
         </div>

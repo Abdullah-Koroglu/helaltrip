@@ -74,13 +74,27 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-primary-foreground/80">
-              © 2024 Helaltrip. Tüm hakları saklıdır.
-            </p>
             <div className="flex gap-6 text-sm">
-              
-              {/* tursab belgesi */}
+
+              <Link href="/tursab" className="flex items-center gap-3">
+                <Image
+                  src="/tursab.jpg"
+                  alt="TÜRSAB Turizm Seyahat Acentası Belgesi"
+                  width={50}
+                  height={50}
+                  className="rounded"
+                />
+                <p className="text-xs text-primary-foreground/80 leading-snug">
+                  Helaltrip, TÜRSAB’a bağlı bir turizm seyahat acentesidir.
+                  <br />
+                  TÜRSAB Belge No: <strong>13707</strong>
+                </p>
+              </Link>
+
             </div>
+            <p className="text-sm text-primary-foreground/80">
+              © 2025 Helaltrip. Tüm hakları saklıdır.
+            </p>
           </div>
         </div>
       </div>

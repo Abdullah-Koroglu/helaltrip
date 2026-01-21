@@ -105,7 +105,7 @@ const About = () => {
               </div>
               <div className="relative">
                 <img
-                  src={"./hotelImages/wome_1.jpg"}
+                  src={"/hotelImages/wome_1.jpg"}
                   alt="Hikayemiz"
                   className="w-full h-80 object-cover rounded-2xl card-shadow"
                 />

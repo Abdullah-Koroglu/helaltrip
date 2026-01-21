@@ -50,6 +50,8 @@ export function Header() {
               height={80}
               width={200}
             />
+            <p className="text-foreground font-thin text-[10px] w-full text-center h-5"
+            >Helaltrip Turizm Belge No: 13707</p>
           </Link>
 
           {/* Desktop nav */}

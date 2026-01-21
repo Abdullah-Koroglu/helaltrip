@@ -15,7 +15,7 @@ export const campaigns = [
   },
   {
     image: './hotelImages/wome_1.jpg',
-    header: 'Wome Deluxe\'de Grup İndirimleri',
+    header: 'Wome Deluxe\'de Kampanya Dönemleri',
     description: 'Mayıs ve Ekim aylarına özel avantajlı grup fiyatlarıyla, yılın en keyifli ve en kazançlı tatilini planlayın.',
     link: 'https://wa.me/905338189958?text=Wome Deluxe Grup fiyatlarını öğrenebilir miyim?',
     linkText: "İletişime Geç!"
