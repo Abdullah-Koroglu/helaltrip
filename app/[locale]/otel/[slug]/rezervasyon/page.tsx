@@ -191,7 +191,7 @@ export default function BookingPage() {
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 py-8">
 
-        <Link href={`/otel/${hotel.slug}`}>
+        <Link href={withLocale(`/otel/${hotel.slug}`)}>
           <Button variant="outline">
             <ArrowLeft className="w-4 h-4 mr-2" />
             {t("goBack")}
