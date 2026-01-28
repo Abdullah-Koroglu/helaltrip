@@ -1,0 +1,36 @@
+{
+  "common": {
+    "brandLicense": "Helaltrip Tourism License No: 13707"
+  },
+  "nav": {
+    "home": "Home",
+    "hotels": "Hotels",
+    "about": "About Us",
+    "contact": "Contact"
+  },
+  "home": {
+    "popularHotelsTitle": "Our Popular Hotels",
+    "popularHotelsSubtitle": "Discover our most preferred hotels",
+    "seeAllHotels": "View All Hotels",
+    "reviewsTitle": "Customer Reviews",
+    "reviewsSubtitle": "Average rating 5/5 on Google",
+    "seeAllReviews": "View All Reviews"
+  },
+  "header": {
+    "topBarSlogan": "The world’s best halal, alcohol-free family hotels are only in Turkey"
+  },
+  "footer": {
+    "companyBlurb": "Your trusted travel agency offering unforgettable holiday experiences at Turkey’s finest hotels.",
+    "quickLinks": "Quick Links",
+    "services": "Our Services",
+    "service1": "Premium Quality",
+    "service2": "Customer Satisfaction",
+    "service3": "Unique Locations",
+    "service4": "24/7 Support",
+    "contact": "Contact",
+    "tursabTextLine1": "Helaltrip is a travel agency affiliated with TÜRSAB.",
+    "tursabTextLine2": "TÜRSAB License No:",
+    "rights": "All rights reserved."
+  }
+}
+

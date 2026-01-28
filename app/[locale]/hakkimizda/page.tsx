@@ -1,9 +1,12 @@
+'use client'
 import { Award, Users, MapPin, Heart, CheckCircle, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { useLocalePath } from "@/components/hooks/useLocalePath";
 // import Navbar from "@/components/Navbar";
 
 const About = () => {
+  const { withLocale } = useLocalePath()
   const stats = [
     // { number: "50+", label: "Partner Otel" },
     { number: "10K+", label: "Mutlu Müşteri" },
@@ -66,7 +69,7 @@ const About = () => {
         <div className="relative z-10 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Hakkımızda</h1>
           <p className="text-lg md:text-lg text-white/90 max-w-3xl mx-auto">
-          Helal Konsept otellerde yetkili acente olarak  10 yılı aşkın bir süredir misafirlerimize rezervasyon yapma konusunda özenle hizmet etmeye gayret ettik. Geldiğimiz noktada binlerce ailenin güvenini sağladık. Otellerle de ilişkimizi en üst düzeyde tutarak misafirlerimizin anlık gelişebilen sorunlarını hızlıca çözebilme konusunda gayret sarfediyoruz. Her misafir bizim için kıymetli ve çalıştığımız her otel de bizim için değerli.
+            Helal Konsept otellerde yetkili acente olarak  10 yılı aşkın bir süredir misafirlerimize rezervasyon yapma konusunda özenle hizmet etmeye gayret ettik. Geldiğimiz noktada binlerce ailenin güvenini sağladık. Otellerle de ilişkimizi en üst düzeyde tutarak misafirlerimizin anlık gelişebilen sorunlarını hızlıca çözebilme konusunda gayret sarfediyoruz. Her misafir bizim için kıymetli ve çalıştığımız her otel de bizim için değerli.
           </p>
         </div>
       </section>
@@ -185,7 +188,7 @@ const About = () => {
               </Link>
             </Button>
             <Button variant="link" size="lg">
-              <Link href={'/oteller'} className="text-white">
+              <Link href={withLocale('/oteller')} className="text-white">
                 Otelleri İncele
               </Link>
             </Button>

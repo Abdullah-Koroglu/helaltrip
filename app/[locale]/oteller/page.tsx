@@ -1,11 +1,13 @@
+'use client'
+import { useLocalePath } from '@/components/hooks/useLocalePath'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { hotels } from '@/lib/hotel-data'
 import { MapPin, Star } from 'lucide-react'
 import Link from 'next/link'
-import React from 'react'
 
 const page = () => {
+  const { withLocale } = useLocalePath()
   return (
     <>
       <div className="container mx-auto px-4 mt-12 pb-12">
@@ -52,7 +54,7 @@ const page = () => {
                       </span>
                     ))}
                   </div>
-                  <Link href={`/otel/${hotel.slug}`}>
+                  <Link href={withLocale(`/otel/${hotel.slug}`)}>
                     <Button size="sm" variant="outline">
                       Detaylar
                     </Button>

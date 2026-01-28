@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { XCircle, Home, ArrowLeft, RefreshCw } from "lucide-react"
 import Link from "next/link"
+import { useLocalePath } from "@/components/hooks/useLocalePath"
 
 interface PaymentData {
   hotel: {
@@ -18,6 +19,7 @@ interface PaymentData {
 }
 
 export default function PaymentErrorPage() {
+  const { withLocale } = useLocalePath()
   const router = useRouter()
   const [paymentData, setPaymentData] = useState<PaymentData | null>(null)
   const [loading, setLoading] = useState(true)
@@ -105,7 +107,7 @@ export default function PaymentErrorPage() {
                     <RefreshCw className="w-4 h-4 mr-2" />
                     Tekrar Dene
                   </Button>
-                  <Link href="/">
+                  <Link href={withLocale("/")}>
                     <Button
                       variant="outline"
                       size="lg"
@@ -116,7 +118,7 @@ export default function PaymentErrorPage() {
                     </Button>
                   </Link>
                   {paymentData?.hotel?.slug && (
-                    <Link href={`/otel/${paymentData.hotel.slug}/rezervasyon?checkin=${paymentData.checkin}&checkout=${paymentData.checkout}&adults=${paymentData.adults}&children=${paymentData.children}`}>
+                    <Link href={withLocale(`/otel/${paymentData.hotel.slug}/rezervasyon?checkin=${paymentData.checkin}&checkout=${paymentData.checkout}&adults=${paymentData.adults}&children=${paymentData.children}`)}>
                       <Button
                         variant="outline"
                         size="lg"
@@ -132,7 +134,7 @@ export default function PaymentErrorPage() {
                 <div className="mt-6">
                   <p className="text-sm text-gray-600">
                     Sorun yaşıyorsanız{" "}
-                    <Link href="/iletisim" className="text-blue-600 hover:underline">
+                    <Link href={withLocale("/iletisim")} className="text-blue-600 hover:underline">
                       iletişim sayfamızdan
                     </Link>{" "}
                     bize ulaşabilirsiniz.

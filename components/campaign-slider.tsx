@@ -57,11 +57,6 @@ export function CampaignSlider() {
                       {campaign.linkText}
                     </Button>
                   </Link>
-                  {/* <Link href={`/otel/${hotel.slug}/rezervasyon`}>
-                    <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-black">
-                      Rezervasyon Yap
-                    </Button>
-                  </Link> */}
                 </div>
               </div>
             </div>

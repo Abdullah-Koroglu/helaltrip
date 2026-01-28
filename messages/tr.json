@@ -1,0 +1,36 @@
+{
+  "common": {
+    "brandLicense": "Helaltrip Turizm Belge No: 13707"
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "hotels": "Oteller",
+    "about": "Hakkımızda",
+    "contact": "İletişim"
+  },
+  "home": {
+    "popularHotelsTitle": "Popüler Otellerimiz",
+    "popularHotelsSubtitle": "En çok tercih edilen otellerimizi keşfedin",
+    "seeAllHotels": "Tüm Otelleri Gör",
+    "reviewsTitle": "Müşteri Yorumları",
+    "reviewsSubtitle": "Google'da 5/5 puan ortalaması",
+    "seeAllReviews": "Tüm Yorumları Gör"
+  },
+  "header": {
+    "topBarSlogan": "Dünyanın en iyi helal konsept alkolsuz aile otelleri sadece Türkiye'de"
+  },
+  "footer": {
+    "companyBlurb": "Türkiye'nin en güzel otellerinde unutulmaz tatil deneyimleri sunan güvenilir turizm acenteniz.",
+    "quickLinks": "Hızlı Linkler",
+    "services": "Hizmetlerimiz",
+    "service1": "Premium Kalite",
+    "service2": "Müşteri Memnuniyeti",
+    "service3": "Eşsiz Lokasyonlar",
+    "service4": "7/24 Destek",
+    "contact": "İletişim",
+    "tursabTextLine1": "Helaltrip, TÜRSAB’a bağlı bir turizm seyahat acentesidir.",
+    "tursabTextLine2": "TÜRSAB Belge No:",
+    "rights": "Tüm hakları saklıdır."
+  }
+}
+

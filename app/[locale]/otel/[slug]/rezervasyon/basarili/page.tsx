@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { CheckCircle, Home, Calendar, Users, MapPin, Star, Mail, Camera } from "lucide-react"
 import Link from "next/link"
 import html2canvas from "html2canvas"
+import { useLocalePath } from "@/components/hooks/useLocalePath"
 
 interface PaymentData {
   hotel: {
@@ -39,6 +40,7 @@ interface PaymentData {
 }
 
 export default function PaymentSuccessPage() {
+  const { withLocale } = useLocalePath()
   const router = useRouter()
   const [paymentData, setPaymentData] = useState<PaymentData | null>(null)
   const [loading, setLoading] = useState(true)
@@ -232,14 +234,14 @@ export default function PaymentSuccessPage() {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-                  <Link href="/">
+                  <Link href={withLocale("/")}>
                     <Button size="lg" className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700">
                       <Home className="w-4 h-4 mr-2" />
                       Ana Sayfaya Dön
                     </Button>
                   </Link>
                   {paymentData.hotel.slug && (
-                    <Link href={`/otel/${paymentData.hotel.slug}`}>
+                    <Link href={withLocale(`/otel/${paymentData.hotel.slug}`)}>
                       <Button
                         variant="outline"
                         size="lg"

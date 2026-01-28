@@ -1,3 +1,4 @@
+import { Header } from "@/components/header";
 import Image from "next/image";
 
 export const metadata = {
@@ -7,6 +8,8 @@ export const metadata = {
 
 export default function BelgelerPage() {
   return (
+    <>
+    <Header />
     <main style={{ maxWidth: 900, margin: "0 auto", padding: "40px 16px" }}>
       
       <h1 style={{ textAlign: "center", marginBottom: 32 }}>
@@ -35,5 +38,6 @@ export default function BelgelerPage() {
       </p>
 
     </main>
+    </>
   );
 }

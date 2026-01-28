@@ -8,12 +8,14 @@ import { fetchHotelPrice, RoomOffer } from "@/lib/price-api"
 import { Hotel } from "@/lib/hotel-data"
 import { Loader2, XCircle, Bed, Utensils, X } from "lucide-react"
 import Image from "next/image"
+import { useLocalePath } from "./hooks/useLocalePath"
 
 interface HotelBookingSidebarProps {
   hotel: Hotel
 }
 
 export function HotelBookingSidebar({ hotel }: HotelBookingSidebarProps) {
+  const {withLocale} = useLocalePath()
   const [offers, setOffers] = useState<RoomOffer[]>([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -88,7 +90,7 @@ export function HotelBookingSidebar({ hotel }: HotelBookingSidebarProps) {
       mealPlan: offer.mealPlan,
       price: offer.discountedPrice.toString(),
     })
-    window.location.href = `/otel/${hotel.slug}/rezervasyon?${params.toString()}`
+    window.location.href = withLocale(`/otel/${hotel.slug}/rezervasyon?${params.toString()}`)
   }
 
   const calculateNights = () => {

@@ -13,14 +13,28 @@ const poppins = Poppins({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: 'Helaltrip - Türkiye\'nin en iyi helal konsept alkolsuz aile otelleri',
-  description: 'Dünyanın en iyi helal konsept alkolsuz aile otelleri sadece Türkiye\'de',
-  icons: {
-    icon: "./icon.png",
-    shortcut: "./icon.png",
-  },
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+
+  const { locale } = await params
+
+
+
+  return {
+    title: "Helaltrip - Türkiye'nin en iyi helal konsept alkolsuz aile otelleri",
+
+    description: "Dünyanın en iyi helal konsept alkolsuz aile otelleri sadece Türkiye'de",
+
+    icons: {
+      icon: '/icon.png',
+      shortcut: '/icon.png',
+    },
+  }
 }
+
 
 export default function RootLayout({
   children,
@@ -30,13 +44,9 @@ export default function RootLayout({
   return (
     <html lang="tr">
       <body className={poppins.className}>
-        <Header />
         <div className="min-h-[calc(100vh-20rem)]">
           {children}
         </div>
-        <TimedPopup />
-        <ContactButton />
-        <Footer />
       </body>
     </html>
   )

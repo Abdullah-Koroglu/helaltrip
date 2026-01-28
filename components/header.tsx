@@ -6,9 +6,27 @@ import { hotels } from "@/lib/hotel-data"
 import { Phone, Mail, Menu, X } from "lucide-react"
 import Image from "next/image"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
+import { usePathname, useRouter } from "next/navigation"
+import { useLocalePath } from "./hooks/useLocalePath"
 
 export function Header() {
+
+  const { withLocale } = useLocalePath()
+
   const [menuOpen, setMenuOpen] = useState(false)
+
+  const router = useRouter()
+  const pathname = usePathname()
+
+  const changeLanguage = (lang: 'tr' | 'en') => {
+    const segments = pathname.split('/')
+
+    segments[1] = lang
+
+    const newPath = segments.join('/')
+
+    router.push(newPath)
+  }
 
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
@@ -42,7 +60,7 @@ export function Header() {
 
         {/* Main header */}
         <div className="flex items-center justify-between py-4">
-          <Link href="/" className="text-2xl font-bold text-red-600">
+          <Link href={withLocale("/")} className="text-2xl font-bold text-red-600">
             <Image
               src="/logo.png"
               alt="Helaltrip"
@@ -57,7 +75,7 @@ export function Header() {
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link
-              href="/"
+              href={withLocale("/")}
               className="text-primary font-semibold hover:text-primary/80 transition-colors duration-300"
             >
               Ana Sayfa
@@ -84,7 +102,7 @@ export function Header() {
                   {hotels.map((hotel) => (
                     <Link
                       key={hotel.id}
-                      href={`/otel/${hotel.slug}`}
+                      href={withLocale(`/otel/${hotel.slug}`)}
                       className="flex items-center space-x-3 p-2 rounded hover:bg-primary/10 transition-colors duration-300"
                     >
                       <div className="w-12 h-12 rounded-lg overflow-hidden flex-shrink-0">
@@ -108,7 +126,7 @@ export function Header() {
                   ))}
                   <Link
                     key={'locamarin'}
-                    href={`locamarin`}
+                    href={withLocale(`locamarin`)}
                     className="flex items-center space-x-3 p-2 rounded hover:bg-primary/10 transition-colors duration-300"
                   >
                     <div className="w-12 h-12 rounded-lg overflow-hidden flex-shrink-0">
@@ -133,17 +151,33 @@ export function Header() {
               </div>
             </div>
             <Link
-              href="/hakkimizda"
+              href={withLocale("/hakkimizda")}
               className="text-primary font-semibold hover:text-primary/80 transition-colors duration-300"
             >
               Hakkımızda
             </Link>
             <Link
-              href="/iletisim"
+              href={withLocale("/iletisim")}
               className="text-primary font-semibold hover:text-primary/80 transition-colors duration-300"
             >
               İletişim
             </Link>
+
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => changeLanguage("tr")}
+                className="px-2 py-1 text-sm font-semibold border rounded hover:bg-primary/10"
+              >
+                TR
+              </button>
+
+              <button
+                onClick={() => changeLanguage("en")}
+                className="px-2 py-1 text-sm font-semibold border rounded hover:bg-primary/10"
+              >
+                EN
+              </button>
+            </div>
           </nav>
 
           {/* Mobile hamburger */}
@@ -160,7 +194,7 @@ export function Header() {
           <div className="md:hidden bg-white transition-all duration-300">
             <nav className="flex flex-col space-y-2 p-4">
               <Link
-                href="/"
+                href={withLocale("/")}
                 className="text-primary font-semibold hover:text-primary/80 transition-colors duration-300"
                 onClick={() => setMenuOpen(false)}
               >
@@ -189,7 +223,7 @@ export function Header() {
                     {hotels.map((hotel) => (
                       <Link
                         key={hotel.id}
-                        href={`/otel/${hotel.slug}`}
+                        href={withLocale(`/otel/${hotel.slug}`)}
                         className="flex items-center space-x-3 p-2 rounded hover:bg-primary/10 transition-colors duration-300"
                         onClick={() => setMenuOpen(false)}
                       >
@@ -201,7 +235,7 @@ export function Header() {
                     ))}
                     <Link
                       key={'locamarin'}
-                      href={`/locamarin`}
+                      href={withLocale(`/locamarin`)}
                       className="flex items-center space-x-3 p-2 rounded hover:bg-primary/10 transition-colors duration-300"
                       onClick={() => setMenuOpen(false)}
                     >
@@ -214,19 +248,36 @@ export function Header() {
                 </CollapsibleContent>
               </Collapsible>
               <Link
-                href="/hakkimizda"
+                href={withLocale("/hakkimizda")}
                 className="text-primary font-semibold hover:text-primary/80 transition-colors duration-300"
                 onClick={() => setMenuOpen(false)}
               >
                 Hakkımızda
               </Link>
               <Link
-                href="/iletisim"
+                href={withLocale("/iletisim")}
                 className="text-primary font-semibold hover:text-primary/80 transition-colors duration-300"
                 onClick={() => setMenuOpen(false)}
               >
                 İletişim
               </Link>
+
+              <div className="flex gap-2 pt-4 border-t">
+                <button
+                  onClick={() => changeLanguage("tr")}
+                  className="flex-1 py-2 border rounded text-sm font-semibold"
+                >
+                  Türkçe
+                </button>
+
+                <button
+                  onClick={() => changeLanguage("en")}
+                  className="flex-1 py-2 border rounded text-sm font-semibold"
+                >
+                  English
+                </button>
+              </div>
+
             </nav>
           </div>
         )}

@@ -12,10 +12,12 @@ import { Textarea } from "@/components/ui/textarea"
 import { Star, MapPin, ArrowLeft, User, Phone, Mail, Calendar, Users } from "lucide-react"
 import Link from "next/link"
 import { fetchHotelPrice } from "@/lib/price-api"
+import { useLocalePath } from "@/components/hooks/useLocalePath"
 
 export default function BookingPage() {
   const router = useRouter()
   const searchParams = useSearchParams()
+  const { withLocale } = useLocalePath()
   const [hotel, setHotel] = useState<Hotel | null>(null)
   const [loading, setLoading] = useState(true)
   const [price, setPrice] = useState<number | null>(null)
@@ -43,7 +45,7 @@ export default function BookingPage() {
   const roomName = searchParams.get("roomName")
   const mealPlan = searchParams.get("mealPlan")
   const priceParam = searchParams.get("price")
-  
+
   // Get slug from URL path
   const [slug, setSlug] = useState<string | null>(null)
   const [selectedRoom, setSelectedRoom] = useState<{
@@ -52,11 +54,11 @@ export default function BookingPage() {
     mealPlan: string
     price: number
   } | null>(null)
-  
+
   useEffect(() => {
     const pathSlug = window.location.pathname.split("/")[2]
     setSlug(pathSlug)
-    
+
     // Set selected room if params are available
     if (roomId && roomName && mealPlan && priceParam) {
       setSelectedRoom({
@@ -71,7 +73,7 @@ export default function BookingPage() {
 
   useEffect(() => {
     if (!slug) return
-    
+
     // Find hotel by slug
     const foundHotel = hotels.find((h) => h.slug === slug)
     if (!foundHotel) {
@@ -194,7 +196,7 @@ export default function BookingPage() {
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 py-8">
         <div className="mb-6">
-          <Link href={`/otel/${hotel.slug}`}>
+          <Link href={withLocale(`/otel/${hotel.slug}`)}>
             <Button variant="outline" className="mb-4">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Geri Dön

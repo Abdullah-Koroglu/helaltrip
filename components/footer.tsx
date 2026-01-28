@@ -1,8 +1,11 @@
+'use client'
 import Link from "next/link";
 import { Phone, Mail, MapPin, Instagram, Facebook, Twitter, MessageCircle } from "lucide-react";
 import Image from "next/image";
+import { useLocalePath } from "./hooks/useLocalePath";
 
 const Footer = () => {
+  const { withLocale } = useLocalePath()
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 py-12">
@@ -26,16 +29,16 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-semibold text-lg">Hızlı Linkler</h3>
             <div className="space-y-2">
-              <Link href="/" className="block text-sm hover:text-secondary smooth-transition">
+              <Link href={withLocale("/")} className="block text-sm hover:text-secondary smooth-transition">
                 Ana Sayfa
               </Link>
-              <Link href="/oteller" className="block text-sm hover:text-secondary smooth-transition">
+              <Link href={withLocale("/oteller")} className="block text-sm hover:text-secondary smooth-transition">
                 Oteller
               </Link>
-              <Link href="/hakkimizda" className="block text-sm hover:text-secondary smooth-transition">
+              <Link href={withLocale("/hakkimizda")} className="block text-sm hover:text-secondary smooth-transition">
                 Hakkımızda
               </Link>
-              <Link href="/iletisim" className="block text-sm hover:text-secondary smooth-transition">
+              <Link href={withLocale("/iletisim")} className="block text-sm hover:text-secondary smooth-transition">
                 İletişim
               </Link>
             </div>

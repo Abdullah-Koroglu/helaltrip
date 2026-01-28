@@ -1,10 +1,25 @@
+const createNextIntlPlugin = require('next-intl/plugin')
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // output: process.env.NODE_ENV !== 'DEV' ? 'export' : 'standalone',
   images: {
     unoptimized: true,
-    domains: ['images.unsplash.com', 'img.youtube.com'],
+
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'img.youtube.com',
+        pathname: '/**',
+      },
+    ],
   },
 }
 
-module.exports = nextConfig 
+const withNextIntl = createNextIntlPlugin('./i18n/request.ts')
+
+module.exports = withNextIntl(nextConfig)
