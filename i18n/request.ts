@@ -5,10 +5,7 @@ import { defaultLocale } from '@/i18n';
 export default getRequestConfig(async () => {
   const cookieStore = await cookies();
   
-  // next-intl varsayılan olarak NEXT_LOCALE cookie'sini kullanır
   const locale = cookieStore.get('NEXT_LOCALE')?.value || defaultLocale;
-  
-  console.log('Detected locale from cookies:', locale); // "tr" olmalı
   
   return {
     locale,

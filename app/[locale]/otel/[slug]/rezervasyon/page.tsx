@@ -12,11 +12,12 @@ import { Textarea } from "@/components/ui/textarea"
 import { Star, MapPin, ArrowLeft, User, Phone, Mail, Calendar, Users } from "lucide-react"
 import Link from "next/link"
 import { fetchHotelPrice } from "@/lib/price-api"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 import { useLocalePath } from "@/components/hooks/useLocalePath"
 
 export default function BookingPage() {
   const t = useTranslations("Booking")
+  const locale = useLocale()
   const { withLocale } = useLocalePath()
 
   const router = useRouter()
@@ -110,6 +111,7 @@ export default function BookingPage() {
         discountPercentage: "0",
         currency: "TRY",
         customerCountryCode: "TR",
+        locale: locale || 'tr'
       }
 
       await fetchHotelPrice(priceRequest)

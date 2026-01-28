@@ -59,6 +59,7 @@ export function HotelBookingSidebar({ hotel }: HotelBookingSidebarProps) {
         discountPercentage: "0",
         currency: "TRY",
         customerCountryCode: "TR",
+        locale: locale || 'tr'
       }
 
       const response = await fetchHotelPrice(priceRequest)
