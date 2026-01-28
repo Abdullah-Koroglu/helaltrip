@@ -9,7 +9,6 @@ export const metadata = {
 export default function BelgelerPage() {
   return (
     <>
-    <Header />
     <main style={{ maxWidth: 900, margin: "0 auto", padding: "40px 16px" }}>
       
       <h1 style={{ textAlign: "center", marginBottom: 32 }}>
