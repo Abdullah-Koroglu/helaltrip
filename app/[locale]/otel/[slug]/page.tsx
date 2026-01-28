@@ -77,6 +77,7 @@ export default async function HotelPage({ params }: HotelPageProps) {
             {hotel.SYReview && (
               <HotelReviewPage
                 hotel={{
+                  id: hotel.id,
                   SYReview: hotel.SYReview,
                   rating: hotel.rating
                 }}

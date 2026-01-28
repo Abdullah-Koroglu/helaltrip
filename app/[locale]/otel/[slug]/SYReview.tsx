@@ -1,12 +1,11 @@
-"use client"
-
 import { Card, CardContent, CardTitle } from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Star } from "lucide-react"
-import { useTranslations } from "next-intl"
+import { getLocale, getTranslations } from "next-intl/server"
 
-export default function HotelReviewPage({ hotel }: any) {
-  const t = useTranslations("HotelReview")
+export default async function HotelReviewPage({ hotel }: any) {
+  const locale = await getLocale()
+  const t = await getTranslations("HotelReview")
 
   return (
     <Card className="w-full rounded-2xl shadow-sm">
@@ -77,7 +76,7 @@ export default function HotelReviewPage({ hotel }: any) {
 
           <div
             className="text-sm text-slate-700 leading-relaxed space-y-4"
-            dangerouslySetInnerHTML={{ __html: hotel.SYReview }}
+            dangerouslySetInnerHTML={{ __html: hotel.SYReview[locale] }}
           />
 
         </div>
