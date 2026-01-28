@@ -1,8 +1,10 @@
-import React from "react";
 import { MessageCircle } from "lucide-react";
+import { getTranslations } from "next-intl/server"
 import Link from "next/link";
 
-const ContactButton = () => {
+const ContactButton = async () => {
+  const t = await getTranslations("common")
+
   return (
     <Link
       href="https://wa.me/905338189958?text=Merhaba."
@@ -27,11 +29,11 @@ const ContactButton = () => {
 
         <div className="leading-tight">
           <div className="font-semibold text-blue-600 text-xs sm:text-sm">
-            CANLI DESTEK
+            {t('liveSupport')}
           </div>
           <div className="flex items-center gap-1 text-[10px] sm:text-xs text-green-600">
             <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-600 rounded-full"></span>
-            ÇEVRİMİÇİ
+            {t('online')}
           </div>
         </div>
       </div>

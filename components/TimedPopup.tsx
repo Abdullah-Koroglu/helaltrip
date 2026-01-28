@@ -4,9 +4,12 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { MessageCircle, ChevronLeft, Tag } from "lucide-react";
+import { MessageCircle, Tag } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function TimedPopup() {
+  const t = useTranslations("TimedPopup");
+
   const [open, setOpen] = useState(false);
   const [showIndicator, setShowIndicator] = useState(false);
 
@@ -38,12 +41,12 @@ export default function TimedPopup() {
           "
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 h-[30rem]">
-            
+
             {/* Image */}
             <div className="relative h-64 sm:h-full">
               <Image
                 src="/hotelImages/adenya_1.jpg"
-                alt="Özel Fırsatlar"
+                alt={t("imageAlt")}
                 fill
                 className="object-cover"
                 priority
@@ -52,25 +55,29 @@ export default function TimedPopup() {
 
             {/* Content */}
             <div className="flex flex-col justify-center gap-5 p-6 sm:p-8">
+
               <h2 className="text-xl sm:text-2xl font-bold">
-                Size Özel Tatil Fırsatlarını Kaçırmayın
+                {t("title")}
               </h2>
 
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Web sitemize özel kampanyalar, avantajlı fiyatlar ve sınırlı
-                kontenjan fırsatlarını ilk siz öğrenmek için bizimle hemen
-                iletişime geçin.
+                {t("description")}
               </p>
 
-              <Button asChild size="lg" className="gap-2 text-base bg-green-600 hover:bg-green-600/90 transition-all">
+              <Button
+                asChild
+                size="lg"
+                className="gap-2 text-base bg-green-600 hover:bg-green-600/90 transition-all"
+              >
                 <a
                   href="https://wa.me/905338189958?text=Merhaba,%20özel%20fırsatlar%20hakkında%20bilgi%20almak%20istiyorum."
                   target="_blank"
                 >
                   <MessageCircle size={20} />
-                  WhatsApp’tan İletişime Geç
+                  {t("whatsappButton")}
                 </a>
               </Button>
+
             </div>
           </div>
         </DialogContent>
@@ -95,9 +102,11 @@ export default function TimedPopup() {
           "
         >
           <Tag fill="#fff" size={15} />
+
           <span className="hidden sm:block text-sm font-medium">
-            Fırsatlar
+            {t("indicator")}
           </span>
+
         </button>
       )}
     </>

@@ -1,16 +1,18 @@
-import type {Metadata} from 'next'
-import {notFound} from 'next/navigation'
-import {NextIntlClientProvider} from 'next-intl'
+import type { Metadata } from "next"
+import { notFound } from "next/navigation"
+import { NextIntlClientProvider } from "next-intl"
 
-import Footer from '@/components/footer'
-import {Header} from '@/components/header'
-import ContactButton from '@/components/contact-button'
-import TimedPopup from '@/components/TimedPopup'
-import {defaultLocale, locales, type Locale} from '@/i18n'
+import Footer from "@/components/footer"
+import { Header } from "@/components/header"
+import ContactButton from "@/components/contact-button"
+import TimedPopup from "@/components/TimedPopup"
+import { defaultLocale, locales, type Locale } from "@/i18n"
+
 
 export function generateStaticParams() {
-  return locales.map((locale) => ({locale}))
+  return locales.map((locale) => ({ locale }))
 }
+
 
 export async function generateMetadata({
   params,
@@ -24,7 +26,7 @@ export async function generateMetadata({
     ? (locale as Locale)
     : defaultLocale
 
-  const isEn = currentLocale === 'en'
+  const isEn = currentLocale === "en"
 
   return {
     title: isEn
@@ -34,11 +36,6 @@ export async function generateMetadata({
     description: isEn
       ? "The world's best halal alcohol-free family hotels are only in Turkey"
       : "Dünyanın en iyi helal konsept alkolsuz aile otelleri sadece Türkiye'de",
-
-    icons: {
-      icon: '/icon.png',
-      shortcut: '/icon.png',
-    },
   }
 }
 
@@ -57,17 +54,19 @@ export default async function LocaleLayout({
     notFound()
   }
 
-  
   const messages = (await import(`../../messages/${locale}.json`)).default
 
   return (
-    <NextIntlClientProvider locale={locale} messages={messages}>
-      <Header />
-      <div className="min-h-[calc(100vh-20rem)]">{children}</div>
-      <TimedPopup />
-      <ContactButton />
-      <Footer />
-    </NextIntlClientProvider>
+    <html lang={locale}>
+      <body>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <Header />
+          <div className="min-h-[calc(100vh-20rem)]">{children}</div>
+          <TimedPopup />
+          <ContactButton />
+          <Footer />
+        </NextIntlClientProvider>
+      </body>
+    </html>
   )
 }
-

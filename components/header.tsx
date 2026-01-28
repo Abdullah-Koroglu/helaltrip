@@ -8,8 +8,11 @@ import Image from "next/image"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import { usePathname, useRouter } from "next/navigation"
 import { useLocalePath } from "./hooks/useLocalePath"
+import { useTranslations } from "next-intl"
 
 export function Header() {
+  const t = useTranslations('header')
+  const navt = useTranslations('nav')
 
   const { withLocale } = useLocalePath()
 
@@ -24,6 +27,7 @@ export function Header() {
     segments[1] = lang
 
     const newPath = segments.join('/')
+    document.cookie = `NEXT_LOCALE=${lang}; path=/; max-age=31536000; SameSite=Lax;`
 
     router.push(newPath)
   }
@@ -53,7 +57,7 @@ export function Header() {
           </div>
           <div className="flex items-center space-x-4">
             <p className="text-sm text-primary hidden md:block">
-              Dünyanın en iyi helal konsept alkolsuz aile otelleri sadece Türkiye'de
+              {t('topBarSlogan')}
             </p>
           </div>
         </div>
@@ -69,7 +73,7 @@ export function Header() {
               width={200}
             />
             <p className="text-foreground font-thin text-[10px] w-full text-center h-5"
-            >Helaltrip Turizm Belge No: 13707</p>
+            >{navt('brandLicense')}</p>
           </Link>
 
           {/* Desktop nav */}
@@ -78,11 +82,11 @@ export function Header() {
               href={withLocale("/")}
               className="text-primary font-semibold hover:text-primary/80 transition-colors duration-300"
             >
-              Ana Sayfa
+              {navt('home')}
             </Link>
             <div className="relative group">
               <button className="bg-white text-primary font-semibold hover:text-primary/80 transition-colors duration-300 flex items-center">
-                Oteller
+                {navt('hotels')}
                 <svg
                   className="w-4 h-4 ml-1"
                   fill="none"
@@ -154,13 +158,13 @@ export function Header() {
               href={withLocale("/hakkimizda")}
               className="text-primary font-semibold hover:text-primary/80 transition-colors duration-300"
             >
-              Hakkımızda
+              {navt('about')}
             </Link>
             <Link
               href={withLocale("/iletisim")}
               className="text-primary font-semibold hover:text-primary/80 transition-colors duration-300"
-            >
-              İletişim
+              >
+              {navt('contact')}
             </Link>
 
             <div className="flex items-center gap-2">

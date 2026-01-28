@@ -9,13 +9,18 @@ import { Hotel } from "@/lib/hotel-data"
 import { Loader2, XCircle, Bed, Utensils, X } from "lucide-react"
 import Image from "next/image"
 import { useLocalePath } from "./hooks/useLocalePath"
+import { useTranslations, useLocale } from "next-intl"
 
 interface HotelBookingSidebarProps {
   hotel: Hotel
 }
 
 export function HotelBookingSidebar({ hotel }: HotelBookingSidebarProps) {
-  const {withLocale} = useLocalePath()
+
+  const { withLocale } = useLocalePath()
+  const t = useTranslations("HotelSidebar")
+  const locale = useLocale()
+
   const [offers, setOffers] = useState<RoomOffer[]>([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -45,7 +50,7 @@ export function HotelBookingSidebar({ hotel }: HotelBookingSidebarProps) {
 
     try {
       const priceRequest = {
-        hotelId: hotel.priceId || '31',
+        hotelId: hotel.priceId || "31",
         checkin: params.checkin,
         checkout: params.checkout,
         adults: params.adults.toString(),
@@ -59,18 +64,22 @@ export function HotelBookingSidebar({ hotel }: HotelBookingSidebarProps) {
       const response = await fetchHotelPrice(priceRequest)
 
       if (response.error || !response.success) {
-        setError(response.error || "Fiyat alınamadı")
+        setError(response.error || t("priceError"))
         setLoading(false)
         return
       }
 
-      if (response.data && response.data.offers && response.data.offers.length > 0) {
-        setOffers(response.data.offers)
+      const offers = response.data?.offers ?? []
+
+      if (offers.length > 0) {
+        setOffers(offers)
       } else {
-        setError("Oda seçeneği bulunamadı")
+        setError(t("noRoom"))
       }
+      
+
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Bir hata oluştu")
+      setError(err instanceof Error ? err.message : t("genericError"))
     } finally {
       setLoading(false)
     }
@@ -90,14 +99,20 @@ export function HotelBookingSidebar({ hotel }: HotelBookingSidebarProps) {
       mealPlan: offer.mealPlan,
       price: offer.discountedPrice.toString(),
     })
-    window.location.href = withLocale(`/otel/${hotel.slug}/rezervasyon?${params.toString()}`)
+
+    window.location.href = withLocale(
+      `/otel/${hotel.slug}/rezervasyon?${params.toString()}`
+    )
   }
 
   const calculateNights = () => {
     if (!searchParams) return 0
+
     const checkIn = new Date(searchParams.checkin)
     const checkOut = new Date(searchParams.checkout)
+
     const diffTime = checkOut.getTime() - checkIn.getTime()
+
     return Math.ceil(diffTime / (1000 * 60 * 60 * 24))
   }
 
@@ -105,19 +120,24 @@ export function HotelBookingSidebar({ hotel }: HotelBookingSidebarProps) {
 
   return (
     <div className="space-y-6 mb-8">
-      {hotel.priceId && <BookingSearchForm hotel={hotel} onSearch={handleSearch} />}
 
+      {hotel.priceId && (
+        <BookingSearchForm hotel={hotel} onSearch={handleSearch} />
+      )}
+
+      {/* Loading */}
       {loading && (
         <Card>
           <CardContent className="pt-6">
             <div className="flex items-center justify-center space-x-2">
               <Loader2 className="w-5 h-5 animate-spin" />
-              <span>Fiyat alınıyor...</span>
+              <span>{t("loading")}</span>
             </div>
           </CardContent>
         </Card>
       )}
 
+      {/* Error */}
       {error && (
         <Card className="border-red-200 bg-red-50">
           <CardContent className="pt-6">
@@ -129,32 +149,43 @@ export function HotelBookingSidebar({ hotel }: HotelBookingSidebarProps) {
         </Card>
       )}
 
+      {/* Offers */}
       {visibleOffers.length > 0 && !loading && !error && (
         <Card>
+
           <CardHeader>
+
             <CardTitle className="flex items-center">
               <Bed className="w-5 h-5 mr-2" />
-              Oda Seçenekleri ({offers.length})
+              {t("roomOptions")} ({offers.length})
             </CardTitle>
+
             {searchParams && (
               <div className="text-sm text-gray-600 mt-2">
-                {calculateNights()} gece • {searchParams.adults} yetişkin
-                {searchParams.children > 0 && `, ${searchParams.children} çocuk`}
+
+                {calculateNights()} {t("night")} • {searchParams.adults} {t("adult")}
+
+                {searchParams.children > 0 &&
+                  `, ${searchParams.children} ${t("child")}`}
               </div>
             )}
+
           </CardHeader>
 
           <CardContent>
+
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
               {visibleOffers.map((offer, index) => (
+
                 <Card
                   key={offer.roomId || index}
                   className="border hover:shadow-lg transition-all duration-200 rounded-xl cursor-pointer overflow-hidden"
-                // onClick={() => handleRoomSelect(offer)}
                 >
+
                   <CardContent className="p-0">
 
-                    {/* Ana Görsel */}
+                    {/* Main Image */}
                     <div className="relative w-full h-40 md:h-48 overflow-hidden">
                       <Image
                         src={offer.image}
@@ -166,28 +197,30 @@ export function HotelBookingSidebar({ hotel }: HotelBookingSidebarProps) {
 
                     <div className="p-4 space-y-4">
 
-                      {/* Oda Başlık */}
+                      {/* Room Name */}
                       <h3 className="font-semibold text-xl text-gray-900">
                         {offer.roomName}
                       </h3>
 
-                      {/* Yemek Planı */}
+                      {/* Meal Plan */}
                       <div className="flex items-center text-sm text-gray-600">
                         <Utensils className="w-4 h-4 mr-1" />
                         <span>{offer.mealPlan}</span>
                       </div>
 
-                      {/* İptal Politikası */}
+                      {/* Cancellation */}
                       {offer.cancellationPolicy && (
                         <p className="text-xs text-gray-500">
                           {offer.cancellationPolicy}
                         </p>
                       )}
 
-                      {/* FOTO GALERİ (SCROLLABLE THUMBNAILS) */}
+                      {/* Thumbnails */}
                       {offer.photos && offer.photos.length > 1 && (
                         <div className="flex space-x-2 overflow-x-auto scrollbar-hide py-1">
+
                           {offer.photos.map((photo, idx) => (
+
                             <div
                               key={idx}
                               className="relative w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 cursor-pointer"
@@ -203,69 +236,88 @@ export function HotelBookingSidebar({ hotel }: HotelBookingSidebarProps) {
                                 className="object-cover border hover:scale-110 transition-transform"
                               />
                             </div>
+
                           ))}
+
                         </div>
                       )}
 
-
-                      {/* Fiyat ve Buton */}
+                      {/* Price */}
                       <div className="flex items-end justify-between mt-4">
 
-                        {/* Fiyat Bilgisi */}
                         <div>
+
                           {offer.discountPercentage !== "0" && (
                             <div className="text-sm text-gray-400 line-through">
-                              ₺{offer.originalPrice.toLocaleString("tr-TR")}
+                              ₺{offer.originalPrice.toLocaleString(locale === "en" ? "en-US" : "tr-TR")}
                             </div>
                           )}
+
                           <div className="text-2xl font-bold text-blue-600">
-                            ₺{offer.discountedPrice.toLocaleString("tr-TR")}
+                            ₺{offer.discountedPrice.toLocaleString(locale === "en" ? "en-US" : "tr-TR")}
                           </div>
-                          <div className="text-xs text-gray-500">{calculateNights()} gece</div>
-                        <div className="text-xs text-green-600 font-medium mt-1 pt-1 pl-1">
-                          Yeni Üyelere Özel Hoş Geldin İndirimi Sunulacaktır
-                        </div>
+
+                          <div className="text-xs text-gray-500">
+                            {calculateNights()} {t("night")}
+                          </div>
+
+                          <div className="text-xs text-green-600 font-medium mt-1 pt-1 pl-1">
+                            {t("welcomeDiscount")}
+                          </div>
+
                         </div>
 
-                        {/* Seç Butonu */}
+                        {/* Select */}
                         <Button
                           className="bg-blue-600 hover:bg-blue-700"
                           onClick={(e) => {
-                            e.stopPropagation();
-                            handleRoomSelect(offer);
+                            e.stopPropagation()
+                            handleRoomSelect(offer)
                           }}
                         >
-                          Seç
+                          {t("select")}
                         </Button>
+
                       </div>
+
                     </div>
 
                   </CardContent>
+
                 </Card>
+
               ))}
 
             </div>
 
+            {/* Show More */}
             {offers.length > 6 && (
               <div className="flex justify-center mt-4">
+
                 <Button
                   variant="outline"
                   onClick={() => setShowAll(!showAll)}
                 >
-                  {showAll ? "Daha Az Göster" : "Daha Fazla Göster"}
+                  {showAll ? t("showLess") : t("showMore")}
                 </Button>
+
               </div>
             )}
+
           </CardContent>
+
         </Card>
       )}
 
+      {/* Image Modal */}
       {showImageModal && activeImage && (
         <div
           className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
           onClick={closeImage}
         >
+
           <div className="relative max-w-4xl max-h-[90vh]">
+
             <Image
               src={activeImage}
               alt="room"
@@ -283,7 +335,9 @@ export function HotelBookingSidebar({ hotel }: HotelBookingSidebarProps) {
             >
               <X size={18} />
             </button>
+
           </div>
+
         </div>
       )}
 

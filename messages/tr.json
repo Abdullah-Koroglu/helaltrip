@@ -1,8 +1,13 @@
 {
   "common": {
-    "brandLicense": "Helaltrip Turizm Belge No: 13707"
+    "details": "Detaylar",
+    "bestHotels": "Türkiye'nin en güzel helal konseptli otelleri",
+    "online": "ÇEVRİMİÇİ",
+    "liveSupport": "CANLI DESTEK",
+    "gallery": "Galeri"
   },
   "nav": {
+    "brandLicense": "Helaltrip Turizm Belge No: 13707",
     "home": "Ana Sayfa",
     "hotels": "Oteller",
     "about": "Hakkımızda",
@@ -31,6 +36,336 @@
     "tursabTextLine1": "Helaltrip, TÜRSAB’a bağlı bir turizm seyahat acentesidir.",
     "tursabTextLine2": "TÜRSAB Belge No:",
     "rights": "Tüm hakları saklıdır."
+  },
+  "About": {
+    "hero": {
+      "title": "Hakkımızda",
+      "description": "Helal Konsept otellerde yetkili acente olarak  10 yılı aşkın bir süredir misafirlerimize rezervasyon yapma konusunda özenle hizmet etmeye gayret ettik. Geldiğimiz noktada binlerce ailenin güvenini sağladık. Otellerle de ilişkimizi en üst düzeyde tutarak misafirlerimizin anlık gelişebilen sorunlarını hızlıca çözebilme konusunda gayret sarfediyoruz. Her misafir bizim için kıymetli ve çalıştığımız her otel de bizim için değerli."
+    },
+    "stats": {
+      "customers": "Mutlu Müşteri",
+      "experience": "Yıllık Deneyim",
+      "support": "Destek Hizmeti"
+    },
+    "story": {
+      "title": "Hikayemiz",
+      "text": "Helaltrip Turizm, TURSAB üyesi olarak dünya çapındaki müşterilerine seyahat alternatifleri üretmek üzere kurulmuştur. Şirket; Türkiye’de ve yurt dışında yüzlerce tur hazırlayıp müşterilerine sunmaktadır. Helaltrip Turizm’in yurt içinde otel ve tatil köyü, birçok havayolu şirketiyle anlaşmaları bulunmaktadır ve araba kiralama hizmetleri sunmaktadır. Yurtiçi ve yurtdışı turlardan, kültür turlarına, mavi yolculuktan kayak paketlerine, gençlere yönelik programlardan kurumsal hizmetlere, uçak biletinden araba kiralama hizmetlerine kadar uzanan seyahat ürünleri ile çevresinde kısa sürede kendini göstermiştir."
+    },
+    "vision": {
+      "title": "Vizyonumuz",
+      "text": "Çalıştığı alanda kendini sürekli yenileyerek ve geliştirerek üstlenmiş olduğu her iş ve organizasyonun tüm detaylarını planlamak ve amacına ulaşmasını sağlamak kadromuzun görevidir. Alacağınız hizmetin kusursuz olmasını istiyorsanız. Hayal ettiğiniz, tasarladığınız, düşlediğiniz, fakat parçalarını bulup birleştiremediğiniz her şeyi bize bırakın"
+    },
+    "mission": {
+      "title": "Misyonumuz",
+      "text": "Gelişmekte olan dinamik turizm dünyasını yakından takip ederek, hızlı adaptasyonlarla müşterilerimize her zaman üstün hizmet, servis ve kaliteyi, yüksek eğitimli profesyonel bir takım ruhu içinde sunmaktır. Vizyonumuz ise , müşterilerimiz için değer yaratmak, beklentilerine kalite ve istikrarla karşılık vermek ve çözüm ortakları olmak."
+    },
+    "values": {
+      "title": "Değerlerimiz",
+      "subtitle": "Her adımımızda bizi yönlendiren temel değerler ve ilkeler",
+      "customer": {
+        "title": "Müşteri Odaklı Hizmet",
+        "desc": "Her müşterimizin özel ihtiyaçlarını anlayarak kişiselleştirilmiş hizmet sunuyoruz."
+      },
+      "quality": {
+        "title": "Kalite Garantisi",
+        "desc": "Sadece en kaliteli otelleri seçiyor, sürekli denetim yaparak kaliteyi garanti ediyoruz."
+      },
+      "relationship": {
+        "title": "Oteller ile Birebir İlişki",
+        "desc": "Olası her türlü problemi, otellerle kurduğumuz güçlü ve yakın iletişim sayesinde hızlı ve etkili şekilde çözüme kavuşturuyoruz."
+      },
+      "support": {
+        "title": "7/24 Destek",
+        "desc": "Tatil öncesi, sırası ve sonrasında her an yanınızda olmaya devam ediyoruz."
+      }
+    },
+    "cta": {
+      "title": "Bizimle İletişime Geçin",
+      "subtitle": "Tatil planlarınız için size özel öneriler almak ve sorularınızı yanıtlamak için buradayız",
+      "contact": "İletişim",
+      "hotels": "Otelleri İncele"
+    }
+  },
+  "paymentSuccess": {
+    "title": "Talep Başarılı!",
+    "subtitle": "Rezervasyonunuz başarıyla oluşturuldu",
+    "loading": "Yükleniyor...",
+    "screenshot": "Ekran Görüntüsü Al",
+    "reservationDetails": "Rezervasyon Detayları",
+    "hotel": "Otel:",
+    "location": "Konum:",
+    "room": "Oda:",
+    "mealPlan": "Yemek Planı:",
+    "checkin": "Giriş Tarihi:",
+    "checkout": "Çıkış Tarihi:",
+    "guests": "Misafir:",
+    "adults": "yetişkin",
+    "adults_plural": "yetişkin",
+    "children": "çocuk",
+    "children_plural": "çocuk",
+    "nights": "Gece:",
+    "night": "gece",
+    "nights_plural": "gece",
+    "totalAmount": "Toplam Tutar:",
+    "guestInfo": "Misafir Bilgileri",
+    "fullName": "Ad Soyad:",
+    "email": "Email:",
+    "phone": "Telefon:",
+    "confirmationMessage": "Rezervasyon onayınız email adresinize gönderilmiştir. Lütfen email kutunuzu kontrol edin.",
+    "returnHome": "Ana Sayfaya Dön",
+    "hotelDetails": "Otel Detayları",
+    "and": "ve",
+    "currency": "₺"
+  },
+  "Contact": {
+    "hero": {
+      "title": "İletişim",
+      "subtitle": "Sorularınız, önerileriniz veya rezervasyon talepleriniz için bizimle iletişime geçin"
+    },
+    "info": {
+      "phone": {
+        "title": "Telefon",
+        "desc": "7/24 müşteri hizmetleri"
+      },
+      "mail": {
+        "title": "E-posta",
+        "desc": "24 saat içinde yanıt"
+      },
+      "address": {
+        "title": "Adres",
+        "desc": "Merkez ofisimiz"
+      },
+      "instagram": {
+        "title": "Instagram",
+        "desc": "7/24 müşteri hizmetleri"
+      }
+    },
+    "form": {
+      "title": "Bize WhatsApp Üzerinden Ulaşın",
+      "subtitle": "Sorularınızı ve taleplerinizi WhatsApp üzerinden hızlıca iletebilirsiniz.",
+      "name": "Ad Soyad *",
+      "email": "E-posta *",
+      "phone": "Telefon",
+      "subject": "Konu",
+      "message": "Mesaj *",
+      "namePlaceholder": "Adınız ve soyadınız",
+      "emailPlaceholder": "ornek@email.com",
+      "phonePlaceholder": "+90 5xx xxx xx xx",
+      "subjectPlaceholder": "Konu seçin",
+      "messagePlaceholder": "Mesajınızı buraya yazın...",
+      "subjects": {
+        "reservation": "Rezervasyon",
+        "information": "Bilgi Talebi",
+        "complaint": "Şikayet",
+        "suggestion": "Öneri",
+        "other": "Diğer"
+      },
+      "send": "WhatsApp ile Gönder"
+    },
+    "hours": {
+      "title": "Çalışma Saatlerimiz",
+      "week": "Pazartesi - Cumartesi",
+      "sunday": "Pazar",
+      "holiday": "Resmi Tatiller",
+      "closed": "Kapalı",
+      "emergency": "Acil Durumlar:",
+      "emergencyText": " 7/24 destek hattımız +90 533 888 99 99 numarasından ulaşılabilir."
+    },
+    "map": {
+      "title": "Ofisimizi Ziyaret Edin",
+      "address": "Adres",
+      "city": "Şehir"
+    }
+  },
+  "locamarin": {
+    "pageTitle": "Locamarin Yat Tatili",
+    "aboutTitle": "Locamarin Hakkında",
+    "yachtVacationTitle": "Locamarin Yat Tatili",
+    "description1": "Locamarin Yat Tatili, deniz üzerinde konforlu, mahrem ve tamamen size özel bir tatil deneyimi sunar. Göcek'in eşsiz koylarında gerçekleştirilen bu özel konsept, klasik otel tatiline alternatif olarak özgürlük ve huzuru bir araya getirir. Tatil boyunca teknede yalnızca sizin belirlediğiniz misafirler bulunur; tüm detaylar konfor, mahremiyet ve ayrıcalık esas alınarak hazırlanır.",
+    "description2": "Locamarin filosunda yer alan katamaran ve gulet tekneler; ev konforunda yaşam alanları, klimalı ve özel banyolu kamaraları, geniş güverte alanları ve dinlenme köşeleriyle denizin üzerinde lüks bir yaşam sunar. Alkolsüz hizmet anlayışıyla sunulan bu tatilde; internet, kitaplık, kutu oyunları, SUP, kano ve deniz ekipmanları gibi birçok aktivite imkânı bulunmaktadır.",
+    "description3": "Aileler ve arkadaş grupları için ideal olan Locamarin Yat Tatili, tamamen size ait, güvenli ve sakin bir atmosferde denizle iç içe bir tatil yaşamak isteyenler için tasarlanmıştır.",
+    "yacht1": {
+      "title": "Loca Comfort – Katamaran",
+      "description1": "19 metre uzunluğundaki Loca Comfort katamaran, ev konforunda yat tatili arayan misafirler için özel olarak tasarlanmıştır. 3 kamarasıyla toplamda 8 kişiye kadar konaklama imkânı sunan teknede, her odada çift kişilik yatak, klima, duş ve WC bulunmaktadır. Boydan boya camlara sahip kamaralar sayesinde denizle iç içe, ferah bir yaşam alanı sunulur.",
+      "description2": "Geniş güverte alanları, korunaklı güneşlenme alanı ve üst katta yer alan mini mutfak ile misafirler gün boyunca konforlu vakit geçirebilir. Tamamen kadın mürettebat (kaptan, aşçı ve gemi görevlisi) tarafından hizmet verilen teknede alkolsüz konsept uygulanmaktadır."
+    },
+    "yacht2": {
+      "title": "Loca İstanbul – Gulet",
+      "description1": "22 metre uzunluğundaki Loca İstanbul Gulet, geniş yaşam alanları ve yüksek konfor seviyesiyle kalabalık aileler ve arkadaş grupları için idealdir. 4 kamarasıyla 8 kişiye kadar konaklama sunan teknede, tüm odalarda çift kişilik yatak, klima, duş ve WC bulunmaktadır.",
+      "description2": "Geniş güverte alanları, konforlu dinlenme köşeleri ve profesyonel mürettebat (kaptan, aşçı ve gemi görevlisi) eşliğinde sunulan hizmetle, misafirler tamamen kendilerine ait bir ortamda tatilin keyfini çıkarır. Alkolsüz hizmet anlayışıyla güvenli ve huzurlu bir tatil deneyimi sunar."
+    },
+    "yacht3": {
+      "title": "Loca Venn – Gulet",
+      "description1": "17 metre uzunluğundaki Loca Venn Gulet, daha butik ve sakin bir yat tatili arayan misafirler için tasarlanmıştır. 2 kamarasıyla 4 kişilik konaklama imkânı sunan teknede, her odada çift kişilik yatak ve klima bulunmaktadır.",
+      "description2": "Güneşlenme alanları, rahat dinlenme köşeleri ve kaptan ile aşçıdan oluşan mürettebat eşliğinde hizmet verilen Loca Venn, küçük gruplar ve çekirdek aileler için ideal bir seçenektir. Alkolsüz konsepti ve sunduğu etkinlik imkânlarıyla huzurlu bir deniz tatili sunar."
+    },
+    "mapTitle": "Harita",
+    "videoTitle": "Otel Tanıtım Videosu"
+  },
+  "ReservationConfirm": {
+    "notFound": "Rezervasyon bilgileri bulunamadı.",
+    "mailError": "Mail gönderilirken bir hata oluştu.",
+    "generalError": "Bir hata oluştu.",
+    "hotelInfo": {
+      "title": "Otel Bilgileri",
+      "hotel": "Otel",
+      "room": "Oda",
+      "checkin": "Giriş",
+      "checkout": "Çıkış",
+      "guests": "Misafir",
+      "adult": "yetişkin",
+      "child": "çocuk",
+      "childrenAges": "Çocuk Yaşları"
+    },
+    "customerInfo": {
+      "title": "Müşteri Bilgileri",
+      "name": "Ad Soyad",
+      "email": "Email",
+      "phone": "Telefon",
+      "note": "Not"
+    },
+    "confirm": {
+      "title": "Rezervasyonu Onayla",
+      "description": "Lütfen bilgilerinizi kontrol edin. Her şey doğruysa aşağıdaki butona tıklayın.",
+      "totalPrice": "Toplam Fiyat",
+      "button": "Rezervasyonu Onayla"
+    }
+  },
+  "PaymentError": {
+    "loading": "Yükleniyor...",
+    "title": "Ödeme Başarısız",
+    "subtitle": "Ödeme işlemi sırasında bir hata oluştu",
+    "reasons": {
+      "title": "Olası Nedenler:",
+      "card": "Kart bilgileriniz hatalı olabilir",
+      "limit": "Kart limitiniz yetersiz olabilir",
+      "internet": "İnternet bağlantınızda sorun olabilir",
+      "bank": "Banka tarafından işlem reddedilmiş olabilir"
+    },
+    "warning": "Lütfen kart bilgilerinizi kontrol edip tekrar deneyin. Sorun devam ederse, lütfen bizimle iletişime geçin.",
+    "buttons": {
+      "retry": "Tekrar Dene",
+      "home": "Ana Sayfaya Dön",
+      "back": "Rezervasyona Dön"
+    },
+    "contact": {
+      "text": "Sorun yaşıyorsanız",
+      "link": "iletişim sayfamızdan",
+      "end": "bize ulaşabilirsiniz."
+    }
+  },
+  "Hotel": {
+    "about": "Otel Hakkında",
+    "map": "Harita",
+    "video": "Otel Tanıtım Videosu",
+    "videoTitle": "Tanıtım Videosu",
+    "agency": "Otelin Yetkili Acenteler Sayfası"
+  },
+  "HotelReview": {
+    "name": "Sabahattin Yıldız",
+    "title": "Helal Tatil Uzmanı",
+    "heading": "Sabahattin Yıldız'ın Özel Yorumu",
+    "updateDate": "Güncelleme tarihi: 01 Ocak 2026"
+  },
+  "Reviews": {
+    "googleLink": "Google'da yorumları gör",
+    "title": "Yorumlar",
+    "summary": "Google'da toplam {count} yorum var ve 5/5 puan ortalaması"
+  },
+  "BookingSearch": {
+    "title": {
+      "withHotel": "Rezervasyon Telebi Oluştur",
+      "noHotel": "Otel Ara"
+    },
+    "fields": {
+      "dateRange": "Tarih Aralığı",
+      "adults": "Yetişkin Sayısı",
+      "children": "Çocuk Sayısı",
+      "childrenAges": "Çocuk Yaşları",
+      "child": "Çocuk"
+    },
+    "buttons": {
+      "book": "Fiyatı Gör ve Rezervasyon Yap",
+      "seePrice": "Fiyatı Gör",
+      "search": "Ara"
+    },
+    "alerts": {
+      "selectDates": "Lütfen giriş ve çıkış tarihlerini seçin",
+      "invalidDate": "Çıkış tarihi giriş tarihinden sonra olmalıdır"
+    }
+  },
+  "DatePicker": {
+    "placeholder": "Tarih aralığı seçin"
+  },
+  "HotelSidebar": {
+    "loading": "Fiyat alınıyor...",
+    "priceError": "Fiyat alınamadı",
+    "noRoom": "Oda seçeneği bulunamadı",
+    "genericError": "Bir hata oluştu",
+    "roomOptions": "Oda Seçenekleri",
+    "night": "gece",
+    "adult": "yetişkin",
+    "child": "çocuk",
+    "welcomeDiscount": "Yeni Üyelere Özel Hoş Geldin İndirimi Sunulacaktır",
+    "select": "Seç",
+    "showMore": "Daha Fazla Göster",
+    "showLess": "Daha Az Göster"
+  },
+  "TimedPopup": {
+    "imageAlt": "Özel Fırsatlar",
+    "title": "Size Özel Tatil Fırsatlarını Kaçırmayın",
+    "description": "Web sitemize özel kampanyalar, avantajlı fiyatlar ve sınırlı kontenjan fırsatlarını ilk siz öğrenmek için bizimle hemen iletişime geçin.",
+    "whatsappButton": "WhatsApp’tan İletişime Geç",
+    "indicator": "Fırsatlar"
+  },
+  "Campaigns": {
+    "earlyBooking": {
+      "header": "Erken Rezervasyon Fırsatlarını Kaçırmayın",
+      "description": "Birçok seçkin otelimizde erken dönem rezervasyon avantajlarından yararlanmak için hemen bizimle iletişime geçin, en iyi fırsatları kaçırmayın.",
+      "linkText": "İletişime Geç!"
+    },
+    "sahinInn": {
+      "header": "Aqua Park Keyfini Şah Inn Paradise’te Yaşayın",
+      "description": "Şah Inn Paradise’te, aqua park eğlencesini ihtişam ve konforla buluşturan özel bir tatil sizi bekliyor. Ailenizle birlikte serinliğin, eğlencenin ve ayrıcalıklı bir atmosferin tadını doyasıya çıkarın.",
+      "linkText": "Keşfet!"
+    },
+    "womeDeluxe": {
+      "header": "Wome Deluxe'de Kampanya Dönemleri",
+      "description": "Mayıs ve Ekim aylarına özel avantajlı grup fiyatlarıyla, yılın en keyifli ve en kazançlı tatilini planlayın.",
+      "linkText": "İletişime Geç!"
+    }
+  },
+  "Booking": {
+    "loading": "Yükleniyor...",
+    "goBack": "Geri Dön",
+    "title": "Rezervasyon Bilgileri",
+
+    "customerInfo": "Müşteri Bilgileri",
+
+    "firstName": "Ad *",
+    "lastName": "Soyad *",
+    "phone": "Telefon *",
+    "email": "Email *",
+    "address": "Adres",
+    "city": "Şehir",
+    "country": "Ülke",
+    "notes": "Özel İstekler veya Notlar",
+
+    "submit": "Onay Sayfasına Geç",
+
+    "validationRequired": "Lütfen tüm gerekli alanları doldurun",
+    "validationEmail": "Lütfen geçerli bir email adresi girin",
+
+    "summary": "Rezervasyon Özeti",
+    "selectedRoom": "Seçilen Oda:",
+    "checkin": "Giriş:",
+    "checkout": "Çıkış:",
+    "guests": "Misafir:",
+    "nights": "Gece:",
+    "night": "gece",
+    "notSpecified": "Belirtilmedi",
+    "adult": "yetişkin",
+    "child": "çocuk",
+    "total": "Toplam Tutar:"
   }
 }
-

@@ -1,8 +1,13 @@
 {
   "common": {
-    "brandLicense": "Helaltrip Tourism License No: 13707"
+    "details": "Details",
+    "bestHotels": "Türkiye's best quality halal concept hotels",
+    "online": "ONLINE",
+    "liveSupport": "LIVE SUPPORT",
+    "gallery": "Gallery"
   },
   "nav": {
+    "brandLicense": "Helaltrip Tourism License No: 13707",
     "home": "Home",
     "hotels": "Hotels",
     "about": "About Us",
@@ -20,7 +25,7 @@
     "topBarSlogan": "The world’s best halal, alcohol-free family hotels are only in Turkey"
   },
   "footer": {
-    "companyBlurb": "Your trusted travel agency offering unforgettable holiday experiences at Turkey’s finest hotels.",
+    "companyBlurb": "Your trusted travel agency offering unforgettable vacation experiences at Turkey’s finest hotels.",
     "quickLinks": "Quick Links",
     "services": "Our Services",
     "service1": "Premium Quality",
@@ -31,6 +36,336 @@
     "tursabTextLine1": "Helaltrip is a travel agency affiliated with TÜRSAB.",
     "tursabTextLine2": "TÜRSAB License No:",
     "rights": "All rights reserved."
+  },
+  "About": {
+    "hero": {
+      "title": "About Us",
+      "description": "As the authorized agency for Halal Concept hotels, we have meticulously served our guests with booking reservations for over 10 years. We have earned the trust of thousands of families to date. By maintaining the highest level of relationships with hotels, we diligently strive to promptly resolve any issues our guests may encounter in real-time. Every guest is valuable to us, and every hotel we work with is equally important."
+    },
+    "stats": {
+      "customers": "Satisfied Customers",
+      "experience": "Years of Experience",
+      "support": "Support Service"
+    },
+    "story": {
+      "title": "Our Story",
+      "text": "Helaltrip Travel was established as a TURSAB member to provide travel alternatives to customers worldwide. The company has prepared and offered hundreds of tours both within Turkey and abroad. Domestically, Helaltrip Travel has agreements with hotels, resorts, numerous airline companies, and provides car rental services. It has quickly distinguished itself in the market with a wide range of travel products, including domestic and international tours, cultural excursions, blue cruises, ski packages, youth-oriented programs, corporate services, flight tickets, and car rental services."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "text": "It is our team's duty to continuously renew and develop itself in the field we work in, planning all details of every task and organization we undertake, and ensuring they achieve their purpose. If you want the service you receive to be flawless, leave everything you have imagined, designed, dreamed of, but couldn't piece together to us."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "text": "Our mission is to closely follow the dynamic and evolving world of tourism, quickly adapting to offer superior service, customer care, and quality to our clients through a highly trained professional team spirit. Our vision is to create value for our customers, meet their expectations with quality and consistency, and become their solution partners."
+    },
+    "values": {
+      "title": "Our Values",
+      "subtitle": "The core values and principles that guide us at every step",
+      "customer": {
+        "title": "Customer-Centric Service",
+        "desc": "We provide personalized service by understanding the unique needs of each customer."
+      },
+      "quality": {
+        "title": "Quality Guarantee",
+        "desc": "We select only the highest quality hotels and guarantee quality through continuous inspections."
+      },
+      "relationship": {
+        "title": "Direct Relationships with Hotels",
+        "desc": "We resolve any potential issues quickly and effectively thanks to our strong and close communication with hotels."
+      },
+      "support": {
+        "title": "24/7 Support",
+        "desc": "We remain by your side before, during, and after your vacation at all times."
+      }
+    },
+    "cta": {
+      "title": "Get in Touch with Us",
+      "subtitle": "We're here to provide you with personalized recommendations for your vacation plans and answer all your questions",
+      "contact": "Contact",
+      "hotels": "Explore Hotels"
+    }
+  },
+  "paymentSuccess": {
+    "title": "Request Successful!",
+    "subtitle": "Your reservation has been created successfully",
+    "loading": "Loading...",
+    "screenshot": "Take Screenshot",
+    "reservationDetails": "Reservation Details",
+    "hotel": "Hotel:",
+    "location": "Location:",
+    "room": "Room:",
+    "mealPlan": "Meal Plan:",
+    "checkin": "Check-in Date:",
+    "checkout": "Check-out Date:",
+    "guests": "Guests:",
+    "adults": "adult",
+    "adults_plural": "adults",
+    "children": "child",
+    "children_plural": "children",
+    "nights": "Nights:",
+    "night": "night",
+    "nights_plural": "nights",
+    "totalAmount": "Total Amount:",
+    "guestInfo": "Guest Information",
+    "fullName": "Full Name:",
+    "email": "Email:",
+    "phone": "Phone:",
+    "confirmationMessage": "Your reservation confirmation has been sent to your email address. Please check your inbox.",
+    "returnHome": "Return to Home",
+    "hotelDetails": "Hotel Details",
+    "and": "and",
+    "currency": "₺"
+  },
+  "Contact": {
+    "hero": {
+      "title": "Contact",
+      "subtitle": "Contact us for your questions, suggestions, or reservation requests"
+    },
+    "info": {
+      "phone": {
+        "title": "Phone",
+        "desc": "24/7 customer support"
+      },
+      "mail": {
+        "title": "Email",
+        "desc": "Response within 24 hours"
+      },
+      "address": {
+        "title": "Address",
+        "desc": "Our head office"
+      },
+      "instagram": {
+        "title": "Instagram",
+        "desc": "24/7 customer support"
+      }
+    },
+    "form": {
+      "title": "Contact Us via WhatsApp",
+      "subtitle": "You can quickly send your questions and requests via WhatsApp.",
+      "name": "Full Name *",
+      "email": "Email *",
+      "phone": "Phone",
+      "subject": "Subject",
+      "message": "Message *",
+      "namePlaceholder": "Your full name",
+      "emailPlaceholder": "example@email.com",
+      "phonePlaceholder": "+90 5xx xxx xx xx",
+      "subjectPlaceholder": "Select subject",
+      "messagePlaceholder": "Write your message here...",
+      "subjects": {
+        "reservation": "Reservation",
+        "information": "Information Request",
+        "complaint": "Complaint",
+        "suggestion": "Suggestion",
+        "other": "Other"
+      },
+      "send": "Send via WhatsApp"
+    },
+    "hours": {
+      "title": "Working Hours",
+      "week": "Monday - Saturday",
+      "sunday": "Sunday",
+      "vacation": "Public Vacations",
+      "closed": "Closed",
+      "emergency": "Emergency:",
+      "emergencyText": " Our 24/7 support line is available at +90 533 888 99 99."
+    },
+    "map": {
+      "title": "Visit Our Office",
+      "address": "Address",
+      "city": "City"
+    }
+  },
+  "locamarin": {
+    "pageTitle": "Locamarin Yacht Vacation",
+    "aboutTitle": "About Locamarin",
+    "yachtVacationTitle": "Locamarin Yacht Vacation",
+    "description1": "Locamarin Yacht Vacation offers a comfortable, private, and completely personalized vacation experience on the sea. This unique concept in Göcek's exquisite bays brings together freedom and tranquility as an alternative to traditional hotel vacations. Throughout the vacation, only the guests you specify are on the yacht; all details are prepared with comfort, privacy, and privilege in mind.",
+    "description2": "The catamaran and gulet yachts in Locamarin's fleet offer luxurious living on the water with home-like living spaces, air-conditioned cabins with private bathrooms, spacious deck areas, and relaxation corners. In this alcohol-free service concept, many activity opportunities are available including internet, library, board games, SUP, canoe, and sea equipment.",
+    "description3": "Designed for families and friend groups, Locamarin Yacht Vacation is ideal for those who want to experience a vacation intertwined with the sea in a completely private, safe, and calm atmosphere.",
+    "yacht1": {
+      "title": "Loca Comfort – Catamaran",
+      "description1": "The 19-meter Loca Comfort catamaran is specially designed for guests seeking a yacht vacation with home comfort. With 3 cabins accommodating up to 8 people, each room features a double bed, air conditioning, shower, and WC. Cabins with floor-to-ceiling windows offer a spacious, sea-integrated living area.",
+      "description2": "With spacious deck areas, a protected sunbathing area, and a mini kitchen on the upper deck, guests can spend comfortable time throughout the day. Alcohol-free service is provided on the yacht, which is served by an all-female crew (captain, chef, and deckhand)."
+    },
+    "yacht2": {
+      "title": "Loca Istanbul – Gulet",
+      "description1": "The 22-meter Loca Istanbul Gulet, with its spacious living areas and high comfort level, is ideal for large families and friend groups. With 4 cabins accommodating up to 8 people, all rooms feature a double bed, air conditioning, shower, and WC.",
+      "description2": "With spacious deck areas, comfortable relaxation corners, and service accompanied by a professional crew (captain, chef, and deckhand), guests enjoy their vacation in a completely private environment. It offers a safe and peaceful vacation experience with an alcohol-free service concept."
+    },
+    "yacht3": {
+      "title": "Loca Venn – Gulet",
+      "description1": "The 17-meter Loca Venn Gulet is designed for guests seeking a more boutique and tranquil yacht vacation. With 2 cabins accommodating 4 people, each room features a double bed and air conditioning.",
+      "description2": "With sunbathing areas, comfortable relaxation corners, and service accompanied by a crew consisting of a captain and chef, Loca Venn is an ideal option for small groups and nuclear families. It offers a peaceful sea vacation with its alcohol-free concept and activity opportunities."
+    },
+    "mapTitle": "Map",
+    "videoTitle": "Hotel Promotion Video"
+  },
+  "ReservationConfirm": {
+    "notFound": "Reservation details could not be found.",
+    "mailError": "An error occurred while sending the email.",
+    "generalError": "An error occurred.",
+    "hotelInfo": {
+      "title": "Hotel Information",
+      "hotel": "Hotel",
+      "room": "Room",
+      "checkin": "Check-in",
+      "checkout": "Check-out",
+      "guests": "Guests",
+      "adult": "adult",
+      "child": "child",
+      "childrenAges": "Children's Ages"
+    },
+    "customerInfo": {
+      "title": "Customer Information",
+      "name": "Full Name",
+      "email": "Email",
+      "phone": "Phone",
+      "note": "Note"
+    },
+    "confirm": {
+      "title": "Confirm Reservation",
+      "description": "Please review your information. If everything is correct, click the button below.",
+      "totalPrice": "Total Price",
+      "button": "Confirm Reservation"
+    }
+  },
+  "PaymentError": {
+    "loading": "Loading...",
+    "title": "Payment Failed",
+    "subtitle": "An error occurred during the payment process",
+    "reasons": {
+      "title": "Possible Reasons:",
+      "card": "Your card information may be incorrect",
+      "limit": "Your card limit may be insufficient",
+      "internet": "There may be a problem with your internet connection",
+      "bank": "The transaction may have been declined by your bank"
+    },
+    "warning": "Please check your card details and try again. If the problem persists, feel free to contact us.",
+    "buttons": {
+      "retry": "Try Again",
+      "home": "Back to Home",
+      "back": "Back to Reservation"
+    },
+    "contact": {
+      "text": "If you are experiencing any issues, you can contact us via our",
+      "link": "contact page",
+      "end": "."
+    }
+  },
+  "Hotel": {
+    "about": "About the Hotel",
+    "map": "Map",
+    "video": "Hotel Promotional Video",
+    "videoTitle": "Promotional Video",
+    "agency": "Authorized Agency Page"
+  },
+  "HotelReview": {
+    "name": "Sabahattin Yıldız",
+    "title": "Halal Travel Specialist",
+    "heading": "Exclusive Review by Sabahattin Yıldız",
+    "updateDate": "Last updated: January 1, 2026"
+  },
+  "Reviews": {
+    "googleLink": "View reviews on Google",
+    "title": "Reviews",
+    "summary": "There are a total of {count} reviews on Google with an average rating of 5/5"
+  },
+  "BookingSearch": {
+    "title": {
+      "withHotel": "Create a Reservation Request",
+      "noHotel": "Search Hotels"
+    },
+    "fields": {
+      "dateRange": "Date Range",
+      "adults": "Number of Adults",
+      "children": "Number of Children",
+      "childrenAges": "Children's Ages",
+      "child": "Child"
+    },
+    "buttons": {
+      "book": "View Price and Book",
+      "seePrice": "View Price",
+      "search": "Search"
+    },
+    "alerts": {
+      "selectDates": "Please select check-in and check-out dates",
+      "invalidDate": "Check-out date must be after the check-in date"
+    }
+  },
+  "DatePicker": {
+    "placeholder": "Select date range"
+  },
+  "HotelSidebar": {
+    "loading": "Fetching prices...",
+    "priceError": "Unable to retrieve pricing",
+    "noRoom": "No room options available",
+    "genericError": "An unexpected error occurred",
+    "roomOptions": "Room Options",
+    "night": "night",
+    "adult": "adult",
+    "child": "child",
+    "welcomeDiscount": "A Welcome Discount Will Be Applied for New Members",
+    "select": "Select",
+    "showMore": "Show More",
+    "showLess": "Show Less"
+  },
+  "TimedPopup": {
+    "imageAlt": "Special Offers",
+    "title": "Don't Miss Exclusive Vacation Deals Just for You",
+    "description": "Contact us now to be the first to learn about exclusive website campaigns, special prices, and limited availability offers.",
+    "whatsappButton": "Contact via WhatsApp",
+    "indicator": "Offers"
+  },
+  "Campaigns": {
+    "earlyBooking": {
+      "header": "Don't Miss Early Booking Opportunities",
+      "description": "Contact us now to take advantage of early booking offers at many of our selected hotels and secure the best deals.",
+      "linkText": "Contact Us"
+    },
+    "sahinInn": {
+      "header": "Experience Aqua Park Fun at Şah Inn Paradise",
+      "description": "At Şah Inn Paradise, enjoy a unique holiday where aqua park entertainment meets luxury and comfort. Experience refreshing fun and an exclusive atmosphere with your family.",
+      "linkText": "Explore"
+    },
+    "womeDeluxe": {
+      "header": "Special Campaign Periods at Wome Deluxe",
+      "description": "Plan the most enjoyable and rewarding holiday of the year with special group rates available in May and October.",
+      "linkText": "Contact Us"
+    }
+  },
+  "Booking": {
+    "loading": "Loading...",
+    "goBack": "Go Back",
+    "title": "Booking Information",
+
+    "customerInfo": "Customer Information",
+
+    "firstName": "First Name *",
+    "lastName": "Last Name *",
+    "phone": "Phone *",
+    "email": "Email *",
+    "address": "Address",
+    "city": "City",
+    "country": "Country",
+    "notes": "Special Requests or Notes",
+
+    "submit": "Proceed to Confirmation",
+
+    "validationRequired": "Please fill in all required fields",
+    "validationEmail": "Please enter a valid email address",
+
+    "summary": "Booking Summary",
+    "selectedRoom": "Selected Room:",
+    "checkin": "Check-in:",
+    "checkout": "Check-out:",
+    "guests": "Guests:",
+    "nights": "Nights:",
+    "night": "night(s)",
+    "notSpecified": "Not Specified",
+    "adult": "adult(s)",
+    "child": "child(ren)",
+    "total": "Total Amount:"
   }
 }
-

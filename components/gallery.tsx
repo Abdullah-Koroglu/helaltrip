@@ -6,10 +6,12 @@ import { Button } from "./ui/button"
 import { ChevronLeft, ChevronRight, Maximize2, Grid } from "lucide-react"
 import { Hotel } from "@/lib/hotel-data"
 import { useIsMobile } from "./hooks/use-mobile"
+import { useTranslations } from "next-intl"
 
 const IMAGE_COUNT = 12
 
 const Gallery = ({ hotel }: { hotel: Hotel }) => {
+  const t = useTranslations("common")
   const [activeIndex, setActiveIndex] = useState(1)
   const [open, setOpen] = useState(false)
   const touchStartX = useRef(0)
@@ -115,7 +117,7 @@ const Gallery = ({ hotel }: { hotel: Hotel }) => {
                 className="bg-white/90 hover:bg-white shadow-md flex items-center gap-1"
               >
                 <Grid className="h-4 w-4 text-black/90" />
-                <span className="text-xs hidden sm:inline text-black/90">Galeri</span>
+                <span className="text-xs hidden sm:inline text-black/90">{t('gallery')}</span>
                 <span className="text-xs font-semibold text-black/90">({IMAGE_COUNT})</span>
               </Button>
             </div>
@@ -205,7 +207,7 @@ const Gallery = ({ hotel }: { hotel: Hotel }) => {
           >
             {!isMobile && (
               <DialogTitle className="text-center text-white px-4 pt-4">
-                {hotel.name} - Galeri
+                {hotel.name} - {t('gallery')}
               </DialogTitle>
             )}
 

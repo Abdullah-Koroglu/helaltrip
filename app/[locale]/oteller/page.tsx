@@ -4,15 +4,18 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { hotels } from '@/lib/hotel-data'
 import { MapPin, Star } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 
 const page = () => {
+  const navt = useTranslations("nav")
+  const t = useTranslations("common")
   const { withLocale } = useLocalePath()
   return (
     <>
       <div className="container mx-auto px-4 mt-12 pb-12">
-        <h1 className="text-4xl font-bold text-center text-primary mb-4">Oteller</h1>
-        <p className="text-xl text-center text-primary/70 mb-4">Türkiye'nin en güzel helal konseptli otelleri</p>
+        <h1 className="text-4xl font-bold text-center text-primary mb-4">{navt('hotels')}</h1>
+        <p className="text-xl text-center text-primary/70 mb-4">{t('bestHotels')}</p>
         <div className="grid md:grid-cols-3 gap-8">
           {hotels.map((hotel: any) => (
             <Card key={hotel.id} className="overflow-hidden hover:shadow-xl transition-shadow">
@@ -56,7 +59,7 @@ const page = () => {
                   </div>
                   <Link href={withLocale(`/otel/${hotel.slug}`)}>
                     <Button size="sm" variant="outline">
-                      Detaylar
+                      {t('details')}
                     </Button>
                   </Link>
                 </div>

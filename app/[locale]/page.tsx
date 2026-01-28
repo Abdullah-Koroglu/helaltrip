@@ -7,10 +7,13 @@ import { Star, Shield, MapPin, Heart, Users, Award } from "lucide-react"
 import Link from "next/link"
 import { CampaignSlider } from "@/components/campaign-slider"
 import { useLocalePath } from "@/components/hooks/useLocalePath"
+import { useTranslations } from "next-intl"
 const review = require("@/public/reviews.json")
 
 export default function HomePage() {
   const { withLocale } = useLocalePath()
+  const t = useTranslations('home')
+
   return (
     <div className="min-h-screen bg-gray-50">
 
@@ -31,10 +34,10 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Popüler Otellerimiz
+              {t('popularHotelsTitle')}
             </h2>
             <p className="text-xl text-gray-600">
-              En çok tercih edilen otellerimizi keşfedin
+              {t('popularHotelsSubtitle')}
             </p>
           </div>
 
@@ -93,7 +96,7 @@ export default function HomePage() {
           <div className="text-center mt-12">
             <Link href={withLocale("/oteller")}>
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-                Tüm Otelleri Gör
+              {t('seeAllHotels')}
               </Button>
             </Link>
           </div>
@@ -106,10 +109,10 @@ export default function HomePage() {
         <div className="container mx-auto px-4 flex items-center justify-center flex-col">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Müşteri Yorumları
+              {t('reviewsTitle')}
             </h2>
             <p className="text-xl text-gray-600">
-              Google'da 5/5 puan ortalaması
+              {t('reviewsSubtitle')}
             </p>
           </div>
 
@@ -125,11 +128,11 @@ export default function HomePage() {
                     <div className="flex items-center">
                       {[...Array(5)].map((_, i) => (
                         <Star
-                          key={i}
-                          className={`w-4 h-4 ${i < review.rating.split("/")[0]
-                            ? "text-yellow-400 fill-current"
-                            : "text-gray-300"
-                            }`}
+                        key={i}
+                        className={`w-4 h-4 ${i < review.rating.split("/")[0]
+                          ? "text-yellow-400 fill-current"
+                          : "text-gray-300"
+                        }`}
                         />
                       ))}
                     </div>
@@ -144,7 +147,7 @@ export default function HomePage() {
 
           <Link className="mt-12 mx-auto" href={withLocale("/yorumlar")}>
             <Button size="lg" className="bg-blue-600 hover:bg-blue-700 mt-12 mx-auto">
-              Tüm Yorumları Gör
+            {t('seeAllReviews')}
             </Button>
           </Link>
 

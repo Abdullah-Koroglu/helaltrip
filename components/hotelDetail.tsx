@@ -4,11 +4,11 @@
 import { SeasonInfo } from './types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle, faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
-import { 
-  faBellConcierge, 
-  faFutbol, 
-  faUmbrellaBeach, 
-  faBaby, 
+import {
+  faBellConcierge,
+  faFutbol,
+  faUmbrellaBeach,
+  faBaby,
   faSpa,
   // faRingsWedding,
   faInfoCircle,
@@ -43,10 +43,10 @@ const useIsMobile = () => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
-    
+
     checkMobile();
     window.addEventListener('resize', checkMobile);
-    
+
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
@@ -63,10 +63,10 @@ interface CollapsibleSectionProps {
   isMobile?: boolean;
 }
 
-function CollapsibleSection({ 
-  title, 
-  icon, 
-  defaultOpen = true, 
+function CollapsibleSection({
+  title,
+  icon,
+  defaultOpen = true,
   children,
   className = '',
   isMobile = false,
@@ -85,13 +85,13 @@ function CollapsibleSection({
           {icon && <FontAwesomeIcon icon={icon} className="text-blue-500 text-lg md:text-xl flex-shrink-0" />}
           <h3 className="text-lg md:text-xl font-semibold text-gray-800 truncate">{title}</h3>
         </div>
-        <FontAwesomeIcon 
-          icon={isOpen ? faChevronUp : faChevronDown} 
+        <FontAwesomeIcon
+          icon={isOpen ? faChevronUp : faChevronDown}
           className="text-gray-400 text-sm md:text-base flex-shrink-0 ml-2"
         />
       </button>
-      
-      <div 
+
+      <div
         className={`transition-all duration-300 ease-in-out ${isOpen ? 'max-h-[10000px] opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}
       >
         <div className="px-4 md:px-6 pb-4 md:pb-6 pt-2">
@@ -120,13 +120,13 @@ function CollapsibleListItem({ title, children, isMobile = false }: CollapsibleL
         style={{ minHeight: isMobile ? '56px' : 'auto' }}
       >
         <span className="font-medium text-gray-700 text-sm md:text-base truncate pr-2">{title}</span>
-        <FontAwesomeIcon 
-          icon={isOpen ? faChevronUp : faChevronDown} 
+        <FontAwesomeIcon
+          icon={isOpen ? faChevronUp : faChevronDown}
           className="text-gray-400 text-xs md:text-sm flex-shrink-0"
         />
       </button>
-      
-      <div 
+
+      <div
         className={`transition-all duration-200 ease-in-out ${isOpen ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}
       >
         <div className="p-3 md:p-4 pt-0">
@@ -156,7 +156,7 @@ function MobileHeader({ title, startDate, endDate, active }: {
           {active ? 'AKTİF' : 'PASİF'}
         </span>
       </div>
-      
+
       <div className="flex items-center justify-between text-sm">
         <div className="flex items-center gap-2">
           <FontAwesomeIcon icon={faSun} className="text-yellow-300" />
@@ -219,7 +219,7 @@ function MobileNavBar() {
 
 export default function HotelInfoCard({ data }: HotelInfoCardProps) {
   const isMobile = useIsMobile();
-  
+
   // Format date from "01-Nisan-2026" to "01 Nisan 2026"
   const formatDate = (dateStr: string) => {
     return dateStr.replace(/-/g, ' ');
@@ -237,12 +237,12 @@ export default function HotelInfoCard({ data }: HotelInfoCardProps) {
       {/* Mobile Header */}
       {
         data?.title &&
-        <MobileHeader 
-        title={data.title}
-        startDate={data.startDate || ''}
-        endDate={data.endDate || ''}
-        active={data.active}
-      />}
+        <MobileHeader
+          title={data.title}
+          startDate={data.startDate || ''}
+          endDate={data.endDate || ''}
+          active={data.active}
+        />}
 
       {/* Mobile Navigation */}
       {/* <MobileNavBar /> */}
@@ -270,32 +270,12 @@ export default function HotelInfoCard({ data }: HotelInfoCardProps) {
             </div>
           )}
 
-          {/* Desktop Header (hidden on mobile) */}
-          {/* {!isMobile && (
-            <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-6 shadow-sm border border-blue-100">
-              <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                <div>
-                  <h1 className="text-3xl font-bold text-gray-800 mb-2">
-                    {data.title}
-                  </h1>
-                  <div className="flex flex-wrap items-center gap-2">
-                    <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full font-medium text-sm">
-                      {formatDate(data.startDate)} - {formatDate(data.endDate)}
-                    </span>
-                    <span className={`px-3 py-1 rounded-full font-medium text-sm ${data.active ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-700'}`}>
-                      {data.active ? 'Aktif Sezon' : 'Pasif Sezon'}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )} */}
 
           <div className={`space-y-4 md:space-y-6 ${isMobile ? '' : 'grid md:grid-cols-3 gap-6'}`}>
             {/* Left Column - Mobile: Full width, Desktop: 2/3 */}
             <div className={isMobile ? 'space-y-4' : 'md:col-span-2 space-y-4'}>
               {/* Themes */}
-              <CollapsibleSection 
+              <CollapsibleSection
                 title="Tema & Özellikler"
                 icon={faCheckCircle}
                 defaultOpen={!isMobile}
@@ -313,14 +293,14 @@ export default function HotelInfoCard({ data }: HotelInfoCardProps) {
               </CollapsibleSection>
 
               {/* General Info Text */}
-              <CollapsibleSection 
+              <CollapsibleSection
                 title="Genel Bilgiler"
                 icon={faInfoCircle}
                 defaultOpen={!isMobile}
                 isMobile={isMobile}
                 id="overview"
               >
-                <div 
+                <div
                   className="prose prose-sm md:prose-base prose-gray max-w-none"
                   dangerouslySetInnerHTML={createMarkup(data.generalInfo.generalInfoText)}
                 />
@@ -329,7 +309,7 @@ export default function HotelInfoCard({ data }: HotelInfoCardProps) {
               {/* Facility Categories */}
               <div className="space-y-4">
                 {data.facilityCategories.map((category, index) => (
-                  <CollapsibleSection 
+                  <CollapsibleSection
                     key={index}
                     title={category.title.label}
                     icon={iconMap[category.title.icon] || faBellConcierge}
@@ -338,7 +318,7 @@ export default function HotelInfoCard({ data }: HotelInfoCardProps) {
                     id={index === 0 ? 'facilities' : undefined}
                   >
                     {category.freeText && (
-                      <div 
+                      <div
                         className="mb-4 md:mb-6 prose prose-sm md:prose-base prose-gray max-w-none"
                         dangerouslySetInnerHTML={createMarkup(category.freeText)}
                       />
@@ -347,7 +327,7 @@ export default function HotelInfoCard({ data }: HotelInfoCardProps) {
                     {category.facilities && category.facilities.length > 0 && (
                       <div className="space-y-3">
                         {category.facilities.map((facility, fIndex) => (
-                          <CollapsibleListItem 
+                          <CollapsibleListItem
                             key={fIndex}
                             title={facility.label}
                             isMobile={isMobile}
@@ -378,7 +358,7 @@ export default function HotelInfoCard({ data }: HotelInfoCardProps) {
             <div className={isMobile ? 'space-y-4' : 'md:col-span-1 space-y-4'}>
               {/* Check-in/out - Desktop version */}
               {!isMobile && (
-                <CollapsibleSection 
+                <CollapsibleSection
                   title="Check-in & Check-out"
                   icon={faBed}
                   defaultOpen={true}
@@ -404,20 +384,20 @@ export default function HotelInfoCard({ data }: HotelInfoCardProps) {
               )}
 
               {/* Important Info */}
-              <CollapsibleSection 
+              <CollapsibleSection
                 title="Önemli Bilgiler"
                 icon={faInfoCircle}
                 defaultOpen={false}
                 isMobile={isMobile}
               >
-                <div 
+                <div
                   className="prose prose-sm max-w-none text-gray-600"
                   dangerouslySetInnerHTML={createMarkup(data.importantInfo.desc)}
                 />
               </CollapsibleSection>
 
               {/* General Facilities */}
-              <CollapsibleSection 
+              <CollapsibleSection
                 title="Tesis Olanakları"
                 icon={faSwimmingPool}
                 defaultOpen={false}
@@ -425,7 +405,7 @@ export default function HotelInfoCard({ data }: HotelInfoCardProps) {
               >
                 <div className="space-y-3">
                   {data.generalInfo.facilities.map((facility, index) => (
-                    <CollapsibleListItem 
+                    <CollapsibleListItem
                       key={index}
                       title={facility.label}
                       isMobile={isMobile}
@@ -445,81 +425,11 @@ export default function HotelInfoCard({ data }: HotelInfoCardProps) {
                 </div>
               </CollapsibleSection>
 
-              {/* Quick Actions - Desktop only */}
-              {/* {!isMobile && (
-                <CollapsibleSection 
-                  title="Hızlı Erişim"
-                  icon={faStar}
-                  defaultOpen={false}
-                  isMobile={isMobile}
-                >
-                  <div className="space-y-3">
-                    <button className="w-full text-left p-3 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors">
-                      <span className="font-medium text-blue-700">📞 Rezervasyon</span>
-                    </button>
-                    <button className="w-full text-left p-3 bg-green-50 hover:bg-green-100 rounded-lg transition-colors">
-                      <span className="font-medium text-green-700">📍 Konum & Ulaşım</span>
-                    </button>
-                    <button className="w-full text-left p-3 bg-purple-50 hover:bg-purple-100 rounded-lg transition-colors">
-                      <span className="font-medium text-purple-700">📸 Fotoğraf Galerisi</span>
-                    </button>
-                  </div>
-                </CollapsibleSection>
-              )} */}
+
             </div>
           </div>
-
-          {/* Mobile Bottom Actions */}
-          {/* {isMobile && (
-            <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-4 sticky bottom-20 z-10">
-              <div className="grid grid-cols-2 gap-3">
-                <button className="bg-blue-500 text-white py-3 rounded-lg font-medium active:bg-blue-600 transition-colors flex items-center justify-center gap-2">
-                  <FontAwesomeIcon icon={faUtensils} />
-                  <span>Rezervasyon</span>
-                </button>
-                <button className="bg-green-500 text-white py-3 rounded-lg font-medium active:bg-green-600 transition-colors flex items-center justify-center gap-2">
-                  <FontAwesomeIcon icon={faInfoCircle} />
-                  <span>Detaylar</span>
-                </button>
-              </div>
-            </div>
-          )} */}
         </div>
       </div>
-
-      {/* Expand/Collapse All Buttons - Desktop only */}
-      {/* {!isMobile && (
-        <div className="fixed bottom-6 right-6 z-10 flex flex-col gap-2">
-          <button
-            onClick={() => {
-              // Tüm bölümleri aç
-              const buttons = document.querySelectorAll('[data-collapsible="true"]');
-              buttons.forEach(button => {
-                const isClosed = button.getAttribute('data-open') === 'false';
-                if (isClosed) (button as HTMLElement).click();
-              });
-            }}
-            className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors shadow-lg flex items-center gap-2"
-          >
-            <span>📖</span>
-            <span>Tümünü Aç</span>
-          </button>
-          <button
-            onClick={() => {
-              // Tüm bölümleri kapat
-              const buttons = document.querySelectorAll('[data-collapsible="true"]');
-              buttons.forEach(button => {
-                const isOpen = button.getAttribute('data-open') === 'true';
-                if (isOpen) (button as HTMLElement).click();
-              });
-            }}
-            className="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors shadow-lg flex items-center gap-2"
-          >
-            <span>📕</span>
-            <span>Tümünü Kapat</span>
-          </button>
-        </div>
-      )} */}
     </div>
   );
 }

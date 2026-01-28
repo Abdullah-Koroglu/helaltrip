@@ -3,9 +3,12 @@ import Link from "next/link";
 import { Phone, Mail, MapPin, Instagram, Facebook, Twitter, MessageCircle } from "lucide-react";
 import Image from "next/image";
 import { useLocalePath } from "./hooks/useLocalePath";
+import { useTranslations } from "next-intl";
 
 const Footer = () => {
   const { withLocale } = useLocalePath()
+  const t = useTranslations('footer')
+  const navt = useTranslations('nav')
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 py-12">
@@ -16,7 +19,7 @@ const Footer = () => {
               <Image src="/logo-w.png" alt="Helaltrip" width={240} height={32} />
             </div>
             <p className="text-sm text-primary-foreground/80 leading-relaxed">
-              Türkiye'nin en güzel otellerinde unutulmaz tatil deneyimleri sunan güvenilir turizm acenteniz.
+              {t('companyBlurb')}
             </p>
             <div className="flex space-x-4">
               {/* <Whatsapp className="h-5 w-5 hover:text-secondary cursor-pointer smooth-transition" /> */}
@@ -27,37 +30,37 @@ const Footer = () => {
 
           {/* Hızlı Linkler */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-lg">Hızlı Linkler</h3>
+            <h3 className="font-semibold text-lg">{t('quickLinks')}</h3>
             <div className="space-y-2">
               <Link href={withLocale("/")} className="block text-sm hover:text-secondary smooth-transition">
-                Ana Sayfa
+                {navt('home')}
               </Link>
               <Link href={withLocale("/oteller")} className="block text-sm hover:text-secondary smooth-transition">
-                Oteller
+                {navt('hotels')}
               </Link>
               <Link href={withLocale("/hakkimizda")} className="block text-sm hover:text-secondary smooth-transition">
-                Hakkımızda
+                {navt('about')}
               </Link>
               <Link href={withLocale("/iletisim")} className="block text-sm hover:text-secondary smooth-transition">
-                İletişim
+                {navt('contact')}
               </Link>
             </div>
           </div>
 
           {/* Hizmetler */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-lg">Hizmetlerimiz</h3>
+            <h3 className="font-semibold text-lg">{t('services')}</h3>
             <div className="space-y-2 text-sm">
-              <div>Premium Kalite</div>
-              <div>Müşteri Memnuniyeti</div>
-              <div>Eşsiz Lokasyonlar</div>
-              <div>7/24 Destek</div>
+              <div>{t('service1')}</div>
+              <div>{t('service2')}</div>
+              <div>{t('service3')}</div>
+              <div>{t('service4')}</div>
             </div>
           </div>
 
           {/* İletişim */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-lg">İletişim</h3>
+            <h3 className="font-semibold text-lg">{navt('contact')}</h3>
             <div className="space-y-3">
               <Link href={"tel:+905338189958"} className="flex items-center gap-3">
                 <Phone className="h-4 w-4 text-secondary" />
@@ -88,15 +91,15 @@ const Footer = () => {
                   className="rounded"
                 />
                 <p className="text-xs text-primary-foreground/80 leading-snug">
-                  Helaltrip, TÜRSAB’a bağlı bir turizm seyahat acentesidir.
+                  {t('tursabTextLine1')}
                   <br />
-                  TÜRSAB Belge No: <strong>13707</strong>
+                  {t('tursabTextLine2')}: <strong>13707</strong>
                 </p>
               </Link>
 
             </div>
             <p className="text-sm text-primary-foreground/80">
-              © 2025 Helaltrip. Tüm hakları saklıdır.
+              © 2025 Helaltrip. {t('rights')}
             </p>
           </div>
         </div>
