@@ -42,6 +42,15 @@ export function Header() {
               target="_blank"
               className="flex items-center gap-2"
               href="https://wa.me/905338189958"
+              onClick={() => {
+                window.gtag("event", "conversion", {
+                  send_to: "AW-123456789/AbCdEfGhIj",
+                  event_callback: () => {
+                    window.open("https://wa.me/905XXXXXXXXX", "_blank");
+                  },
+                });
+              }}
+              
             >
               <Phone className="w-4 h-4" />
               +90 533 818 99 58

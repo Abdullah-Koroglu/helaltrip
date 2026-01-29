@@ -6,6 +6,8 @@ import ContactButton from '@/components/contact-button'
 import TimedPopup from '@/components/TimedPopup'
 import { Poppins } from "next/font/google";
 
+import Script from "next/script";
+
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
@@ -43,6 +45,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>        <Script
+        src="https://www.googletagmanager.com/gtag/js?id=AW-10889372782"
+        strategy="afterInteractive"
+      />
+
+        <Script id="google-ads" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-10889372782');
+          `}
+        </Script></head>
       <body className={poppins.className}>
         <div className="min-h-[calc(100vh-20rem)]">
           {children}

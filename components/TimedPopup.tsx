@@ -72,6 +72,15 @@ export default function TimedPopup() {
                 <a
                   href="https://wa.me/905338189958?text=Merhaba,%20özel%20fırsatlar%20hakkında%20bilgi%20almak%20istiyorum."
                   target="_blank"
+                  onClick={() => {
+                    window.gtag("event", "conversion", {
+                      send_to: "AW-123456789/AbCdEfGhIj",
+                      event_callback: () => {
+                        window.open("https://wa.me/905XXXXXXXXX", "_blank");
+                      },
+                    });
+                  }}
+                  
                 >
                   <MessageCircle size={20} />
                   {t("whatsappButton")}

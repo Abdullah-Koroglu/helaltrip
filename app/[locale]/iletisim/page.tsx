@@ -279,6 +279,14 @@ const Contact = () => {
 
                 {/* WhatsApp */}
                 <a
+                onClick={() => {
+                  window.gtag("event", "conversion", {
+                    send_to: "AW-123456789/AbCdEfGhIj",
+                    event_callback: () => {
+                      window.open("https://wa.me/905XXXXXXXXX", "_blank");
+                    },
+                  });
+                }}                
                   href={`https://wa.me/905338189958?text=${encodeURIComponent(
                     `Ad Soyad: ${formData.name}
 E-posta: ${formData.email}

@@ -65,6 +65,13 @@ export function CampaignSlider() {
                 <div className="flex items-center space-x-4">
                   <Link target="_blank" href={campaign.link}>
                     <Button
+                      onClick={() => 
+                      {
+                        window.gtag("event", "conversion", {
+                          send_to: "AW-10889372782/7VMcCM7u7u4bEO7Iusgo",
+                        });
+                      }
+                      }
                       size="lg"
                       className="bg-green-600 hover:bg-green-600/90 duration-500 animate-attention hover:scale-110 transition-all"
                     >
