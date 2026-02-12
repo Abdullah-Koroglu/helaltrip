@@ -37,9 +37,8 @@ export function CampaignSlider() {
       {campaigns.map((campaign, index) => (
         <div
           key={campaign.id}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
-            index === currentSlide ? "opacity-100" : "opacity-0"
-          }`}
+          className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? "opacity-100" : "opacity-0"
+            }`}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent z-10" />
 
@@ -65,13 +64,11 @@ export function CampaignSlider() {
                 <div className="flex items-center space-x-4">
                   <Link target="_blank" href={campaign.link}>
                     <Button
-                      onClick={() => 
-                      {
+                      onClick={() => {
                         window.gtag("event", "conversion", {
                           send_to: "AW-10889372782/7VMcCM7u7u4bEO7Iusgo",
                         });
-                      }
-                      }
+                      }}
                       size="lg"
                       className="bg-green-600 hover:bg-green-600/90 duration-500 animate-attention hover:scale-110 transition-all"
                     >
@@ -107,9 +104,8 @@ export function CampaignSlider() {
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full ${
-              index === currentSlide ? "bg-white" : "bg-white/50"
-            }`}
+            className={`w-3 h-3 rounded-full ${index === currentSlide ? "bg-white" : "bg-white/50"
+              }`}
           />
         ))}
       </div>

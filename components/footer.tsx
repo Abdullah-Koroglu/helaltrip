@@ -26,15 +26,12 @@ const Footer = () => {
               {/* <Whatsapp className="h-5 w-5 hover:text-secondary cursor-pointer smooth-transition" /> */}
               <Link href={'https://www.instagram.com/helaltrip/'}><Instagram className="h-5 w-5 hover:text-secondary cursor-pointer smooth-transition" /></Link>
               <Link
-              onClick={() => {
-                window.gtag("event", "conversion", {
-                  send_to: "AW-123456789/AbCdEfGhIj",
-                  event_callback: () => {
-                    window.open("https://wa.me/905XXXXXXXXX", "_blank");
-                  },
-                });
-              }}              
-              href={"https://wa.me/905338189958"}><MessageCircle className="h-5 w-5 hover:text-secondary cursor-pointer smooth-transition" /></Link>
+                onClick={() => {
+                  window.gtag("event", "conversion", {
+                    send_to: "AW-10889372782/7VMcCM7u7u4bEO7Iusgo",
+                  });
+                }}
+                href={"https://wa.me/905338189958"}><MessageCircle className="h-5 w-5 hover:text-secondary cursor-pointer smooth-transition" /></Link>
             </div>
           </div>
 
