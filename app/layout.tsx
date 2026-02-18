@@ -1,10 +1,8 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import Footer from '@/components/footer'
-import { Header } from '@/components/header'
-import ContactButton from '@/components/contact-button'
-import TimedPopup from '@/components/TimedPopup'
 import { Poppins } from "next/font/google";
+import { GoogleAnalytics } from '@next/third-parties/google'
+
 
 import Script from "next/script";
 
@@ -59,6 +57,7 @@ export default function RootLayout({
           `}
         </Script></head>
       <body className={poppins.className}>
+      <GoogleAnalytics gaId="G-7VZ3ZM7NHH" />
         <div className="min-h-[calc(100vh-20rem)]">
           {children}
         </div>
@@ -66,3 +65,5 @@ export default function RootLayout({
     </html>
   )
 } 
+
+// G-7VZ3ZM7NHH
