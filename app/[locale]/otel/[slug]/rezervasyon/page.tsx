@@ -9,11 +9,13 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { Star, MapPin, ArrowLeft, User, Phone, Mail, Calendar, Users } from "lucide-react"
+import { Star, MapPin, ArrowLeft, User, Phone, Mail, Calendar, Users, Tag, Gift } from "lucide-react" // Tag ikonu eklendi
 import Link from "next/link"
 import { fetchHotelPrice } from "@/lib/price-api"
 import { useLocale, useTranslations } from "next-intl"
 import { useLocalePath } from "@/components/hooks/useLocalePath"
+import DiscountPopup from "@/components/DiscountPopup"
+import { formatCurrency } from "@/lib/utils"
 
 export default function BookingPage() {
   const t = useTranslations("Booking")
@@ -27,6 +29,12 @@ export default function BookingPage() {
   const [loading, setLoading] = useState(true)
   const [price, setPrice] = useState<number | null>(null)
   const [priceLoading, setPriceLoading] = useState(false)
+
+  // --- İNDİRİM KODU STATE'LERİ ---
+  const [discountCode, setDiscountCode] = useState("")
+  const [appliedDiscount, setAppliedDiscount] = useState(0) // Yüzdelik indirim tutarı
+  const [discountMessage, setDiscountMessage] = useState({ text: "", type: "" }) // Hata veya başarı mesajı
+  const [isPopupOpen, setIsPopupOpen] = useState(false)
 
   const [formData, setFormData] = useState({
     name: "",
@@ -126,6 +134,23 @@ export default function BookingPage() {
     setFormData((prev) => ({ ...prev, [field]: value }))
   }
 
+  // --- İNDİRİM UYGULAMA MANTIĞI ---
+  const handleApplyDiscount = () => {
+    if (!discountCode) return;
+  
+    if (discountCode.trim().toLowerCase() === "hosgeldin8") {
+      setAppliedDiscount(8); 
+      setDiscountMessage({ text: t("discountSuccess"), type: "success" });
+    } else {
+      setAppliedDiscount(0);
+      setDiscountMessage({ text: t("discountError"), type: "error" });
+    }
+  }
+
+  // Fiyat Hesaplamaları
+  const basePrice = selectedRoom?.price || price || 0;
+  const finalPrice = appliedDiscount > 0 ? basePrice * (1 - appliedDiscount / 100) : basePrice;
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
 
@@ -153,7 +178,9 @@ export default function BookingPage() {
       adults,
       children,
       childrenAges,
-      price: selectedRoom?.price || price,
+      price: finalPrice, // Eski fiyat yerine indirimli son fiyatı kaydediyoruz
+      originalPrice: basePrice, // İstenirse orijinal fiyatı da referans için tutabiliriz
+      discountCode: appliedDiscount > 0 ? discountCode : null, // Kullanılan kodu kaydediyoruz
       room: selectedRoom,
       customer: formData,
     }
@@ -320,7 +347,16 @@ export default function BookingPage() {
                     />
                   </div>
 
-                  <Button type="submit" className="w-full">
+                  <Button
+                    onClick={() => {
+                      window.gtag('event', 'conversion', {
+                        'send_to': 'AW-10889372782/t8HpCPW7mfsbEO7Iusgo',
+                        'value': finalPrice, // Gtag eventine güncel fiyat geçiliyor
+                        'currency': 'TRY',
+                        'transaction_id': ''
+                      });
+                    }}
+                    type="submit" className="w-full">
                     {t("submit")}
                   </Button>
 
@@ -398,14 +434,60 @@ export default function BookingPage() {
 
                 </div>
 
-                {(selectedRoom?.price || price) && (
-                  <div className="border-t pt-4 flex justify-between">
+                {/* --- İNDİRİM KODU ALANI --- */}
+                <div className="border-t pt-4 space-y-3">
+                  <div className="flex items-center justify-between">
+                    <Label className="flex items-center gap-2">
+                      <Tag className="w-4 h-4" /> {t("discountCodeLabel")}
+                    </Label>
 
-                    <strong>{t("total")}</strong>
+                    {/* İndirim Kazan Butonu */}
+                    <button
+                      type="button"
+                      onClick={() => setIsPopupOpen(true)}
+                      className="text-sm text-blue-600 hover:text-blue-800 font-medium flex items-center gap-1 transition-colors"
+                    >
+                      <Gift className="w-4 h-4" /> {t("noCodePrompt")}
+                    </button>
+                  </div>
 
-                    <span className="text-xl text-blue-600 font-bold">
-                      ₺{(selectedRoom?.price || price)?.toLocaleString()}
-                    </span>
+                  <div className="flex gap-2">
+                    <Input
+                      placeholder={t("discountCodePlaceholder")}
+                      value={discountCode}
+                      onChange={(e) => setDiscountCode(e.target.value)}
+                      className="flex-1"
+                    />
+                    <Button variant="outline" onClick={handleApplyDiscount} type="button">
+                      {t("applyButton")}
+                    </Button>
+                  </div>
+                  {discountMessage.text && (
+                    <p className={`text-sm ${discountMessage.type === 'success' ? 'text-green-600' : 'text-red-600'}`}>
+                      {/* Not: API/State'den gelen dinamik mesajları t() ile sarmak zordur. 
+                          Eğer setDiscountMessage içinde çeviri yapıyorsanız bu kısım çalışacaktır. */}
+                      {discountMessage.text}
+                    </p>
+                  )}
+                </div>
+
+                {basePrice > 0 && (
+                  <div className="border-t pt-4 flex flex-col gap-1">
+
+                    {/* Eğer indirim uygulandıysa eski fiyatı üzeri çizili gösteriyoruz */}
+                    {appliedDiscount > 0 && (
+                      <div className="flex justify-between items-center text-gray-500 line-through text-sm">
+                        <span>{t("originalAmount")}</span>
+                        <span>₺{formatCurrency(basePrice)}</span>
+                      </div>
+                    )}
+
+                    <div className="flex justify-between items-center mt-1">
+                      <strong>{t("total")}</strong>
+                      <span className="text-xl text-blue-600 font-bold">
+                        ₺{formatCurrency(finalPrice)}
+                      </span>
+                    </div>
 
                   </div>
                 )}
@@ -419,6 +501,10 @@ export default function BookingPage() {
         </div>
 
       </div>
+      <DiscountPopup
+        isOpen={isPopupOpen}
+        onClose={() => setIsPopupOpen(false)}
+      />
     </div>
   )
 }

@@ -14,7 +14,7 @@ export interface Hotel {
   priceId: string | null;
   agencyLink?: string;
   mapLink?: string;
-  SYReview?: {tr: string, en: string};
+  SYReview?: {tr: string, en: string, de: string};
 }
 
 export const hotels: Hotel[] = [
@@ -43,7 +43,8 @@ export const hotels: Hotel[] = [
 <p>Bu otelin ormanlık alan içinde bulunması balayı çiftlerinin çok tercih etmesine sebep olmuştur. Aquaparkı etkinlik ve animasyonları her zaman beğenilmektedir. Bu otele bir defa gelenlerin çoğu uzun yıllar bu oteli tercih etmeye devam etmektedir.</p>
 
 `,
-en: "<p>Years ago, I referred to Wome Deluxe as the Mercedes of Islamic hotels, and over time, this opinion has proven to be accurate. When you visit this hotel, you can feel at home, and the staff serving you may feel like part of your family.</p><p>It is adjacent to İncekum Beach, one of Alanya's most elegant beaches, and the quality of the sea water is widely appreciated. In the kitchen, the famous Maestro Chef Ahmet's shows and skills are spoken of by everyone.</p><p>The hotel's location within a forested area makes it highly preferred by honeymoon couples. Its aquapark, activities, and animation programs are consistently well-received. Many guests who visit this hotel once continue to choose it for many years.</p>"
+en: "<p>Years ago, I referred to Wome Deluxe as the Mercedes of Islamic hotels, and over time, this opinion has proven to be accurate. When you visit this hotel, you can feel at home, and the staff serving you may feel like part of your family.</p><p>It is adjacent to İncekum Beach, one of Alanya's most elegant beaches, and the quality of the sea water is widely appreciated. In the kitchen, the famous Maestro Chef Ahmet's shows and skills are spoken of by everyone.</p><p>The hotel's location within a forested area makes it highly preferred by honeymoon couples. Its aquapark, activities, and animation programs are consistently well-received. Many guests who visit this hotel once continue to choose it for many years.</p>",
+de: "<p>Vor Jahren habe ich das Wome Deluxe als den Mercedes unter den islamischen Hotels bezeichnet, und im Laufe der Zeit hat sich diese Meinung als zutreffend erwiesen. Wenn Sie dieses Hotel besuchen, können Sie sich wie zu Hause fühlen, und das Personal, das Sie bedient, fühlt sich vielleicht wie ein Teil Ihrer Familie an.</p><p>Es grenzt an den İncekum-Strand, einen der elegantesten Strände Alanyas, und die Qualität des Meerwassers wird weithin geschätzt. In der Küche sind die Shows und das Können des berühmten Maestro Chef Ahmet in aller Munde.</p><p>Die Lage des Hotels in einem Waldgebiet macht es besonders bei Flitterwöchnern sehr beliebt. Der Aquapark, die Aktivitäten und die Animationsprogramme kommen stets gut an. Viele Gäste, die dieses Hotel einmal besuchen, entscheiden sich auch in den folgenden Jahren immer wieder dafür.</p>"
     }
   },
   {
@@ -84,7 +85,9 @@ en: "<p>Years ago, I referred to Wome Deluxe as the Mercedes of Islamic hotels, 
 
 <p>Adenya Otel’de geçirdiğiniz güzel zamanların etkisiyle, bir sonraki yıl tekrar gelme isteğiniz doğal olarak oluşur. Henüz denememiş olanlara tavsiye olarak, ilk fırsatta rezervasyon yapıp bu mükemmel tatili deneyimlemeleri yeterli olacaktır.</p>
 `,
-en: "<p>Adenya Hotel stands out as one of the most loved hotels by women. With sands specially brought from Egypt and a fantastic beach easily accessible from the rooms, it is known as the pearl of the sector.</p><p>The moment you step into this hotel, a sense of peace and tranquility immediately surrounds your soul. Thanks to its friendly and hardworking staff, you feel valued at every moment.</p><p>The wonderful time spent at Adenya naturally makes guests want to return the following year. For those who haven't experienced it yet, I highly recommend making a reservation at the earliest opportunity to enjoy this perfect vacation.</p>"
+en: "<p>Adenya Hotel stands out as one of the most loved hotels by women. With sands specially brought from Egypt and a fantastic beach easily accessible from the rooms, it is known as the pearl of the sector.</p><p>The moment you step into this hotel, a sense of peace and tranquility immediately surrounds your soul. Thanks to its friendly and hardworking staff, you feel valued at every moment.</p><p>The wonderful time spent at Adenya naturally makes guests want to return the following year. For those who haven't experienced it yet, I highly recommend making a reservation at the earliest opportunity to enjoy this perfect vacation.</p>",
+de: "<p>Das Adenya Hotel zeichnet sich als eines der beliebtesten Hotels bei Frauen aus. Mit speziell aus Ägypten importiertem Sand und einem traumhaften Strand, der von den Zimmern aus leicht erreichbar ist, ist es als die Perle der Branche bekannt.</p><p>In dem Moment, in dem Sie dieses Hotel betreten, umgibt sofort ein Gefühl von Frieden und Ruhe Ihre Seele. Dank des freundlichen und fleißigen Personals fühlen Sie sich in jedem Moment wertgeschätzt.</p><p>Die wunderbare Zeit im Adenya weckt bei den Gästen natürlich den Wunsch, im folgenden Jahr wiederzukehren. Denjenigen, die es noch nicht erlebt haben, empfehle ich wärmstens, bei der nächsten Gelegenheit eine Reservierung vorzunehmen, um diesen perfekten Urlaub zu genießen.</p>",
+
 }
   },
   {
@@ -140,7 +143,9 @@ Fiyatlarına gelince, ucuz olduğunu söyleyemem.
 Ancak konfor için parasını kolay harcayabilen müşterilerime burayı mutlaka öneriyorum.
 </p>
 `,
-en: "<p>The Oba Hotel in Bodrum reminds me of the special steaks I had by the seaside. It is one of the fastest places to enjoy à la carte service. Meals are buffet only at breakfast; lunch and dinner are ordered from the menu and quickly brought to your table. The food quality is truly top-notch.</p><p>The staff are extremely friendly, and the service is impressively fast. The ladies' beach, along with its sea, pools, and common areas, is adequately sized to satisfy guests. The children's aquapark may not be very large, but it provides sufficient service.</p><p>For those seeking a halal holiday in Bodrum’s unique waters, this is the only alternative. As for prices, it isn’t cheap, but for customers willing to spend for comfort, I definitely recommend this place.</p>"
+en: "<p>The Oba Hotel in Bodrum reminds me of the special steaks I had by the seaside. It is one of the fastest places to enjoy à la carte service. Meals are buffet only at breakfast; lunch and dinner are ordered from the menu and quickly brought to your table. The food quality is truly top-notch.</p><p>The staff are extremely friendly, and the service is impressively fast. The ladies' beach, along with its sea, pools, and common areas, is adequately sized to satisfy guests. The children's aquapark may not be very large, but it provides sufficient service.</p><p>For those seeking a halal holiday in Bodrum’s unique waters, this is the only alternative. As for prices, it isn’t cheap, but for customers willing to spend for comfort, I definitely recommend this place.</p>",
+de: "<p>Das Oba Hotel in Bodrum erinnert mich an die besonderen Steaks, die ich direkt am Meer gegessen habe. Es ist einer der schnellsten Orte, um einen À-la-carte-Service zu genießen. Mahlzeiten gibt es nur beim Frühstück in Buffetform; Mittag- und Abendessen werden von der Speisekarte bestellt und schnell an Ihren Tisch gebracht. Die Qualität des Essens ist wirklich erstklassig.</p><p>Das Personal ist äußerst freundlich und der Service ist beeindruckend schnell. Der Damenstrand, zusammen mit dem Meer, den Pools und den Gemeinschaftsbereichen, ist ausreichend groß, um die Gäste zufriedenzustellen. Der Kinder-Aquapark ist vielleicht nicht sehr groß, erfüllt aber voll und ganz seinen Zweck.</p><p>Für diejenigen, die einen Halal-Urlaub in den einzigartigen Gewässern von Bodrum suchen, ist dies die einzige Alternative. Was die Preise angeht, ist es nicht billig, aber für Kunden, die bereit sind, für Komfort zu zahlen, kann ich diesen Ort auf jeden Fall empfehlen.</p>",
+
 }
   },
   {

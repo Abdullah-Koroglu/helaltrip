@@ -43,11 +43,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>        <Script
-        src="https://www.googletagmanager.com/gtag/js?id=AW-10889372782"
-        strategy="afterInteractive"
-      />
-
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-10889372782"
+          strategy="afterInteractive"
+        />
         <Script id="google-ads" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
@@ -57,13 +57,13 @@ export default function RootLayout({
           `}
         </Script></head>
       <body className={poppins.className}>
-      <GoogleAnalytics gaId="G-7VZ3ZM7NHH" />
+        <GoogleAnalytics gaId="G-7VZ3ZM7NHH" />
         <div className="min-h-[calc(100vh-20rem)]">
           {children}
         </div>
       </body>
     </html>
   )
-} 
+}
 
 // G-7VZ3ZM7NHH

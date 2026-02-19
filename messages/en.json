@@ -366,6 +366,45 @@
     "notSpecified": "Not Specified",
     "adult": "adult(s)",
     "child": "child(ren)",
-    "total": "Total Amount:"
+    "total": "Total Amount:",
+    "discountCodeLabel": "Discount Code",
+    "noCodePrompt": "No code? Get 8% off!",
+    "discountCodePlaceholder": "Enter your code",
+    "applyButton": "Apply",
+    "originalAmount": "Original Amount",
+    "discountSuccess": "Discount applied successfully! (8%)",
+    "discountError": "Invalid discount code."
+  },
+  "DiscountPopup": {
+    "title": "Get 8% Off!",
+    "description": "Enter your email address and we'll send you an instant discount code.",
+    "emailPlaceholder": "Enter your email address",
+    "submitButton": "Send Discount Code",
+    "loadingText": "Sending...",
+    "errorMessage": "An error occurred. Please try again.",
+    "successTitle": "Awesome!",
+    "successDescPart1": "Your discount code has been sent to",
+    "successDescPart2": ". Please check your inbox."
+  },
+  "DiscountEmail": {
+    "subject": "Your Welcome Discount Code is Here! 🎉",
+    "title": "Welcome Aboard!",
+    "description": "Below is your <strong>8% discount</strong> code that you can use on your next booking. Thank you for choosing us.",
+    "footer": "You can apply your discount instantly by entering this code in the 'Discount Code' field on the booking page."
+  },
+  "AdminBookingEmail": {
+    "subject": "New Booking",
+    "title": "New Booking Summary",
+    "hotel": "Hotel",
+    "room": "Room",
+    "checkin": "Check-in",
+    "checkout": "Check-out",
+    "guests": "Guests",
+    "adult": "adult",
+    "child": "child",
+    "name": "Full Name",
+    "email": "Email",
+    "phone": "Phone",
+    "price": "Price"
   }
 }

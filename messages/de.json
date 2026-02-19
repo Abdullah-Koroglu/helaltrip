@@ -1,0 +1,405 @@
+{
+  "common": {
+    "details": "Details",
+    "bestHotels": "Die besten Halal-Konzept-Hotels der Türkei",
+    "online": "ONLINE",
+    "liveSupport": "LIVE-SUPPORT",
+    "gallery": "Galerie"
+  },
+  "nav": {
+    "brandLicense": "Helaltrip Tourismuslizenz Nr: 13707",
+    "home": "Startseite",
+    "hotels": "Hotels",
+    "about": "Über uns",
+    "contact": "Kontakt"
+  },
+  "home": {
+    "popularHotelsTitle": "Unsere beliebtesten Hotels",
+    "popularHotelsSubtitle": "Entdecken Sie unsere am meisten bevorzugten Hotels",
+    "seeAllHotels": "Alle Hotels ansehen",
+    "reviewsTitle": "Kundenbewertungen",
+    "reviewsSubtitle": "Durchschnittliche Bewertung 5/5 auf Google",
+    "seeAllReviews": "Alle Bewertungen ansehen"
+  },
+  "header": {
+    "topBarSlogan": "Die weltweit besten alkoholfreien Halal-Familienhotels gibt es nur in der Türkei"
+  },
+  "footer": {
+    "companyBlurb": "Ihr vertrauenswürdiges Reisebüro für unvergessliche Urlaubserlebnisse in den besten Hotels der Türkei.",
+    "quickLinks": "Schnelle Links",
+    "services": "Unsere Dienstleistungen",
+    "service1": "Premium-Qualität",
+    "service2": "Kundenzufriedenheit",
+    "service3": "Einzigartige Standorte",
+    "service4": "24/7 Support",
+    "contact": "Kontakt",
+    "tursabTextLine1": "Helaltrip ist ein an die TÜRSAB angeschlossenes Reisebüro.",
+    "tursabTextLine2": "TÜRSAB Lizenz-Nr:",
+    "rights": "Alle Rechte vorbehalten."
+  },
+  "About": {
+    "hero": {
+      "title": "Über uns",
+      "description": "Als autorisierte Agentur für Halal-Konzept-Hotels betreuen wir unsere Gäste seit über 10 Jahren sorgfältig bei ihren Buchungen. Wir haben bis heute das Vertrauen tausender Familien gewonnen. Durch die Pflege höchster Beziehungen zu den Hotels bemühen wir uns konsequent, eventuelle Probleme unserer Gäste in Echtzeit zu lösen. Jeder Gast ist für uns wertvoll, und jedes Hotel, mit dem wir zusammenarbeiten, ist ebenso wichtig."
+    },
+    "stats": {
+      "customers": "Zufriedene Kunden",
+      "experience": "Jahre Erfahrung",
+      "support": "Support-Service"
+    },
+    "story": {
+      "title": "Unsere Geschichte",
+      "text": "Helaltrip Travel wurde als TÜRSAB-Mitglied gegründet, um Kunden weltweit Reisealternativen zu bieten. Das Unternehmen hat Hunderte von Touren im In- und Ausland vorbereitet und angeboten. Im Inland hat Helaltrip Travel Vereinbarungen mit Hotels, Resorts und zahlreichen Fluggesellschaften und bietet Autovermietungen an. Durch eine breite Palette an Reiseprodukten, einschließlich In- und Auslandstouren, Kulturausflügen, blauen Reisen, Skipaketen, jugendorientierten Programmen, Unternehmensdiensten, Flugtickets und Mietwagenservices, hat es sich schnell auf dem Markt profiliert."
+    },
+    "vision": {
+      "title": "Unsere Vision",
+      "text": "Es ist die Aufgabe unseres Teams, sich in unserem Tätigkeitsfeld kontinuierlich zu erneuern und weiterzuentwickeln, alle Details jeder Aufgabe und Organisation, die wir übernehmen, zu planen und sicherzustellen, dass sie ihren Zweck erfüllen. Wenn Sie einen makellosen Service wünschen, überlassen Sie uns alles, was Sie sich vorgestellt, entworfen, erträumt, aber noch nicht zusammengefügt haben."
+    },
+    "mission": {
+      "title": "Unsere Mission",
+      "text": "Unsere Mission ist es, die dynamische und sich entwickelnde Welt des Tourismus genau zu verfolgen und uns schnell anzupassen, um unseren Kunden durch einen hochqualifizierten, professionellen Teamgeist erstklassigen Service, Kundenbetreuung und Qualität zu bieten. Unsere Vision ist es, Wert für unsere Kunden zu schaffen, ihre Erwartungen mit Qualität und Beständigkeit zu erfüllen und ihre Lösungspartner zu werden."
+    },
+    "values": {
+      "title": "Unsere Werte",
+      "subtitle": "Die Grundwerte und Prinzipien, die uns auf jedem Schritt leiten",
+      "customer": {
+        "title": "Kundenorientierter Service",
+        "desc": "Wir bieten persönlichen Service, indem wir die einzigartigen Bedürfnisse jedes Kunden verstehen."
+      },
+      "quality": {
+        "title": "Qualitätsgarantie",
+        "desc": "Wir wählen nur die hochwertigsten Hotels aus und garantieren Qualität durch kontinuierliche Inspektionen."
+      },
+      "relationship": {
+        "title": "Direkte Beziehungen zu Hotels",
+        "desc": "Dank unserer starken und engen Kommunikation mit den Hotels lösen wir potenzielle Probleme schnell und effektiv."
+      },
+      "support": {
+        "title": "24/7 Support",
+        "desc": "Wir bleiben vor, während und nach Ihrem Urlaub jederzeit an Ihrer Seite."
+      }
+    },
+    "cta": {
+      "title": "Treten Sie mit uns in Kontakt",
+      "subtitle": "Wir sind hier, um Ihnen persönliche Empfehlungen für Ihre Urlaubspläne zu geben und all Ihre Fragen zu beantworten.",
+      "contact": "Kontakt",
+      "hotels": "Hotels entdecken"
+    }
+  },
+  "paymentSuccess": {
+    "title": "Anfrage erfolgreich!",
+    "subtitle": "Ihre Reservierung wurde erfolgreich erstellt",
+    "loading": "Wird geladen...",
+    "screenshot": "Screenshot machen",
+    "reservationDetails": "Reservierungsdetails",
+    "hotel": "Hotel:",
+    "location": "Standort:",
+    "room": "Zimmer:",
+    "mealPlan": "Verpflegung:",
+    "checkin": "Check-in Datum:",
+    "checkout": "Check-out Datum:",
+    "guests": "Gäste:",
+    "adults": "Erwachsener",
+    "adults_plural": "Erwachsene",
+    "children": "Kind",
+    "children_plural": "Kinder",
+    "nights": "Nächte:",
+    "night": "Nacht",
+    "nights_plural": "Nächte",
+    "totalAmount": "Gesamtbetrag:",
+    "guestInfo": "Gästeinformationen",
+    "fullName": "Vollständiger Name:",
+    "email": "E-Mail:",
+    "phone": "Telefon:",
+    "confirmationMessage": "Ihre Reservierungsbestätigung wurde an Ihre E-Mail-Adresse gesendet. Bitte überprüfen Sie Ihren Posteingang.",
+    "returnHome": "Zurück zur Startseite",
+    "hotelDetails": "Hoteldetails",
+    "and": "und",
+    "currency": "₺"
+  },
+  "Contact": {
+    "hero": {
+      "title": "Kontakt",
+      "subtitle": "Kontaktieren Sie uns für Ihre Fragen, Vorschläge oder Reservierungsanfragen"
+    },
+    "info": {
+      "phone": {
+        "title": "Telefon",
+        "desc": "24/7 Kundensupport"
+      },
+      "mail": {
+        "title": "E-Mail",
+        "desc": "Antwort innerhalb von 24 Stunden"
+      },
+      "address": {
+        "title": "Adresse",
+        "desc": "Unser Hauptbüro"
+      },
+      "instagram": {
+        "title": "Instagram",
+        "desc": "24/7 Kundensupport"
+      }
+    },
+    "form": {
+      "title": "Kontaktieren Sie uns über WhatsApp",
+      "subtitle": "Sie können uns Ihre Fragen und Anfragen schnell über WhatsApp senden.",
+      "name": "Vollständiger Name *",
+      "email": "E-Mail *",
+      "phone": "Telefon",
+      "subject": "Betreff",
+      "message": "Nachricht *",
+      "namePlaceholder": "Ihr vollständiger Name",
+      "emailPlaceholder": "beispiel@email.com",
+      "phonePlaceholder": "+49 1xx xxxxxxx",
+      "subjectPlaceholder": "Betreff auswählen",
+      "messagePlaceholder": "Schreiben Sie hier Ihre Nachricht...",
+      "subjects": {
+        "reservation": "Reservierung",
+        "information": "Informationsanfrage",
+        "complaint": "Beschwerde",
+        "suggestion": "Vorschlag",
+        "other": "Sonstiges"
+      },
+      "send": "Über WhatsApp senden"
+    },
+    "hours": {
+      "title": "Öffnungszeiten",
+      "week": "Montag - Samstag",
+      "sunday": "Sonntag",
+      "vacation": "Feiertage",
+      "closed": "Geschlossen",
+      "emergency": "Notfall:",
+      "emergencyText": " Unsere 24/7 Support-Hotline ist unter +90 533 888 99 99 erreichbar."
+    },
+    "map": {
+      "title": "Besuchen Sie unser Büro",
+      "address": "Adresse",
+      "city": "Stadt"
+    }
+  },
+  "locamarin": {
+    "pageTitle": "Locamarin Yachturlaub",
+    "aboutTitle": "Über Locamarin",
+    "yachtVacationTitle": "Locamarin Yachturlaub",
+    "description1": "Der Locamarin Yachturlaub bietet ein komfortables, privates und vollständig personalisiertes Urlaubserlebnis auf dem Meer. Dieses einzigartige Konzept in den exquisiten Buchten von Göcek verbindet Freiheit und Ruhe als Alternative zu traditionellen Hotelurlauben. Während des gesamten Urlaubs befinden sich nur die von Ihnen angegebenen Gäste auf der Yacht; alle Details werden mit Blick auf Komfort, Privatsphäre und Privilegien vorbereitet.",
+    "description2": "Die Katamarane und Gulets in der Locamarin-Flotte bieten luxuriöses Leben auf dem Wasser mit wohnlichen Lebensräumen, klimatisierten Kabinen mit eigenem Bad, geräumigen Deckbereichen und Entspannungsecken. In diesem alkoholfreien Servicekonzept stehen zahlreiche Freizeitmöglichkeiten wie Internet, Bibliothek, Brettspiele, SUP, Kanu und Wassersportausrüstung zur Verfügung.",
+    "description3": "Entwickelt für Familien und Freundesgruppen, ist der Locamarin Yachturlaub ideal für alle, die einen Urlaub in Verbindung mit dem Meer in einer völlig privaten, sicheren und ruhigen Atmosphäre erleben möchten.",
+    "yacht1": {
+      "title": "Loca Comfort – Katamaran",
+      "description1": "Der 19 Meter lange Loca Comfort Katamaran ist speziell für Gäste konzipiert, die einen Yachturlaub mit heimischem Komfort suchen. Mit 3 Kabinen für bis zu 8 Personen verfügt jedes Zimmer über ein Doppelbett, Klimaanlage, Dusche und WC. Kabinen mit bodentiefen Fenstern bieten einen geräumigen, mit dem Meer verbundenen Wohnbereich.",
+      "description2": "Mit großzügigen Deckbereichen, einem geschützten Sonnenbereich und einer Miniküche auf dem Oberdeck können Gäste den ganzen Tag über eine komfortable Zeit verbringen. Auf der Yacht wird ein alkoholfreier Service angeboten, der von einer ausschließlich weiblichen Crew (Kapitänin, Köchin und Deckshand) betreut wird."
+    },
+    "yacht2": {
+      "title": "Loca Istanbul – Gulet",
+      "description1": "Die 22 Meter lange Loca Istanbul Gulet ist mit ihren großzügigen Wohnbereichen und ihrem hohen Komfortideal für große Familien und Freundesgruppen. Mit 4 Kabinen für bis zu 8 Personen verfügen alle Zimmer über ein Doppelbett, Klimaanlage, Dusche und WC.",
+      "description2": "Mit geräumigen Deckbereichen, komfortablen Entspannungsecken und dem Service einer professionellen Crew (Kapitän, Koch und Deckshand) genießen Gäste ihren Urlaub in einer völlig privaten Umgebung. Es bietet ein sicheres und friedliches Urlaubserlebnis mit einem alkoholfreien Servicekonzept."
+    },
+    "yacht3": {
+      "title": "Loca Venn – Gulet",
+      "description1": "Die 17 Meter lange Loca Venn Gulet ist für Gäste konzipiert, die einen eher exklusiven und ruhigen Yachturlaub suchen. Mit 2 Kabinen für 4 Personen verfügt jedes Zimmer über ein Doppelbett und Klimaanlage.",
+      "description2": "Mit Sonnenbereichen, gemütlichen Entspannungsecken und dem Service einer Crew, bestehend aus einem Kapitän und einem Koch, ist die Loca Venn eine ideale Option für kleine Gruppen und Kernfamilien. Sie bietet mit ihrem alkoholfreien Konzept und ihren Freizeitmöglichkeiten einen friedlichen Urlaub auf See."
+    },
+    "mapTitle": "Karte",
+    "videoTitle": "Hotel-Werbevideo"
+  },
+  "ReservationConfirm": {
+    "notFound": "Reservierungsdetails konnten nicht gefunden werden.",
+    "mailError": "Beim Senden der E-Mail ist ein Fehler aufgetreten.",
+    "generalError": "Ein Fehler ist aufgetreten.",
+    "hotelInfo": {
+      "title": "Hotelinformationen",
+      "hotel": "Hotel",
+      "room": "Zimmer",
+      "checkin": "Check-in",
+      "checkout": "Check-out",
+      "guests": "Gäste",
+      "adult": "Erwachsener",
+      "child": "Kind",
+      "childrenAges": "Alter der Kinder"
+    },
+    "customerInfo": {
+      "title": "Kundeninformationen",
+      "name": "Vollständiger Name",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "note": "Notiz"
+    },
+    "confirm": {
+      "title": "Reservierung bestätigen",
+      "description": "Bitte überprüfen Sie Ihre Angaben. Wenn alles korrekt ist, klicken Sie auf die Schaltfläche unten.",
+      "totalPrice": "Gesamtpreis",
+      "button": "Reservierung bestätigen"
+    }
+  },
+  "PaymentError": {
+    "loading": "Wird geladen...",
+    "title": "Zahlung fehlgeschlagen",
+    "subtitle": "Während des Zahlungsvorgangs ist ein Fehler aufgetreten",
+    "reasons": {
+      "title": "Mögliche Gründe:",
+      "card": "Ihre Karteninformationen sind möglicherweise falsch",
+      "limit": "Ihr Kartenlimit ist möglicherweise unzureichend",
+      "internet": "Es könnte ein Problem mit Ihrer Internetverbindung geben",
+      "bank": "Die Transaktion wurde möglicherweise von Ihrer Bank abgelehnt"
+    },
+    "warning": "Bitte überprüfen Sie Ihre Kartendetails und versuchen Sie es erneut. Sollte das Problem weiterhin bestehen, kontaktieren Sie uns bitte.",
+    "buttons": {
+      "retry": "Erneut versuchen",
+      "home": "Zurück zur Startseite",
+      "back": "Zurück zur Reservierung"
+    },
+    "contact": {
+      "text": "Wenn Sie Probleme haben, können Sie uns über unsere",
+      "link": "Kontaktseite",
+      "end": " kontaktieren."
+    }
+  },
+  "Hotel": {
+    "about": "Über das Hotel",
+    "map": "Karte",
+    "video": "Hotel-Werbevideo",
+    "videoTitle": "Werbevideo",
+    "agency": "Autorisierte Agenturseite"
+  },
+  "HotelReview": {
+    "name": "Sabahattin Yıldız",
+    "title": "Experte für Halal-Reisen",
+    "heading": "Exklusive Bewertung von Sabahattin Yıldız",
+    "updateDate": "Letzte Aktualisierung: 1. Januar 2026"
+  },
+  "Reviews": {
+    "googleLink": "Bewertungen auf Google ansehen",
+    "title": "Bewertungen",
+    "summary": "Es gibt insgesamt {count} Bewertungen auf Google mit einer durchschnittlichen Bewertung von 5/5"
+  },
+  "BookingSearch": {
+    "title": {
+      "withHotel": "Reservierungsanfrage erstellen",
+      "noHotel": "Hotels suchen"
+    },
+    "fields": {
+      "dateRange": "Datumsbereich",
+      "adults": "Anzahl der Erwachsene",
+      "children": "Anzahl der Kinder",
+      "childrenAges": "Alter der Kinder",
+      "child": "Kind"
+    },
+    "buttons": {
+      "book": "Preis ansehen und buchen",
+      "seePrice": "Preis ansehen",
+      "search": "Suchen"
+    },
+    "alerts": {
+      "selectDates": "Bitte wählen Sie die Check-in- und Check-out-Daten",
+      "invalidDate": "Das Check-out-Datum muss nach dem Check-in-Datum liegen"
+    }
+  },
+  "DatePicker": {
+    "placeholder": "Datumsbereich auswählen"
+  },
+  "HotelSidebar": {
+    "loading": "Preise werden abgerufen...",
+    "priceError": "Preise konnten nicht abgerufen werden",
+    "noRoom": "Keine Zimmeroptionen verfügbar",
+    "genericError": "Ein unerwarteter Fehler ist aufgetreten",
+    "roomOptions": "Zimmeroptionen",
+    "night": "Nacht",
+    "adult": "Erwachsener",
+    "child": "Kind",
+    "welcomeDiscount": "Für neue Mitglieder wird ein Willkommensrabatt angewendet",
+    "select": "Auswählen",
+    "showMore": "Mehr anzeigen",
+    "showLess": "Weniger anzeigen"
+  },
+  "TimedPopup": {
+    "imageAlt": "Sonderangebote",
+    "title": "Verpassen Sie nicht unsere exklusiven Urlaubsangebote nur für Sie",
+    "description": "Kontaktieren Sie uns jetzt, um als Erster von exklusiven Website-Kampagnen, Sonderpreisen und Angeboten mit begrenzter Verfügbarkeit zu erfahren.",
+    "whatsappButton": "Kontakt über WhatsApp",
+    "indicator": "Angebote"
+  },
+  "Campaigns": {
+    "earlyBooking": {
+      "header": "Verpassen Sie nicht die Frühbucherangebote",
+      "description": "Kontaktieren Sie uns jetzt, um von Frühbucherangeboten in vielen unserer ausgewählten Hotels zu profitieren und sich die besten Deals zu sichern.",
+      "linkText": "Kontaktieren Sie uns"
+    },
+    "sahinInn": {
+      "header": "Erleben Sie Aqua-Park-Spaß im Şah Inn Paradise",
+      "description": "Genießen Sie im Şah Inn Paradise einen einzigartigen Urlaub, in dem sich Aqua-Park-Unterhaltung mit Luxus und Komfort verbindet. Erleben Sie erfrischenden Spaß und eine exklusive Atmosphäre mit Ihrer Familie.",
+      "linkText": "Entdecken"
+    },
+    "womeDeluxe": {
+      "header": "Spezielle Kampagnenzeiträume im Wome Deluxe",
+      "description": "Planen Sie den schönsten und lohnendsten Urlaub des Jahres mit speziellen Gruppenraten, die im Oktober verfügbar sind.",
+      "linkText": "Kontaktieren Sie uns"
+    }
+  },
+  "Booking": {
+    "loading": "Wird geladen...",
+    "goBack": "Zurück",
+    "title": "Buchungsinformationen",
+    "customerInfo": "Kundeninformationen",
+    "firstName": "Vorname *",
+    "lastName": "Nachname *",
+    "phone": "Telefon *",
+    "email": "E-Mail *",
+    "address": "Adresse",
+    "city": "Stadt",
+    "country": "Land",
+    "notes": "Besondere Wünsche oder Notizen",
+    "submit": "Weiter zur Bestätigung",
+    "validationRequired": "Bitte füllen Sie alle Pflichtfelder aus",
+    "validationEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+    "summary": "Buchungszusammenfassung",
+    "selectedRoom": "Ausgewähltes Zimmer:",
+    "checkin": "Check-in:",
+    "checkout": "Check-out:",
+    "guests": "Gäste:",
+    "nights": "Nächte:",
+    "night": "Nacht/Nächte",
+    "notSpecified": "Nicht angegeben",
+    "adult": "Erwachsene(r)",
+    "child": "Kind(er)",
+    "total": "Gesamtbetrag:",
+    "discountCodeLabel": "Rabattcode",
+    "noCodePrompt": "Kein Code? Erhalten Sie 8% Rabatt!",
+    "discountCodePlaceholder": "Geben Sie Ihren Code ein",
+    "applyButton": "Anwenden",
+    "originalAmount": "Ursprünglicher Betrag",
+    "discountSuccess": "Rabatt erfolgreich angewendet! (8%)",
+    "discountError": "Ungültiger Rabattcode."
+  },
+  "DiscountPopup": {
+    "title": "Erhalten Sie 8% Rabatt!",
+    "description": "Geben Sie Ihre E-Mail-Adresse ein und wir senden Ihnen sofort einen Rabattcode.",
+    "emailPlaceholder": "Geben Sie Ihre E-Mail-Adresse ein",
+    "submitButton": "Rabattcode senden",
+    "loadingText": "Senden...",
+    "errorMessage": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
+    "successTitle": "Fantastisch!",
+    "successDescPart1": "Ihr Rabattcode wurde an",
+    "successDescPart2": "gesendet. Bitte überprüfen Sie Ihren Posteingang."
+  },
+  "DiscountEmail": {
+    "subject": "Dein Willkommens-Rabattcode ist da! 🎉",
+    "title": "Herzlich Willkommen!",
+    "description": "Unten finden Sie Ihren <strong>8% Rabattcode</strong>, den Sie bei Ihrer nächsten Buchung verwenden können. Vielen Dank, dass Sie sich für uns entschieden haben.",
+    "footer": "Sie können Ihren Rabatt sofort einlösen, indem Sie diesen Code auf der Buchungsseite in das Feld 'Rabattcode' eingeben."
+  },
+  "AdminBookingEmail": {
+    "subject": "Neue Buchung",
+    "title": "Zusammenfassung der neuen Buchung",
+    "hotel": "Hotel",
+    "room": "Zimmer",
+    "checkin": "Check-in",
+    "checkout": "Check-out",
+    "guests": "Gäste",
+    "adult": "Erwachsener",
+    "child": "Kind",
+    "name": "Vollständiger Name",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "price": "Preis"
+  }
+}

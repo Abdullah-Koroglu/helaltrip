@@ -4,8 +4,9 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 const intlMiddleware = createMiddleware({
-  locales: ["tr", "en"],
-  defaultLocale: "tr",
+  locales: ["tr", "en", "de"],
+  defaultLocale: "en", 
+  localeDetection: true, // Eklendi: Tarayıcı dilini otomatik algılamayı garanti eder
 });
 
 export default function middleware(request: NextRequest) {
@@ -39,5 +40,6 @@ frame-src https://www.googletagmanager.com;
 }
 
 export const config = {
-  matcher: ["/((?!api|_next|_vercel|.*\\..*).*)"],
+  // Yalnızca ana sayfayı (/) ve dil destekli yolları eşleştirir
+  matcher: ['/', '/(tr|en|de)/:path*']
 };

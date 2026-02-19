@@ -7,6 +7,7 @@ import { useTranslations, useLocale } from "next-intl"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { useLocalePath } from "@/components/hooks/useLocalePath"
+import { formatCurrency } from "@/lib/utils"
 
 export default function ReservationConfirmPage() {
   const router = useRouter()
@@ -167,7 +168,7 @@ export default function ReservationConfirmPage() {
             </p>
 
             <div className="text-xl font-semibold mb-4">
-              {t("confirm.totalPrice")}: ₺{bookingData.price}
+              {t("confirm.totalPrice")}: ₺{formatCurrency(bookingData.price)}
             </div>
 
             <Button

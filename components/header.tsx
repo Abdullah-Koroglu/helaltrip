@@ -21,7 +21,7 @@ export function Header() {
   const router = useRouter()
   const pathname = usePathname()
 
-  const changeLanguage = (lang: 'tr' | 'en') => {
+  const changeLanguage = (lang: 'tr' | 'en' | 'de') => {
     const segments = pathname.split('/')
 
     segments[1] = lang
@@ -186,6 +186,13 @@ export function Header() {
               >
                 EN
               </button>
+
+              <button
+                onClick={() => changeLanguage("de")}
+                className="px-2 py-1 text-sm font-semibold border rounded hover:bg-primary/10"
+              >
+                DE
+              </button>
             </div>
           </nav>
 
@@ -284,6 +291,13 @@ export function Header() {
                   className="flex-1 py-2 border rounded text-sm font-semibold"
                 >
                   English
+                </button>
+
+                <button
+                  onClick={() => changeLanguage("de")}
+                  className="flex-1 py-2 border rounded text-sm font-semibold"
+                >
+                  Deutsch
                 </button>
               </div>
 

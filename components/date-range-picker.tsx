@@ -5,14 +5,15 @@ import { Calendar as CalendarIcon } from "lucide-react"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { Calendar } from "@/components/ui/calendar"
 import { format } from "date-fns"
-import { tr, enUS } from "date-fns/locale"
+import { tr, enUS, de } from "date-fns/locale"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { useLocale, useTranslations } from "next-intl"
 
 const localesMap: any = {
   tr: tr,
-  en: enUS
+  en: enUS,
+  de: de
 }
 
 export function DateRangePicker({

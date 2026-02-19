@@ -366,6 +366,46 @@
     "notSpecified": "Belirtilmedi",
     "adult": "yetişkin",
     "child": "çocuk",
-    "total": "Toplam Tutar:"
-  }
+    "total": "Toplam Tutar:",
+    "discountCodeLabel": "İndirim Kodu",
+    "noCodePrompt": "Kodun yok mu? %8 Kazan!",
+    "discountCodePlaceholder": "Kodunuzu girin",
+    "applyButton": "Uygula",
+    "originalAmount": "Orijinal Tutar",
+    "discountSuccess": "İndirim başarıyla uygulandı! (%8)",
+    "discountError": "Geçersiz indirim kodu."
+
+  },
+  "DiscountPopup": {
+    "title": "%8 İndirim Kazan!",
+    "description": "E-posta adresinizi girin, anında kullanabileceğiniz indirim kodunu size gönderelim.",
+    "emailPlaceholder": "E-posta adresinizi girin",
+    "submitButton": "İndirim Kodunu Gönder",
+    "loadingText": "Gönderiliyor...",
+    "errorMessage": "Bir hata oluştu. Lütfen tekrar deneyin.",
+    "successTitle": "Harika!",
+    "successDescPart1": "İndirim kodunuz",
+    "successDescPart2": "adresine gönderildi. Gelen kutunuzu kontrol edin."
+  },
+  "DiscountEmail": {
+  "subject": "Hoşgeldin İndirim Kodun Burada! 🎉",
+  "title": "Aramıza Hoşgeldiniz!",
+  "description": "Bir sonraki rezervasyonunuzda kullanabileceğiniz <strong>%8 indirim</strong> kodunuz aşağıdadır. Bizi tercih ettiğiniz için teşekkür ederiz.",
+  "footer": "Bu kodu rezervasyon sayfasındaki 'İndirim Kodu' alanına girerek anında indiriminizi uygulayabilirsiniz."
+},
+"AdminBookingEmail": {
+  "subject": "Yeni Rezervasyon",
+  "title": "Yeni Rezervasyon Özeti",
+  "hotel": "Otel",
+  "room": "Oda",
+  "checkin": "Giriş",
+  "checkout": "Çıkış",
+  "guests": "Misafir",
+  "adult": "yetişkin",
+  "child": "çocuk",
+  "name": "Ad Soyad",
+  "email": "Email",
+  "phone": "Telefon",
+  "price": "Fiyat"
+}
 }
